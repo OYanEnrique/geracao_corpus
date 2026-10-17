@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QuestionBenchmarkSchema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^Q[0-9]{3,}$",
+      "description": "Identificador único do item de benchmark (ex.: Q001)"
+    },
+    "question": {
+      "type": "string",
+      "description": "Pergunta em linguagem natural formulada para a pesquisa histórica"
+    },
+    "primary_type": {
+      "type": "string",
+      "enum": [
+        "factual",
+        "temporal",
+        "descriptive",
+        "relational",
+        "comparative",
+        "exploratory",
+        "contradictory"
+      ],
+      "description": "Categoria principal da pergunta"
+    },
+    "reasoning": {
+      "type": "string",
+      "enum": [
+        "lookup",
+        "temporal",
+        "relation",
+        "aggregation",
+        "comparison",
+        "contradiction"
+      ],
+      "description": "Tipo de raciocínio exigido para responder"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["single_document", "multi_document"],
+      "description": "Origem documental da informação requerida"
+    },
+    "answerability": {
+      "type": "string",
+      "enum": ["answerable", "partial", "unanswerable"],
+      "description": "Condição de respondibilidade com base nas fontes"
+    },
+    "reference_answer": {
+      "type": "string",
+      "description": "Resposta de referência estritamente sustentada pelas evidências"
+    },
+    "answer_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim_text": { "type": "string" },
+          "supporting_evidence_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "support_level": {
+            "type": "string",
+            "enum": ["supported", "partial", "contradictory", "unsupported"]
+          }
+        },
+        "required": ["claim_text", "supporting_evidence_ids", "support_level"]
+      },
+      "description": "Decomposição da resposta em afirmações atômicas auditáveis"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "evidence_id": { "type": "string" },
+          "doc_id": { "type": "string" },
+          "page": { "type": "integer" },
+          "span": { "type": "string" }
+        },
+        "required": ["evidence_id", "doc_id", "page", "span"]
+      },
+      "description": "Evidências documentais necessárias para a resposta"
+    },
+    "required_documents": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Número de documentos necessários para responder (0 para unanswerable)"
+    },
+    "temporal_scope": {
+      "type": "string",
+      "description": "Escopo temporal abordado pela pergunta (ex.: 1985-1995)"
+    },
+    "ocr_quality": {
+      "type": "string",
+      "enum": ["good", "moderate", "noisy"],
+      "description": "Qualidade do texto nas evidências associadas"
+    },
+    "lexical_distance": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Distância lexical entre a pergunta e o texto das evidências"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"],
+      "description": "Dificuldade estimada da pergunta"
+    },
+    "generation_model": {
+      "type": "string",
+      "description": "Identificador do modelo que gerou a pergunta e resposta inicial"
+    },
+    "verification_model": {
+      "type": "string",
+      "description": "Identificador do modelo independente que auditou o item"
+    },
+    "verification_result": {
+      "type": "string",
+      "enum": ["supported", "partial", "contradictory", "unsupported"],
+      "description": "Veredito da verificação automática independente"
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": ["auto_only", "human_validated", "rejected"],
+      "description": "Status de validação humana"
+    },
+    "set": {
+      "type": "string",
+      "enum": ["gold", "silver"],
+      "description": "Conjunto de destino (Gold para avaliação final; Silver para desenvolvimento)"
+    },
+    "validator_id": {
+      "type": "string",
+      "description": "Identificador do revisor humano"
+    },
+    "validator_notes": {
+      "type": "string",
+      "description": "Observações ou justificativas do revisor"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Timestamp ISO 8601 de criação"
+    },
+    "version": {
+      "type": "string",
+      "description": "Versão do benchmark (ex.: v0.1_pilot)"
+    }
+  },
+  "required": [
+    "id",
+    "question",
+    "primary_type",
+    "reasoning",
+    "source_type",
+    "answerability",
+    "reference_answer",
+    "answer_claims",
+    "evidence",
+    "required_documents",
+    "ocr_quality",
+    "lexical_distance",
+    "difficulty",
+    "validation_status",
+    "set"
+  ]
+}

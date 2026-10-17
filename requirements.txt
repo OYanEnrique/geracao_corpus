@@ -1,0 +1,18 @@
+# Dependências do Pipeline de Geração de Corpus Semissintético
+jsonschema>=4.20.0
+pydantic>=2.0.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+
+# Clientes de LLM (Provedores suportados)
+groq>=0.11.0
+litellm>=1.40.0
+openai>=1.40.0
+
+# Manipulação de Dados e Análise
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Utilitários de Texto e Tokenização
+tiktoken>=0.7.0
+tqdm>=4.66.0

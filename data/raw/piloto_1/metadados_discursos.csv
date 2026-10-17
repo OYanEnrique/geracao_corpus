@@ -1,0 +1,13 @@
+id_doc,ano,presidente,tipo_discurso,caso_limitrofe,nome_arquivo_origem,arquivo_bruto,observacao
+DISCURSO_1985_SARNEY,1985,José Sarney,pronunciamento de posse,True,jose-sarney-1985.txt,DISCURSO_1985_SARNEY.txt,O compilador registra como pronunciamento de posse um discurso proferido cerca de quatro meses após a assunção do cargo.
+DISCURSO_1990_COLLOR,1990,Fernando Collor de Mello,posse no Congresso Nacional,False,fernando-collor-1990.txt,DISCURSO_1990_COLLOR.txt,
+DISCURSO_1992_ITAMAR,1992,Itamar Franco,posse no Congresso Nacional,False,itamar-franco-1992.txt,DISCURSO_1992_ITAMAR.txt,
+DISCURSO_1995_FHC,1995,Fernando Henrique Cardoso,posse no Congresso Nacional,False,fernando-henrique-cardoso-1-1994.txt,DISCURSO_1995_FHC.txt,Arquivo de origem nomeado pelo ano da eleição (1994); a posse ocorreu em 01/01/1995.
+DISCURSO_1999_FHC,1999,Fernando Henrique Cardoso,posse no Congresso Nacional,False,fernando-henrique-cardoso-2-1999.txt,DISCURSO_1999_FHC.txt,
+DISCURSO_2003_LULA,2003,Luiz Inácio Lula da Silva,posse no Congresso Nacional,False,lula-1-2003.txt,DISCURSO_2003_LULA.txt,
+DISCURSO_2007_LULA,2007,Luiz Inácio Lula da Silva,posse no Congresso Nacional,False,lula-2-2007.txt,DISCURSO_2007_LULA.txt,
+DISCURSO_2011_DILMA,2011,Dilma Rousseff,posse no Congresso Nacional,False,dilma-rousseff-1-2011.txt,DISCURSO_2011_DILMA.txt,
+DISCURSO_2015_DILMA,2015,Dilma Rousseff,posse no Congresso Nacional,False,dilma-rousseff-2-2015.txt,DISCURSO_2015_DILMA.txt,
+DISCURSO_2016_TEMER,2016,Michel Temer,primeiro pronunciamento no exercício da Presidência,True,michel-temer-2016.txt,DISCURSO_2016_TEMER.txt,Não houve sessão solene de posse no Congresso; o compilador registra o primeiro pronunciamento como equivalente.
+DISCURSO_2019_BOLSONARO,2019,Jair Bolsonaro,posse no Congresso Nacional,False,jair-bolsonaro-1-2019.txt,DISCURSO_2019_BOLSONARO.txt,
+DISCURSO_2023_LULA,2023,Luiz Inácio Lula da Silva,posse no Congresso Nacional,False,DISCURSO_2023_LULA.txt,DISCURSO_2023_LULA.txt,Transcrição fornecida pelo autor do projeto; único arquivo do corpus que preserva quebras de parágrafo.

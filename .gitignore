@@ -1,0 +1,25 @@
+# Ambientes e Segredos
+.env
+.env.local
+.env.*.local
+
+# Python / Ambientes virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Firecrawl / Parse temporário
+.firecrawl/
+
+# Logs e arquivos temporários
+logs/*.log
+*.tmp
+
+# Dados brutos pesados (opcional para git)
+# data/raw/

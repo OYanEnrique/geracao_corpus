@@ -1,0 +1,30 @@
+# Configurações do Pipeline de Construção do Corpus de QA
+
+pipeline:
+  name: "corpus_qa_historico"
+  version: "v0.1_pilot1"
+  raw_dir: "data/raw/piloto_1"
+  corpus_dir: "corpus"
+  schemas_dir: "corpus/schemas"
+  prompts_dir: "prompts"
+  logs_dir: "logs"
+
+chunking:
+  strategy: "sentence_window"
+  target_chars: 1200
+  overlap_chars: 200
+  min_chars: 300
+
+evidence_extraction:
+  max_evidences_per_chunk: 4
+  min_evidence_char_length: 30
+
+sampling:
+  num_documents: 12
+  target_gold_questions: 20
+  target_silver_questions: 40
+
+validation:
+  min_claim_support_ratio: 1.0
+  llm_cross_check_required: true
+  allow_unsupported_in_silver: false

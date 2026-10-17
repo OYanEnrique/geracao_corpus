@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DocumentSchema",
+  "type": "object",
+  "properties": {
+    "document_id": {
+      "type": "string",
+      "description": "Identificador único e persistente do documento"
+    },
+    "collection": {
+      "type": "string",
+      "description": "Coleção ou acervo de origem"
+    },
+    "doc_type": {
+      "type": "string",
+      "description": "Tipologia documental (discurso, ata, relatório, ofício, etc.)"
+    },
+    "title": {
+      "type": "string",
+      "description": "Título ou cabeçalho do documento"
+    },
+    "date": {
+      "type": "string",
+      "description": "Ano ou data do documento (ISO ou aproximado)"
+    },
+    "author": {
+      "type": "string",
+      "description": "Autor ou responsável pelo documento"
+    },
+    "page_count": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Quantidade total de páginas (ou 1 se documento contínuo)"
+    },
+    "ocr_quality_overall": {
+      "type": "string",
+      "enum": ["good", "moderate", "noisy"],
+      "description": "Estimativa geral de qualidade do texto/OCR"
+    },
+    "archival_context": {
+      "type": "string",
+      "description": "Contexto arquivístico ou histórico institucional"
+    },
+    "file_ref": {
+      "type": "string",
+      "description": "Caminho relativo para o arquivo de origem"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Metadados adicionais específicos do acervo"
+    }
+  },
+  "required": [
+    "document_id",
+    "collection",
+    "doc_type",
+    "date",
+    "page_count",
+    "ocr_quality_overall",
+    "file_ref"
+  ]
+}

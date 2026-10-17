@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceSchema",
+  "type": "object",
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^E[0-9]{4,}$",
+      "description": "Identificador único da evidência (ex.: E0001)"
+    },
+    "document_id": {
+      "type": "string",
+      "description": "Identificador do documento de origem"
+    },
+    "chunk_id": {
+      "type": "string",
+      "description": "Identificador do trecho/chunk de origem"
+    },
+    "page": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Página da evidência (1 para documentos sem paginação)"
+    },
+    "char_start": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Offset inicial do caractere no texto limpo"
+    },
+    "char_end": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Offset final do caractere no texto limpo"
+    },
+    "text": {
+      "type": "string",
+      "description": "Trecho textual original e literal da evidência"
+    },
+    "claim": {
+      "type": "string",
+      "description": "Afirmação factual normalizada derivada do trecho"
+    },
+    "entities": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Entidades mencionadas (pessoas, instituições, cargos, localidades)"
+    },
+    "dates": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Datas ou períodos explícitos no trecho"
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject": { "type": "string" },
+          "predicate": { "type": "string" },
+          "object": { "type": "string" }
+        },
+        "required": ["subject", "predicate", "object"]
+      },
+      "description": "Relações semânticas identificadas"
+    },
+    "evidence_type": {
+      "type": "string",
+      "enum": ["explicit", "implicit", "ambiguous", "gap"],
+      "description": "Tipo da evidência"
+    },
+    "ocr_quality": {
+      "type": "string",
+      "enum": ["good", "moderate", "noisy"],
+      "description": "Qualidade do OCR no trecho específico"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Notas adicionais de contexto ou ambiguidade"
+    }
+  },
+  "required": [
+    "evidence_id",
+    "document_id",
+    "chunk_id",
+    "page",
+    "text",
+    "claim",
+    "entities",
+    "dates",
+    "evidence_type",
+    "ocr_quality"
+  ]
+}

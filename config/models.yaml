@@ -1,0 +1,18 @@
+# Configuração dos Modelos via Groq
+
+llm_generator: # LLM A (Gerador principal)
+  provider: "groq"
+  model: "openai/gpt-oss-120b"
+  temperature: 0.2
+  max_tokens: 800
+  timeout: 60
+
+llm_verifier: # LLM B (Auditor independente de sustentação documental)
+  provider: "groq"
+  model: "openai/gpt-oss-20b"
+  temperature: 0.0
+  max_tokens: 500
+  timeout: 60
+
+mock_mode:
+  enabled_if_no_keys: false

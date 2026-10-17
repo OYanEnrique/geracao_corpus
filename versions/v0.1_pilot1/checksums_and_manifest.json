@@ -1,0 +1,9 @@
+{
+  "questions_gold.jsonl": "012f46c7b1f67d1ed5ba6f4c22ad880988758b1cb174c97ebab948cc189d9b0f",
+  "questions_silver.jsonl": "8e6bd6396a46b797c004c497858c8bb4db04800f7b8ce930681d99de0728bb7f",
+  "gold_items_count": 15,
+  "silver_items_count": 15,
+  "multidoc_ratio_in_gold": "26.7%",
+  "unanswerable_ratio_in_gold": "13.3%",
+  "frozen_at": "2026-10-14T20:42:00Z"
+}
