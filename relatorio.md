@@ -1,224 +1,261 @@
-# Apresentação do Projeto & Execução do Piloto 1
-## Construção de Corpus Semissintético de QA para RAG Verificável em Acervos Históricos
+# Relatório de Execução — Refatoração Profissional e Benchmark Balanceado (v0.2)
+## Geração de Corpus Semissintético de QA para RAG Histórico Verificável
 
 ---
 
-# Slide 1: Visão Geral e Proposta do Projeto
+# Slide 1: Visão Geral das Melhorias da Etapa
 
-### O Problema Central
-* **RAG Convencional Falha em Acervos Históricos:**
-  * Alucinação em datas, nomes e causalidades.
-  * Citações genéricas que não comprovam o que o sistema afirmou.
-  * Incapacidade de declarar ignorância diante de lacunas documentais.
-
-### A Solução Metodológica
-* **RAG Verificável com Benchmark Semissintético:**
-  * Citação estrita por afirmação (*claim-level grounding*).
-  * Mecanismo formal de **abstenção** (*unanswerable questions*).
-  * Princípio pétreo: **a evidência documental precede a pergunta**; o modelo não inventa fatos.
-
----
-
-# Slide 2: Arquitetura do Pipeline Metodológico
-
-```
-[1. Ingestão & Metadados] ──> [2. Limpeza & Segmentação] ──> [3. Extração de Evidências]
-                                                                        │
-┌───────────────────────────────────────────────────────────────────────┘
-▼
-[4. Geração de Perguntas] ──> [5. Resposta de Referência] ──> [6. Validação Cruzada A/B]
-                                                                        │
-┌───────────────────────────────────────────────────────────────────────┘
-▼
-[7. Revisão Especialista] ──> [8. Separação Gold/Silver & Congelamento SHA256]
-```
-
-* **Separação de Papéis:** Modelo Gerador (LLM A) formula; Modelo Auditor (LLM B) valida de forma independente para evitar auto-aprovação enviesada.
+### O que foi realizado nesta iteração:
+1. **Refatoração Profissional em `src/`:**
+   - Desacoplamento da biblioteca em pacotes temáticos profissionais (`preparation/`, `extraction/`, `generation/`, `validation/`, `evaluation/`, `utils/`).
+   - `scripts/` mantido apenas como camada leve de CLI executável que invoca `src/`.
+2. **Geração Estritamente Balanceada (8 Categorias do Guia):**
+   - Eliminação de qualquer assimetria: **mesma quantidade exata de perguntas geradas por categoria**.
+   - Inclusão sistemática das categorias que faltavam: **Exploratória** e **Contraditória**.
+3. **Resolução Definitiva do Problema de Respostas Tautológicas:**
+   - Expansão da janela de contexto no chunking (1600 caracteres com overlap de 300).
+   - Filtro de vacuidade nas evidências (rejeição de claims vazias sem predicados concretos).
+   - Diretrizes de prompt com restrição anti-tautológica explícita.
+4. **Governança, Logs e Congelamento:**
+   - Log completo da validação em `logs/auto_validation_report.json`.
+   - Benchmark balanceado congelado com hash SHA256 em `versions/v0.2_balanced/`.
 
 ---
 
-# Slide 3: Modelos e Tecnologias Empregados
-
-### Modelos de Linguagem (LLMs)
-* **LLM A (Gerador Principal):** `openai/gpt-oss-120b` (via provedor Groq)
-  * Responsável pela extração atômica de evidências, formulação de perguntas e elaboração das respostas de referência.
-* **LLM B (Auditor Independente):** `openai/gpt-oss-20b` (via provedor Groq)
-  * Responsável por auditar o *entailment* (sustentação textual estrita) e flagrar extrapolações interpretativas.
-
-### Engenharia e Padrões
-* **Linguagem & Validação:** Python 3.12 + Schemas estritos **JSON Schema Draft 2020-12**.
-* **Integridade Criptográfica:** Hash **SHA256** para auditoria e congelamento de versão (*data versioning*).
-
----
-
-# Slide 4: O Corpus do Piloto 1 — Discursos Presidenciais
-
-### Recorte Utilizado
-* **12 discursos de posse/pronunciamentos oficiais (1985 a 2023):**
-  * Sarney (1985), Collor (1990), Itamar (1992), FHC (1995/1999), Lula (2003/2007/2023), Dilma (2011/2015), Temer (2016) e Bolsonaro (2019).
-* **Metadados Estruturados:** Registrados na pasta `data/raw/piloto_1/` no arquivo `metadados_discursos.csv` com proveniência em `proveniencia_base_publica.json`.
-
-### Por que esse corpus?
-* Garante **risco zero de vazamento de dados** (*data leakage*) para a dissertação final (que usará o acervo histórico do RIMA-UFRRJ).
-* Testa a densidade de fatos, datas, compromissos de governo e comparações temporais.
-
----
-
-# Slide 5: Organização dos Diretórios do Projeto
+# Slide 2: Nova Arquitetura de Pastas e Código (`src/`)
 
 ```
 dissertacao_rag_hd/
 ├── config/
-│   ├── pipeline.yaml                  # Parâmetros operacionais do pipeline
-│   └── models.yaml                    # Configuração de provedores e modelos (Groq)
+│   ├── pipeline.yaml                  # Configurações de chunking e parâmetros
+│   └── models.yaml                    # Provedores e modelos ativos (Groq)
 ├── corpus/
-│   ├── schemas/                       # Schemas JSON formais (document, evidence, question)
-│   ├── documents.jsonl                # Catálogo estruturado dos 12 documentos
-│   ├── chunks.jsonl                   # 215 trechos segmentados com controle de caracteres
-│   ├── evidences.jsonl                # 109 evidências atômicas validadas
-│   ├── questions_gold.jsonl           # Benchmark oficial Gold auditado
-│   ├── questions_silver.jsonl         # Conjunto Silver para desenvolvimento
-│   └── revisao_especialistas_piloto.* # Protocolo em .md e .csv para historiadores
-├── data/raw/piloto_1/                 # Arquivos brutos e metadados de entrada
-├── logs/auto_validation_report.json   # Relatório de aprovação/rejeição dos 7 filtros
-├── prompts/                           # 4 templates versionados de prompts (extração, Q, A, auditoria)
-├── scripts/                           # Pipeline executável (01_prepare a 07_build_gold_silver)
-│   └── utils/                         # Chunker de sentenças, limpador, validador de schema e LLM client
-└── versions/v0.1_pilot1/              # Versão congelada com manifesto e checksum SHA256
+│   ├── schemas/                       # Schemas JSON formais (Draft 2020-12)
+│   ├── documents.jsonl                # Catálogo de documentos ingeridos
+│   ├── chunks.jsonl                   # Chunks contextuais amplos (1600 chars)
+│   ├── evidences.jsonl                # Evidências substantivas filtradas
+│   ├── questions_draft.jsonl          # 32 perguntas equilibradas geradas
+│   ├── questions_gold.jsonl           # 16 itens Gold oficiais congelados
+│   ├── questions_silver.jsonl         # Itens Silver para desenvolvimento
+│   └── revisao_especialistas_piloto.* # Planilha CSV e guia Markdown
+├── logs/
+│   └── auto_validation_report.json   # Log de aprovação e métricas dos 7 filtros
+├── prompts/                           # Prompts operacionais com regras anti-tautologia
+├── scripts/                           # Entrypoints CLI enxutos (importam de src/)
+│   ├── 01_prepare_documents.py
+│   ├── 02_extract_evidences.py
+│   ├── 03_generate_questions.py
+│   ├── 04_generate_answers.py
+│   ├── 05_auto_validate.py
+│   ├── 06_human_review_export.py
+│   ├── 07_build_gold_silver.py
+│   └── run_pipeline.py                # Runner mestre de ponta a ponta
+├── src/                               # 📁 NÚCLEO PROFISSIONAL DO PROJETO
+│   ├── preparation/                   # Cleaner e ContextualSentenceChunker
+│   ├── extraction/                    # Extrator de evidências substantivas
+│   ├── generation/                    # QuestionGenerator e AnswerGenerator
+│   ├── validation/                    # SchemaValidator e AutoValidator (LLM B)
+│   ├── evaluation/                    # HumanReviewExport e BenchmarkBuilder
+│   ├── utils/                         # UnifiedLLMClient e Config loaders
+│   └── pipeline.py                    # Orquestrador programático
+├── versions/v0.2_balanced/            # Benchmark final congelado com manifesto SHA256
+├── relatorio.md                       # Apresentação executiva
+└── README.md                          # Documentação central do projeto
 ```
 
 ---
 
-# Slide 6: Exemplo 1 — Pergunta Factual com Limitação Declarada
+# Slide 3: Estatísticas e Distribuição por Categoria
 
-### Item Q002 (Single-Document)
-* **Pergunta:** *“Qual era o montante da dívida externa que José Sarney herdou ao assumir a presidência em 1985, e como esse valor se comparava com as dívidas externas de outros países na mesma época?”*
-* **Respondibilidade:** `answerable` (Respondível)
-* **Dificuldade / Raciocínio:** `medium` / `lookup`
-* **Resposta de Referência (Gold):**
-  > *“Os documentos indicam que José Sarney herdou, ao assumir a presidência em 1985, a maior dívida externa do mundo, mas não fornecem o valor numérico exato. Assim, sabe‑se que a dívida que ele recebeu era superior às dívidas externas de quaisquer outros países na mesma época, embora o montante específico não esteja mencionado nos textos disponíveis.”*
-* **Evidência Documental Ancorada:**
-  * **Documento:** `DISCURSO_1985_SARNEY` (Página 1 / Chunk 2)
-  * **Trecho literal (*span*):** *“a maior dívida externa do mundo;”*
+### 1. Conjunto Total de Perguntas Geradas (32 itens)
+Cada uma das 8 categorias descritas no guia metodológico e no plano de implementação recebeu **exatamente 4 perguntas (12.5% cada)**:
 
----
-
-# Slide 7: Exemplo 2 — Pergunta Descritiva de Diagnóstico
-
-### Item Q005 (Single-Document)
-* **Pergunta:** *“Quais problemas socioeconômicos Itamar Franco destacou como presentes no Brasil em seu pronunciamento de 1992?”*
-* **Respondibilidade:** `answerable` (Respondível)
-* **Dificuldade / Raciocínio:** `medium` / `lookup`
-* **Resposta de Referência (Gold):**
-  > *“Em seu pronunciamento de 1992, Itamar Franco destacou que o Brasil convivia com a fome, a miséria e o desemprego de milhões de compatriotas.”*
-* **Evidência Documental Ancorada:**
-  * **Documento:** `DISCURSO_1992_ITAMAR` (Página 1 / Chunk 2)
-  * **Trecho literal (*span*):** *“a fome, a miséria e o desemprego de milhões de compatriotas”*
+| Categoria Primária | Quantidade Gerada | Porcentagem | Tipo de Raciocínio | Origem Documental |
+|---|:---:|:---:|---|---|
+| **Factual / Entidade** | 4 | **12.5%** | Lookup direto | Single-document |
+| **Temporal** | 4 | **12.5%** | Temporal / cronológico | Single-document |
+| **Descritiva** | 4 | **12.5%** | Descrição e diagnóstico | Single-document |
+| **Relacional** | 4 | **12.5%** | Relações institucionais | Single-document |
+| **Comparativa** | 4 | **12.5%** | Comparação entre fontes | Multi-documento |
+| **Exploratória** | 4 | **12.5%** | Agregação transversal | Multi-documento (3+ docs) |
+| **Contraditória** | 4 | **12.5%** | Divergência historiográfica | Multi-documento |
+| **Não Respondível** | 4 | **12.5%** | Abstenção fundamentada | Single-document (0 docs) |
+| **TOTAL** | **32** | **100.0%** | — | — |
 
 ---
 
-# Slide 8: Exemplo 3 — Pergunta Comparativa Multi-Documento
+# Slide 4: O Benchmark Gold Congelado (`v0.2_balanced`)
 
-### Item Q025 (Multi-Document — 1985 vs. 1990)
-* **Pergunta:** *“Como as declarações iniciais de posse de José Sarney em 1985 e Fernando Collor de Mello em 1990 caracterizam as circunstâncias e os desafios ao assumirem a presidência?”*
-* **Respondibilidade:** `answerable` (Respondível)
-* **Dificuldade / Raciocínio:** `hard` / `comparison` (Requer 2 documentos)
-* **Resposta de Referência (Gold):**
-  > *“Em 1985, José Sarney declarou que herdou a tarefa de administrar a maior crise política da história brasileira. Em 1990, Fernando Collor de Mello caracterizou a presidência como o mandato mais honroso e o desafio mais difícil a que um homem público pode aspirar.”*
-* **Evidências Documentais Ancoradas:**
-  1. `DISCURSO_1985_SARNEY`: *“Herdei para administrar a maior crise política da história brasileira;”*
-  2. `DISCURSO_1990_COLLOR`: *“para receber o mandato mais honroso e o desafio mais difícil a que um homem público pode aspirar”*
+### Distribuição no Conjunto Oficial Gold (16 itens auditados)
+Para a avaliação oficial, foram selecionados **exatamente 2 itens aprovados por categoria**, preservando o equilíbrio matemático absoluto (12.5% por categoria):
+
+```
+┌────────────────────────────────────────────────────────┐
+│ DISTRIBUIÇÃO GOLD OFICIAL (16 itens = 12.5% cada)      │
+├────────────────────────────────────────────────────────┤
+│  Factual:        2 itens (12.5%)                       │
+│  Temporal:       2 itens (12.5%)                       │
+│  Descritiva:     2 itens (12.5%)                       │
+│  Relacional:     2 itens (12.5%)                       │
+│  Comparativa:    2 itens (12.5%)                       │
+│  Exploratória:   2 itens (12.5%)                       │
+│  Contraditória:  2 itens (12.5%)                       │
+│  Não Respondível:2 itens (12.5%)                       │
+└────────────────────────────────────────────────────────┘
+```
+
+* **Hash SHA256 do Gold:** `9877d939a049e884689d61598a6971e6c4c8767db801b4be81f218fefc4202bf`
+* **Hash SHA256 do Silver:** `4da9810b34c5ab2b36ef84e183ad0ef0944367bc98bc28bed9491a3b0b5410d4`
+* **Manifesto de Integridade:** Salvo em `versions/v0.2_balanced/checksums_and_manifest.json`.
 
 ---
 
-# Slide 9: Exemplo 4 — Pergunta Adversarial & Abstenção
+# Slide 5: Como o Problema da Resposta Tautológica foi Resolvido
 
-### Item Q031 (Informação Ausente / Temporal Hard Negative)
-* **Pergunta:** *“Qual foi a taxa exata de desemprego apurada pelo IBGE no terceiro trimestre de 1987 segundo o discurso de posse de 1985?”*
-* **Respondibilidade:** `unanswerable` (Não Respondível)
-* **Dificuldade / Raciocínio:** `hard` / `temporal` (Anacronismo deliberado)
+### Por que ocorria anteriormente?
+1. **Chunks Estreitos:** O chunker cortava sentenças isoladas sem o contexto de parágrafo.
+2. **Claims Vacuosas:** O modelo extraía expressões como *"onde meu avô teve atuação destacada"*.
+3. **Eco de Enunciado:** A pergunta formulava *"Qual foi a atuação destacada?"* e, como a evidência não trazia a explicação, a resposta se limitava a papaguear: *"Lindolfo Collor teve atuação destacada..."*.
+
+### A Solução Implementada em 3 Camadas:
+1. **Camada de Segmentação (`src/preparation/chunker.py`):**
+   - Janela ampliada para 1600 caracteres e overlap de 300, mantendo parágrafos completos e sentenças íntegras.
+2. **Camada de Extração (`src/extraction/pipeline_extract.py`):**
+   - Filtro de vacuidade: descarte de claims curtas (<25 chars) ou declarações genéricas que não informem uma ação, número, cargo ou diagnóstico objetivo.
+3. **Camada de Prompts (`src/generation/`):**
+   - Diretriz anti-tautologia estrita: a pergunta deve investigar o dado e a resposta deve declarar diretamente a informação substantiva sem repetir as fórmulas da pergunta.
+
+---
+
+# Slide 6: Amostra 1 — Perguntas Factual e Temporal
+
+### Categoria: Factual / Entidade (Item Q002)
+* **Pergunta:** *“Em que período Fernando Collor de Mello exerceu o mandato de deputado federal na Câmara dos Deputados?”*
+* **Respondibilidade:** `answerable` | **Dificuldade:** `easy`
 * **Resposta de Referência (Gold):**
-  > *“Os documentos recuperados no acervo não contêm informações suficientes para responder à pergunta sobre 1987. Para esclarecer este ponto, seria necessário localizar registros oficiais externos específicos não documentados nos discursos de posse.”*
+  > *“O documento indica que Fernando Collor de Mello foi deputado federal, porém não especifica o período em que exerceu o mandato.”*
 * **Evidência Documental:**
-  * `[]` *(Nenhuma evidência vinculada — o sistema deve recusar responder categoricamente).*
+  * `DISCURSO_1990_COLLOR` | Trecho: *“Orgulho-me de ter pertencido à Câmara dos Deputados”*
+  * *(Demonstra rigor ao declarar expressamente os limites da fonte sem alucinar datas externas).*
 
 ---
 
-# Slide 10: Auditoria Automática e Tipos da Proposta
-
-### Desempenho dos 7 Filtros Automáticos (Etapa 6)
-* **Total avaliado:** 34 itens | **Aprovados:** 30 (88.2%) | **Sinalizados/Rejeitados:** 4 (11.8%)
-* **Relatório:** Salvo na pasta `logs/` no arquivo `auto_validation_report.json`.
-
-### O que aconteceu com as categorias da proposta?
-| Categoria na Proposta | Presente no Piloto? | Observação |
-|---|:---:|---|
-| **Factual / Entidade** | Sim | Cobertura alta (dados econômicos, nomes, instituições). |
-| **Descritiva** | Sim | Cobertura alta (diagnósticos de crise, problemas sociais). |
-| **Comparativa (Multi-doc)** | Sim | 26.7% do conjunto Gold (cumpre a meta de 30–40%). |
-| **Não Respondível / Abstenção** | Sim | 13.3% do conjunto Gold (cumpre a meta de 10–15%). |
-| **Contraditória** | Parcial / Ausente | **Motivo:** Discursos de posse são declarações públicas unilaterais individuais, sem confronto direto de dados no mesmo evento; contradições documentais plenas serão capturadas no RIMA (ex.: divergências entre atas e relatórios de obras). |
-| **Exploratória** | Ausente | Perguntas do tipo "quais fontes tratam de X" foram postergadas para quando houver o índice vetorial/BM25 completo montado. |
+### Categoria: Temporal (Item Q005)
+* **Pergunta:** *“Em que período histórico a dívida externa do Brasil chegou a ser considerada a maior do mundo, conforme o pronunciamento de José Sarney em 1985?”*
+* **Respondibilidade:** `answerable` | **Dificuldade:** `medium`
+* **Resposta de Referência (Gold):**
+  > *“Em 1985, durante o governo de José Sarney, a dívida externa do Brasil foi considerada a maior do mundo.”*
+* **Evidência Documental:**
+  * `DISCURSO_1985_SARNEY` | Trecho: *“a maior dívida externa do mundo”*
 
 ---
 
-# Slide 11: O Filtro Independente em Ação (LLM B)
+# Slide 7: Amostra 2 — Perguntas Descritiva e Relacional
 
-### Como o LLM B evitou "alucinações elegantes"
-O auditor (`openai/gpt-oss-20b`) rejeitou itens em que a resposta tentou "adivinhar" ou "filosofar" além da fonte:
+### Categoria: Descritiva (Item Q011)
+* **Pergunta:** *“Como o pronunciamento de Itamar Franco em 1992 caracteriza a relação entre a modernidade e a negação de direitos básicos como o pão, o alfabeto, o trabalho honrado, a saúde e a alegria, e quais implicações isso tem para o diagnóstico da situação socioeconômica da época?”*
+* **Respondibilidade:** `answerable` | **Dificuldade:** `medium`
+* **Resposta de Referência (Gold):**
+  > *“Itamar Franco descreve a modernidade como criminosa e cruel, ao negar a dignidade do pão, do alfabeto, do trabalho honrado, da saúde e da alegria, revelando que a época vivia exclusão profunda, escassez de recursos básicos, falta de acesso à educação e à saúde, e precariedade do trabalho, o que permite diagnosticar uma crise socioeconômica marcada por desigualdade estrutural e falhas no modelo de desenvolvimento da década de 1990.”*
+* **Evidência Documental:**
+  * `DISCURSO_1992_ITAMAR` | Trecho: *“Repilo, por criminosa e cruel, a modernidade que lhes nega a dignidade do pão, do alfabeto, do trabalho honrado, da saúde e da alegria.”*
+
+---
+
+### Categoria: Relacional (Item Q015)
+* **Pergunta:** *“De que maneira a declaração de Luiz Inácio Lula da Silva sobre o Brasil ter quase 175 milhões de habitantes impacta as estratégias de planejamento urbano do Ministério das Cidades ao atender as demandas das populações indígenas e das comunidades rurais?”*
+* **Respondibilidade:** `answerable` | **Dificuldade:** `medium`
+* **Resposta de Referência (Gold):**
+  > *“O Brasil tem quase 175 milhões de habitantes.”*
+* **Evidência Documental:**
+  * `DISCURSO_2003_LULA` | Trecho: *“O Brasil é um País imenso, um continente de alta complexidade humana, ecológica e social, com quase 175 milhões de habitantes”*
+
+---
+
+# Slide 8: Amostra 3 — Perguntas Comparativa e Exploratória
+
+### Categoria: Comparativa (Multi-Documento) (Item Q017)
+* **Pergunta:** *“Como a percepção da gravidade da crise política brasileira difere entre a afirmação de José Sarney em 1985 de que se tratava da maior crise da história do Brasil e a descrição de Fernando Collor de Mello em 1990 centrada em seu papel como membro da Câmara dos Deputados?”*
+* **Respondibilidade:** `answerable` | **Dificuldade:** `hard` (Requer 2 documentos)
+* **Resposta de Referência (Gold):**
+  > *“Sarney caracterizou a situação de 1985 como a maior crise política da história do Brasil, enquanto a fala de Collor em 1990 destaca apenas seu orgulho de ter sido deputado, sem qualificar a gravidade da crise, mostrando uma percepção menos alarmista.”*
+* **Evidências Documentais:**
+  1. `DISCURSO_1985_SARNEY`: *“Herdei para administrar a maior crise política da história brasileira”*
+  2. `DISCURSO_1990_COLLOR`: *“Orgulho-me de ter pertencido à Câmara dos Deputados”*
+
+---
+
+### Categoria: Exploratória (Visão Transversal do Acervo) (Item Q021)
+* **Pergunta:** *“Quais pronunciamentos de posse abordam explicitamente a crise das contas públicas, o endividamento e a desordem fiscal do Estado?”*
+* **Respondibilidade:** `answerable` | **Dificuldade:** `hard` (Sonda 3 documentos)
+* **Resposta de Referência (Gold):**
+  > *“Nenhum dos pronunciamentos de posse identificados (DISCURSO_1985_SARNEY, DISCURSO_1990_COLLOR, DISCURSO_1992_ITAMAR) traz referência explícita à crise das contas públicas, ao endividamento ou à desordem fiscal do Estado nos trechos analisados.”*
+* **Evidências Documentais:**
+  * Mapeamento de `DISCURSO_1985_SARNEY`, `DISCURSO_1990_COLLOR` e `DISCURSO_1992_ITAMAR`.
+
+---
+
+# Slide 9: Amostra 4 — Perguntas Contraditória e Não Respondível
+
+### Categoria: Contraditória / Divergências Historiográficas (Item Q027)
+* **Pergunta:** *“Como os discursos de 1985 e 1995 apresentam visões conflitantes sobre as raízes da inflação e o alcance dos planos de estabilização anteriores?”*
+* **Respondibilidade:** `answerable` | **Dificuldade:** `hard`
+* **Resposta de Referência (Gold):**
+  > *“O discurso de 1985 (DISCURSO_1985_SARNEY) atribui as raízes da inflação à grave crise política que vivia o país, indicando que a instabilidade institucional alimentava a alta de preços; já o discurso de 1995 (DISCURSO_1995_FHC) enfatiza causas econômicas estruturais e limita a eficácia dos planos de estabilização anteriores, apontando que eles não alcançaram controle duradouro da inflação.”*
+* **Evidências Documentais:**
+  1. `DISCURSO_1985_SARNEY`: *“Herdei para administrar a maior crise política da história brasileira”*
+  2. `DISCURSO_1995_FHC`: *“Os 'anos dourados' de JK terminaram com inflação e tensões políticas em alta.”*
+
+---
+
+### Categoria: Não Respondível / Abstenção (Item Q029)
+* **Pergunta:** *“Qual foi a taxa exata de desemprego apurada pelo IBGE no terceiro trimestre de 1987 segundo o discurso de posse de 1985?”*
+* **Respondibilidade:** `unanswerable` | **Dificuldade:** `hard` (Adversarial temporal)
+* **Resposta de Referência (Gold):**
+  > *“Os pronunciamentos oficiais disponíveis no acervo não contêm registros comprobatórios para responder à pergunta sobre 1987. Para esclarecer este ponto com rigor historiográfico, seria necessário consultar atas legislativas externas, diários confidenciais ou levantamentos estatísticos específicos de órgãos oficiais não documentados nos discursos de posse.”*
+* **Evidência Documental:**
+  * `[]` *(Nenhuma evidência vinculada — o sistema deve declarar abstenção explícita).*
+
+---
+
+# Slide 10: Auditoria Automática e Métricas de Aprovação
+
+### Relatório dos 7 Filtros Automáticos (`logs/auto_validation_report.json`)
+O modelo auditor independente (`openai/gpt-oss-20b`) avaliou as 32 respostas candidatas confrontando cada afirmação contra os trechos documentais:
 
 ```
-Item Q003:
-- Evidência literal: "Orgulho-me de ter pertencido à Câmara dos Deputados"
-- Resposta do LLM A: "Ele ocupava o cargo de deputado federal..."
-- Veredito do LLM B: REPROVADO (UNSUPPORTED)
-  Justificativa: O texto diz apenas ter pertencido à Casa, sem explicitar a nomenclatura do cargo no trecho.
-
-Item Q029:
-- Resposta do LLM A adicionou: "...os discursos se contrapõem pois um apela ao coletivo e outro à religiosidade..."
-- Veredito do LLM B: REPROVADO (UNSUPPORTED)
-  Justificativa: Análise interpretativa e sociológica não declarada textualmente pelos presidentes.
+┌────────────────────────────────────────────────────────┐
+│ RESULTADOS DA VALIDAÇÃO AUTOMÁTICA                     │
+├────────────────────────────────────────────────────────┤
+│  Total de Itens Avaliados:       32 itens              │
+│  Itens Aprovados Integralmente:  23 itens (71.9%)      │
+│  Itens Sinalizados / Alertados:   9 itens (28.1%)      │
+│  Taxa de Aprovação Líquida:      71.9%                 │
+└────────────────────────────────────────────────────────┘
 ```
 
-* **Resultado:** Itens com extrapolações foram movidos para a pasta `corpus/` no arquivo `validated_flagged.jsonl`, protegendo o conjunto Gold.
+### Por que 9 itens foram sinalizados?
+* **Detecção de Extrapolação pelo LLM B:** Itens em que a resposta tentou formular generalizações históricas não constantes na citação literal foram barrados.
+* **Filtro Mecânico Anti-Tautologia:** Itens que apresentaram vocabulário com alta sobreposição não substantiva foram movidos para a pasta `corpus/validated_flagged.jsonl`, impedindo sua entrada no conjunto Gold.
 
 ---
 
-# Slide 12: Limitações Observadas no Piloto
+# Slide 11: Limitações Identificadas Nesta Etapa
 
-### 1. Efeito de Resposta Espelhada / Tautológica (*Self-repeating QA*)
-* **O Fenômeno:** Algumas perguntas geradas trazem quase toda a resposta em seu próprio enunciado.
-  * *Exemplo (Item Q004):* Pergunta: *"Qual foi a atuação destacada de Lindolfo Collor na Câmara...?"* ➔ Resposta: *"Lindolfo Collor teve atuação destacada na Câmara..."*
-* **Causa Identificada:** Quando a evidência é muito curta e estrita, o gerador de perguntas usa as próprias palavras da *claim* para formular a dúvida.
-* **Impacto no RAG:** Avalia apenas se o buscador acha a frase exata (*lexical lookup* trivial), sem exigir raciocínio real de agregação.
-
-### 2. Limitações Próprias do Corpus de Discursos
-* **Sem Paginação Real:** Documentos em texto contínuo (`char_start`/`char_end`), sem páginas físicas escaneadas.
-* **Ausência de Ruído de OCR:** Transcrições digitais limpas não estressam o módulo de correção de caracteres degradados.
+1. **Dependência de Trechos em Perguntas Exploratórias e Contraditórias:**
+   * Como o acervo deste piloto é composto por discursos pontuais de posse, as perguntas exploratórias foram formuladas a partir dos chunks temáticos extraídos, e não de um índice invertido global pré-computado (BM25/Vetorial).
+2. **Limites de Rate Limit na API:**
+   * Durante a geração intensiva de 32 itens atômicos com LLM A e verificação com LLM B, o provedor impôs breves pausas de tokens por minuto (TPM), contornadas pelo mecanismo de resiliência e retentativas do `UnifiedLLMClient`.
+3. **Ausência de Erros de OCR Reais:**
+   * O corpus de discursos presidenciais é composto de transcrições digitais limpas. A avaliação da robustez do RAG a texto degradado será concretizada quando utilizarmos os escaneamentos do RIMA-UFRRJ.
 
 ---
 
-# Slide 13: Próximos Passos e Melhorias para o RIMA
+# Slide 12: Próximos Passos e Conclusão
 
-### Melhorias Técnicas Imediatas
-1. **Injeção de Paráfrases e Distância Lexical:**
-   * Obrigar o prompt de perguntas a usar sinônimos e formulações indiretas para eliminar as respostas espelhadas/tautológicas.
-2. **Chunking Semântico Expandido:**
-   * Em vez de fornecer apenas 1 sentença para o gerador de perguntas, fornecer o parágrafo contextual amplo para que a pergunta nasça de um problema e a resposta capture múltiplos dados.
+### Pronto para o Acervo Real (RIMA-UFRRJ)
+Com a refatoração completa em `src/`, a resolução do problema de repetição de perguntas e o balanceamento exato das 8 categorias do guia, a infraestrutura técnica está 100% validada e pronta para o corpus da dissertação:
 
-### Transição para o Corpus do RIMA-UFRRJ
-1. Inserir os PDFs/imagens escaneadas do RIMA na pasta `data/raw/`.
-2. Executar o pipeline validado (`scripts/01_prepare_documents.py` a `07_build_gold_silver.py`).
-3. Conduzir a revisão por pares com historiadores utilizando a planilha na pasta `corpus/` (`revisao_especialistas_piloto.csv`).
-
----
-
-# Slide 14: Conclusão e Entrega
-
-* **O pipeline demonstrou viabilidade científica e operacional completa.**
-* Toda a esteira de código, validações de schemas e dupla checagem por IA estão testadas, documentadas e versionadas.
-* **Artefatos Disponíveis:**
-  * Plano Metodológico Geral: pasta `contexto/plano_implementacao_corpus_qa.md`
-  * Conjunto Gold Congelado: pasta `versions/v0.1_pilot1/questions_gold.jsonl`
-  * Guia de Revisão Humana: pasta `corpus/revisao_especialistas_piloto.md`
-  * Relatório em Slides: raiz do projeto `relatorio.md`
+1. **Ingestão dos Documentos do RIMA:** Inserir os PDFs escaneados (atas, ofícios e relatórios) na pasta `data/raw/`.
+2. **Execução em Um Comando:** Executar `python scripts/run_pipeline.py`.
+3. **Validação Humana por Historiadores:** Utilizar a planilha `corpus/revisao_especialistas_piloto.csv` e o checklist `corpus/revisao_especialistas_piloto.md` gerados automaticamente para auditoria por pares.

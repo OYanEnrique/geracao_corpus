@@ -1,6 +1,26 @@
 {
-  "total_evaluated": 34,
-  "approved_count": 30,
-  "flagged_count": 4,
-  "approval_rate": 0.882
+  "total_evaluated": 32,
+  "approved_count": 23,
+  "flagged_count": 9,
+  "approval_rate": 0.719,
+  "approved_by_category": {
+    "factual": 4,
+    "temporal": 2,
+    "descriptive": 3,
+    "relational": 2,
+    "comparative": 4,
+    "exploratory": 2,
+    "contradictory": 2,
+    "unanswerable": 4
+  },
+  "percentages_by_category": {
+    "factual": "17.4%",
+    "temporal": "8.7%",
+    "descriptive": "13.0%",
+    "relational": "8.7%",
+    "comparative": "17.4%",
+    "exploratory": "8.7%",
+    "contradictory": "8.7%",
+    "unanswerable": "17.4%"
+  }
 }

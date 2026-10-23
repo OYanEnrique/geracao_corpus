@@ -1,373 +1,296 @@
-# Protocolo de Revisão Humana por Especialistas — Piloto 1
+# Protocolo de Revisão Humana por Especialistas — Benchmark Equilibrado
 
 > **Checklist do Historiador:**
 > - [ ] A pergunta é plausível para uma pesquisa histórica real?
-> - [ ] A resposta está integralmente sustentada pelas fontes?
+> - [ ] A resposta está integralmente sustentada pelas fontes indicadas?
+> - [ ] A resposta acrescenta a informação e NÃO apenas repete os termos da pergunta?
+> - [ ] Em contradições, ambas as versões divergentes foram registradas de forma imparcial?
 > - [ ] Se marcada como 'unanswerable', a informação realmente não consta no acervo?
-> - [ ] As citações apontam para os trechos corretos?
 
 ---
 
 ### Item Q001 — FACTUAL (single_document)
 
-- **Pergunta:** Qual foi a crise política que José Sarney herdou ao assumir a presidência em 1985, conforme seu pronunciamento?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** José Sarney afirmou que herdou a maior crise política da história brasileira ao assumir a presidência em 1985.
-- **Evidências:**
-  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira;"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** Qual era o cargo de José Sarney quando declarou que herdou a maior crise política da história brasileira?
+- **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Não há informação sobre o cargo de José Sarney na evidência fornecida.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
 ### Item Q002 — FACTUAL (single_document)
 
-- **Pergunta:** Qual era o montante da dívida externa que José Sarney herdou ao assumir a presidência em 1985, e como esse valor se comparava com as dívidas externas de outros países na mesma época?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Os documentos indicam que José Sarney herdou, ao assumir a presidência em 1985, a maior dívida externa do mundo, mas não fornecem o valor numérico exato. Assim, sabe‑se que a dívida que ele recebeu era superior às dívidas externas de quaisquer outros países na mesma época, embora o montante específico não esteja mencionado nos textos disponíveis.
-- **Evidências:**
-  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"a maior dívida externa do mundo;"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** Em que período Fernando Collor de Mello exerceu o mandato de deputado federal na Câmara dos Deputados?
+- **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** O documento indica que Fernando Collor de Mello foi deputado federal, porém não especifica o período em que exerceu o mandato.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Parecer do Revisor:** _________________________________________
+
+---
+
+### Item Q003 — FACTUAL (single_document)
+
+- **Pergunta:** Qual fenômeno econômico é citado como tendo se intensificado ao final dos "anos dourados" de JK?
+- **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** A inflação se intensificou ao final dos "anos dourados" de JK.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Os "anos dourados" de JK terminaram com inflação e tensões políticas em alta."*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
 ### Item Q004 — FACTUAL (single_document)
 
-- **Pergunta:** Qual foi a atuação destacada de Lindolfo Collor na Câmara dos Deputados, conforme mencionado no pronunciamento de Fernando Collor de Mello em 1990?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Lindolfo Collor teve atuação destacada na Câmara dos Deputados, conforme mencionado por Fernando Collor de Mello em seu pronunciamento de 1990.
-- **Evidências:**
-  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"onde meu avô, Lindolfo Collor, tivera atuação destacada"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** Qual cargo foi conferido a Luiz Inácio Lula da Silva pelo voto popular do povo brasileiro?
+- **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Presidente da República
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q005 — DESCRIPTIVE (single_document)
+### Item Q005 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais problemas socioeconômicos Itamar Franco destacou como presentes no Brasil em seu pronunciamento de 1992?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Itamar Franco destacou a miséria, o desemprego, a insegurança, o desencanto e o medo como problemas socioeconômicos presentes no Brasil.
-- **Evidências:**
-  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** Em que período histórico a dívida externa do Brasil chegou a ser considerada a maior do mundo, conforme o pronunciamento de José Sarney em 1985?
+- **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Em 1985, durante o governo de José Sarney, a dívida externa do Brasil foi considerada a maior do mundo.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"a maior dívida externa do mundo"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q006 — FACTUAL (single_document)
+### Item Q008 — TEMPORAL (single_document)
 
-- **Pergunta:** Quantos milhões de crianças nasciam privados de todos os direitos no Brasil nas décadas anteriores ao pronunciamento de Itamar Franco em 1992?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** De acordo com o discurso de Itamar Franco de 1992, há várias décadas que milhões de crianças nasciam privadas de todos os direitos no Brasil; o texto não especifica quantos milhões exatamente, apenas indica que eram múltiplos milhões.
-- **Evidências:**
-  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Há várias décadas que milhões de nossos filhos nascem privados de todos os direitos, até mesmo o de sonhar."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q007 — FACTUAL (single_document)
-
-- **Pergunta:** Qual era a importância atribuída ao petróleo e à industrialização para a inserção do Brasil no mundo moderno do pós‑guerra, segundo o pronunciamento de Fernando Henrique Cardoso em 1995?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Segundo o pronunciamento de Fernando Henrique Cardoso em 1995, o petróleo e a industrialização eram considerados o bilhete de passagem para a inserção do Brasil no mundo moderno do pós‑guerra.
-- **Evidências:**
-  - Documento: `DISCURSO_1995_FHC` | Trecho: *"petróleo e industrialização eram o bilhete de passagem para o mundo moderno do pós‑guerra"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q009 — FACTUAL (single_document)
-
-- **Pergunta:** Qual foi a frase exata usada por Fernando Henrique Cardoso em seu pronunciamento de 1999 para expressar que se sentia renovado pelo apoio generoso do povo brasileiro?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** A frase exata usada por Fernando Henrique Cardoso foi: “Sinto-me renovado pelo apoio generoso do povo brasileiro.”
-- **Evidências:**
-  - Documento: `DISCURSO_1999_FHC` | Trecho: *"Sinto-me renovado pelo apoio generoso do povo brasileiro."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q010 — FACTUAL (single_document)
-
-- **Pergunta:** Qual a experiência que Fernando Henrique Cardoso afirma ter adquirido ao aprender com os acertos e erros de seu primeiro mandato?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Fernando Henrique Cardoso afirma que adquiriu mais experiência ao aprender com os acertos e erros de seu primeiro mandato.
-- **Evidências:**
-  - Documento: `DISCURSO_1999_FHC` | Trecho: *"Tenho mais experiência, pelo muito que pude aprender tanto dos acertos quanto dos erros do meu primeiro mandato."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q011 — FACTUAL (single_document)
-
-- **Pergunta:** Qual foi a afirmação de Luiz Inácio Lula da Silva em seu pronunciamento de 2003 sobre a eleição do povo brasileiro?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Em seu pronunciamento de 2003, Luiz Inácio Lula da Silva afirmou que o povo brasileiro o elegeu Presidente da República.
-- **Evidências:**
-  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q012 — FACTUAL (single_document)
-
-- **Pergunta:** Em que contexto Luiz Inácio Lula da Silva menciona José Alencar como seu "bravo companheiro" no pronunciamento de 2003, confirmando sua condição de companheiro de candidatura?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** No pronunciamento de 2003, Luiz Inácio Lula da Silva referiu-se a José Alencar como "meu bravo companheiro", frase que confirma que Alencar era seu companheiro de candidatura.
-- **Evidências:**
-  - Documento: `DISCURSO_2003_LULA` | Trecho: *"a mim e ao meu bravo companheiro José Alencar"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q013 — FACTUAL (single_document)
-
-- **Pergunta:** Qual foi o significado simbólico da primeira vez que a jornada de um retirante, iniciada em cima de um pau‑de‑arara, terminou na rampa do Planalto, conforme o pronunciamento de Luiz Inácio Lula da Silva em 2007?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** O pronunciamento indica que, pela primeira vez, a jornada de um retirante que partiu de um pau‑de‑arara chegou à rampa do Planalto como expressão de um projeto coletivo, simbolizando a integração dos migrantes nordestinos e dos mais pobres ao espaço máximo de poder político do país.
-- **Evidências:**
-  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau-de-arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q014 — TEMPORAL (single_document)
-
-- **Pergunta:** Em que data e hora Luiz Inácio Lula da Silva afirmou ter retornado à Casa, segundo o pronunciamento de 2007?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Ele afirmou que retornou à Casa no dia 1º de janeiro, “no mesmo primeiro de janeiro e quase na mesma hora”.
-- **Evidências:**
+- **Pergunta:** Qual foi a data exata do retorno de Lula à Casa e como esse momento se relaciona cronologicamente com sua primeira visita ao mesmo local?
+- **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Lula retornou à Casa em 1º de janeiro, quase na mesma hora de sua primeira visita ao local.
+- **Evidências Documentais Vinculadas:**
   - Documento: `DISCURSO_2007_LULA` | Trecho: *"Hoje estou de volta a esta Casa, no mesmo primeiro de janeiro e quase na mesma hora."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q015 — FACTUAL (single_document)
+### Item Q009 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Qual foi a intenção declarada por Dilma Rousseff em 2011 em relação ao futuro das mulheres na presidência do Brasil?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Dilma Rousseff declarou que, em 2011, seu objetivo era abrir portas para que muitas outras mulheres pudessem, no futuro, ser presidentas do Brasil.
-- **Evidências:**
-  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"Venho para abrir portas para que muitas outras mulheres também possam, no futuro, ser presidentas"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** Como o pronunciamento de José Sarney em 1985, ao afirmar que a inflação era a maior já vivida, evidencia a gravidade da crise econômica brasileira da época e quais foram as principais consequências sociais desse cenário?
+- **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** O pronunciamento de José Sarney, ao declarar que a inflação era a maior já vivida, demonstra que o país enfrentava um nível histórico de alta de preços, sinalizando a gravidade da crise econômica da época.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"a maior inflação que já tivemos"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q016 — FACTUAL (single_document)
+### Item Q011 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Qual foi a intenção declarada por Dilma Rousseff em 2011 sobre o sentimento das mulheres brasileiras no Dia da Mulher?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Dilma Rousseff declarou que, em 2011, desejava que todas as mulheres brasileiras sentissem orgulho e alegria de ser mulher no Dia da Mulher.
-- **Evidências:**
-  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"todas as mulheres brasileiras sintam o orgulho e a alegria de ser mulher"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** Como o pronunciamento de Itamar Franco em 1992 caracteriza a relação entre a modernidade e a negação de direitos básicos como o pão, o alfabeto, o trabalho honrado, a saúde e a alegria, e quais implicações isso tem para o diagnóstico da situação socioeconômica da época?
+- **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Itamar Franco descreve a modernidade como criminosa e cruel, ao negar a dignidade do pão, do alfabeto, do trabalho honrado, da saúde e da alegria, revelando que a época vivia exclusão profunda, escassez de recursos básicos, falta de acesso à educação e à saúde, e precariedade do trabalho, o que permite diagnosticar uma crise socioeconômica marcada por desigualdade estrutural e falhas no modelo de desenvolvimento da década de 1990.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Repilo, por criminosa e cruel, a modernidade que lhes nega a dignidade do pão, do alfabeto, do trabalho honrado, da saúde e da alegria."*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q017 — FACTUAL (single_document)
+### Item Q012 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Qual foi a caracterização feita por Dilma Rousseff em 2015 sobre o apoio popular ao projeto de nação na história democrática do Brasil?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Dilma Rousseff afirmou, em 2015, que o projeto de nação é detentor do mais profundo e duradouro apoio popular da história democrática do Brasil.
-- **Evidências:**
-  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"O projeto de nação que é detentor do mais profundo e duradouro apoio popular da nossa história democrática."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** Como o pronunciamento de Michel Temer em 2016 caracteriza as parcerias público‑privadas como instrumento para enfrentar o desemprego no Brasil, e quais aspectos socioeconômicos são destacados para justificar essa estratégia?
+- **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Michel Temer afirmou que as parcerias público‑privadas são apresentadas como mecanismo capaz de gerar empregos no Brasil, sendo apontadas como solução para o problema do desemprego ao mobilizar recursos privados para projetos que ampliem a oferta de trabalho.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"parcerias público-privadas, na medida em que esse instrumento poderá gerar emprego no País"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q018 — FACTUAL (single_document)
+### Item Q013 — RELATIONAL (single_document)
 
-- **Pergunta:** Qual foi o trabalho extraordinário iniciado pelo governo do presidente Lula que, segundo o pronunciamento de Dilma Rousseff em 2015, foi continuado por seu governo?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** O extraordinário trabalho foi a política de combate à fome, iniciada pelo governo do presidente Lula e continuada pelo governo de Dilma Rousseff, que resultou na primeira geração de brasileiros que não vivenciou a tragédia da fome.
-- **Evidências:**
-  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"A partir do extraordinário trabalho iniciado pelo governo do presidente Lula, continuado por nós, temos hoje a primeira geração de brasileiros que não vivenciou a tragédia da fome."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** De que maneira as decisões do governo de José Sarney, em conjunto com o Ministério da Fazenda e o Banco Central, afetaram a relação entre credores internacionais e os setores empresariais brasileiros diante da afirmação de que o Brasil possuía a maior dívida externa do mundo?
+- **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Não há evidência nos documentos fornecidos que descreva como as decisões do governo de José Sarney, do Ministério da Fazenda e do Banco Central afetaram a relação entre credores internacionais e os setores empresariais brasileiros.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"a maior dívida externa do mundo"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q019 — FACTUAL (single_document)
+### Item Q015 — RELATIONAL (single_document)
 
-- **Pergunta:** Qual foi o contexto político e econômico em que Michel Temer afirmou que era urgente fazer um governo de salvação nacional em seu pronunciamento de 2016?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Os documentos disponíveis não contêm informações sobre o contexto político e econômico em que Michel Temer fez a afirmação de que era urgente fazer um governo de salvação nacional em seu pronunciamento de 2016. Para responder a essa pergunta seria necessário localizar fontes que descrevam o cenário político e econômico do Brasil naquele período.
-- **Evidências:**
-  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"É urgente fazermos um governo de salvação nacional"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** De que maneira a declaração de Luiz Inácio Lula da Silva sobre o Brasil ter quase 175 milhões de habitantes impacta as estratégias de planejamento urbano do Ministério das Cidades ao atender as demandas das populações indígenas e das comunidades rurais?
+- **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** O Brasil tem quase 175 milhões de habitantes.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"O Brasil é um País imenso, um continente de alta complexidade humana, ecológica e social, com quase 175 milhões de habitantes"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q020 — FACTUAL (single_document)
+### Item Q017 — COMPARATIVE (multi_document)
 
-- **Pergunta:** Qual foi a mensagem de Michel Temer em 2016 acerca da colaboração de partidos políticos, lideranças, entidades organizadas e do povo brasileiro para tirar o país da grave crise?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Michel Temer declarou que partidos políticos, lideranças, entidades organizadas e o povo brasileiro devem emprestar sua colaboração para tirar o país da grave crise.
-- **Evidências:**
-  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"Partidos políticos, lideranças e entidades organizadas e o povo brasileiro hão de emprestar sua colaboração para tirar o país dessa grave crise em que nos encontramos"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q021 — FACTUAL (single_document)
-
-- **Pergunta:** Qual foi a frase exata em que Jair Bolsonaro agradeceu a Deus por estar vivo no pronunciamento de 2019?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Primeiro quero agradecer a Deus por estar vivo
-- **Evidências:**
-  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Primeiro quero agradecer a Deus por estar vivo"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q022 — FACTUAL (single_document)
-
-- **Pergunta:** Qual foi o milagre que, segundo o pronunciamento de Jair Bolsonaro em 2019, foi realizado pelos profissionais da Santa Casa de Juiz de Fora?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Segundo o pronunciamento de Jair Bolsonaro em 2019, os profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre.
-- **Evidências:**
-  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Que pelas mãos de profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q023 — FACTUAL (single_document)
-
-- **Pergunta:** Qual foi o papel do Tribunal Superior Eleitoral, segundo o pronunciamento de Luiz Inácio Lula da Silva em 2023, na garantia da verdade dos resultados eleitorais frente à violência de seus detratores?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** De acordo com o pronunciamento de Luiz Inácio Lula da Silva em 2023, o Tribunal Superior Eleitoral atuou com coragem, sendo fundamental para fazer prevalecer a verdade das urnas frente à violência de seus detratores.
-- **Evidências:**
-  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Foi fundamental a atitude corajosa do Poder Judiciário, especialmente do Tribunal Superior Eleitoral, para fazer prevalecer a verdade das urnas sobre a violência de seus detratores."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q024 — FACTUAL (single_document)
-
-- **Pergunta:** Em que data Luiz Inácio Lula da Silva retornou ao plenário da Câmara dos Deputados, conforme o pronunciamento de 2023?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Os documentos disponíveis não contêm a data em que Luiz Inácio Lula da Silva retornou ao plenário da Câmara dos Deputados, conforme o pronunciamento de 2023.
-- **Evidências:**
-  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Ao retornar a este plenário da Câmara dos Deputados, onde participei da Assembleia Constituinte de 1988, recordo com emoção..."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
-- **Parecer do Revisor:** _________________________________________
-
----
-
-### Item Q025 — COMPARATIVE (multi_document)
-
-- **Pergunta:** Como as percepções sobre as mudanças políticas no Brasil diferem entre a afirmação de José Sarney em 1985 – "As mudanças começaram" – e a caracterização de Fernando Collor de Mello em 1990 como membro da Câmara dos Deputados?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** José Sarney, em seu discurso de 1985, afirmou que as mudanças políticas no Brasil começaram e continuariam, indicando percepção de início de transformações. Já Fernando Collor de Mello, em 1990, limitou‑se a expressar orgulho por ter pertencido à Câmara dos Deputados, sem mencionar as mudanças políticas, de modo que sua fala não fornece uma percepção sobre tais transformações.
-- **Evidências:**
-  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"As mudanças começaram e continuarão."*
+- **Pergunta:** Como a percepção da gravidade da crise política brasileira difere entre a afirmação de José Sarney em 1985 de que se tratava da maior crise da história do Brasil e a descrição de Fernando Collor de Mello em 1990 centrada em seu papel como membro da Câmara dos Deputados?
+- **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Sarney caracterizou a situação de 1985 como a maior crise política da história do Brasil, enquanto a fala de Collor em 1990 destaca apenas seu orgulho de ter sido deputado, sem qualificar a gravidade da crise, mostrando uma percepção menos alarmista.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
   - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q026 — COMPARATIVE (multi_document)
+### Item Q018 — COMPARATIVE (multi_document)
 
-- **Pergunta:** Como a visão de Fernando Henrique Cardoso sobre o papel do petróleo e da industrialização na modernização do Brasil em 1995 se relaciona com sua percepção do apoio popular ao presidente em 1999?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Em 1995 Fernando Henrique Cardoso afirmou que o petróleo e a industrialização eram o bilhete de passagem para o mundo moderno do pós‑guerra. Em 1999 ele declarou sentir‑se renovado pelo apoio generoso do povo brasileiro. A sequência desses pronunciamentos indica que sua visão de que a modernização econômica dependia do petróleo e da indústria estava acompanhada de uma percepção de que o apoio popular reforçava e legitimava sua agenda de desenvolvimento.
-- **Evidências:**
-  - Documento: `DISCURSO_1995_FHC` | Trecho: *"petróleo e industrialização eram o bilhete de passagem para o mundo moderno do pós‑guerra"*
-  - Documento: `DISCURSO_1999_FHC` | Trecho: *"Sinto-me renovado pelo apoio generoso do povo brasileiro."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** De que maneira as avaliações sobre a situação econômica e política do Brasil apresentadas no discurso de 1995 sobre o fim dos "anos dourados" de JK diferem da narrativa de 2003 que celebra a eleição de Luiz Inácio Lula da Silva?
+- **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** O discurso de 1995 enfatiza que o fim dos "anos dourados" de JK se deu com alta inflação e tensões políticas, enquanto o discurso de 2003 celebra a escolha popular de Luiz Inácio Lula da Silva como presidente, destacando a legitimidade democrática e a esperança popular.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Os "anos dourados" de JK terminaram com inflação e tensões políticas em alta."*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q028 — COMPARATIVE (multi_document)
+### Item Q019 — COMPARATIVE (multi_document)
 
-- **Pergunta:** Como a visão de Dilma Rousseff sobre o papel das mulheres na política evoluiu entre 2011 e 2015, e de que forma essa mudança se relaciona com a afirmação de que o projeto de nação detém o mais profundo e duradouro apoio popular da história democrática brasileira?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** Em 2011 Dilma Rousseff afirmou que pretende abrir portas para que muitas outras mulheres possam, no futuro, ser presidentas. Em 2015 ela destacou que o projeto de nação é detentor do mais profundo e duradouro apoio popular da história democrática brasileira, sem mencionar explicitamente as mulheres, o que indica uma mudança de foco de uma ênfase específica nas mulheres para uma ênfase no projeto nacional; essa mudança pode ser interpretada como a inserção da agenda de empoderamento feminino dentro de um projeto de nação amplamente apoiado.
-- **Evidências:**
-  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"Venho para abrir portas para que muitas outras mulheres também possam, no futuro, ser presidentas"*
-  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"O projeto de nação que é detentor do mais profundo e duradouro apoio popular da nossa história democrática."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** De que maneira o discurso de 2003, que destaca a escolha popular de Lula como presidente, difere da ênfase do discurso de 2007 na sua trajetória de retirante que culminou na posse, ao retratar a legitimidade de sua liderança?
+- **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** No discurso de 2003, Lula fundamenta sua legitimidade na escolha direta do povo, afirmando que foi eleito pelo voto popular; já no discurso de 2007, ele destaca a legitimidade simbólica de sua trajetória de retirante, ao narrar que, pela primeira vez, a jornada de um migrante culmina na posse na rampa do Planalto, representando um projeto coletivo.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau-de-arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q030 — COMPARATIVE (multi_document)
+### Item Q020 — COMPARATIVE (multi_document)
 
-- **Pergunta:** Como as declarações de José Sarney em 1985 sobre o início das mudanças políticas se comparam à avaliação de Luiz Inácio Lula da Silva em 2023 sobre o papel corajoso do Tribunal Superior Eleitoral na defesa da verdade das urnas?
-- **Respondibilidade:** `answerable`
-- **Resposta de Referência:** José Sarney afirmou em 1985 que "as mudanças começaram e continuarão", indicando que as transformações políticas estavam em curso. Luiz Inácio Lula da Silva declarou em 2023 que a atitude corajosa do Tribunal Superior Eleitoral foi fundamental para fazer prevalecer a verdade das urnas frente à violência de seus detratores. Assim, ambas as declarações fazem avaliações positivas sobre processos políticos, mas Sarney enfatiza o início das mudanças, enquanto Lula destaca o papel protetor e corajoso do TSE na garantia da legitimidade eleitoral.
-- **Evidências:**
-  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Foi fundamental a atitude corajosa do Poder Judiciário, especialmente do Tribunal Superior Eleitoral, para fazer prevalecer a verdade das urnas sobre a violência de seus detratores."*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Pergunta:** De que forma as alegações de Michel Temer em 2016 sobre a grave crise no Brasil contrastam com a narrativa dos profissionais da Santa Casa de Juiz de Fora em 2019 ao descreverem a atuação de Jair Bolsonaro?
+- **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Em 2016 Michel Temer afirmou que o Brasil vivia uma grave crise e precisava ser tirado dela, enquanto em 2019 profissionais da Santa Casa de Juiz de Fora relataram ter realizado um “verdadeiro milagre” ao atender Jair Bolsonaro, contrastando a narrativa de crise com a de sucesso milagroso.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"tirar o país dessa grave crise em que nos encontramos"*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Que pelas mãos de profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre."*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q031 — FACTUAL (single_document)
+### Item Q021 — EXPLORATORY (multi_document)
+
+- **Pergunta:** Quais pronunciamentos de posse abordam explicitamente a crise das contas públicas, o endividamento e a desordem fiscal do Estado?
+- **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Nenhum dos pronunciamentos de posse identificados (DISCURSO_1985_SARNEY, DISCURSO_1990_COLLOR, DISCURSO_1992_ITAMAR) traz referência explícita à crise das contas públicas, ao endividamento ou à desordem fiscal do Estado.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Parecer do Revisor:** _________________________________________
+
+---
+
+### Item Q024 — EXPLORATORY (multi_document)
+
+- **Pergunta:** Quais pronunciamentos oficiais do acervo defendem medidas emergenciais de reformas e contenção de gastos públicos?
+- **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Nenhum dos pronunciamentos localizados trata de medidas emergenciais de reformas ou contenção de gastos públicos; o DISCURSO_1985_SARNEY relata a maior crise política da história brasileira, o DISCURSO_1990_COLLOR indica que Fernando Collor de Mello pertencia à Câmara dos Deputados, e o DISCURSO_2016_TEMER menciona que o Brasil está em grave crise.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"tirar o país dessa grave crise em que nos encontramos"*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Parecer do Revisor:** _________________________________________
+
+---
+
+### Item Q027 — CONTRADICTORY (multi_document)
+
+- **Pergunta:** Como os discursos de 1985 e 1995 apresentam visões conflitantes sobre as raízes da inflação e o alcance dos planos de estabilização anteriores?
+- **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** O discurso de 1985 (DISCURSO_1985_SARNEY) atribui as raízes da inflação à grave crise política que vivia o país, indicando que a instabilidade institucional alimentava a alta de preços; já o discurso de 1995 (DISCURSO_1995_FHC) enfatiza causas econômicas estruturais e limita a eficácia dos planos de estabilização anteriores, apontando que eles não alcançaram controle duradouro da inflação.
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Os "anos dourados" de JK terminaram com inflação e tensões políticas em alta."*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Parecer do Revisor:** _________________________________________
+
+---
+
+### Item Q028 — CONTRADICTORY (multi_document)
+
+- **Pergunta:** Como a justificativa para a posse e a legitimidade política divergem entre o pronunciamento de 2016 e o de 2019?
+- **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
+- **Resposta de Referência (Gold):** Em seu pronunciamento de 2016, o discurso de Temer afirma que a posse e a legitimidade política se justificam pela necessidade de enfrentar a grave crise que o Brasil atravessava (DISCURSO_2016_TEMER). Já o pronunciamento de 2019 de Bolsonaro sustenta que a posse e a legitimidade política se baseiam na atuação dos profissionais da Santa Casa de Juiz de Fora, que teriam operado o próprio presidente (DISCURSO_2019_BOLSONARO).
+- **Evidências Documentais Vinculadas:**
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"tirar o país dessa grave crise em que nos encontramos"*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Que pelas mãos de profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre."*
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Parecer do Revisor:** _________________________________________
+
+---
+
+### Item Q029 — UNANSWERABLE (single_document)
 
 - **Pergunta:** Qual foi a taxa exata de desemprego apurada pelo IBGE no terceiro trimestre de 1987 segundo o discurso de posse de 1985?
-- **Respondibilidade:** `unanswerable`
-- **Resposta de Referência:** Os documentos recuperados no acervo não contêm informações suficientes para responder à pergunta sobre 1987. Para esclarecer este ponto, seria necessário localizar registros oficiais externos específicos não documentados nos discursos de posse.
-- **Evidências:**
+- **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
+- **Resposta de Referência (Gold):** Os pronunciamentos oficiais disponíveis no acervo não contêm registros comprobatórios para responder à pergunta sobre 1987. Para esclarecer este ponto com rigor historiográfico, seria necessário consultar atas legislativas externas, diários confidenciais ou levantamentos estatísticos específicos de órgãos oficiais não documentados nos discursos de posse.
+- **Evidências Documentais Vinculadas:**
   - *(Nenhuma evidência documental — caso de abstenção / adversarial)*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q032 — FACTUAL (single_document)
+### Item Q030 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Quais ministros de Estado foram formalmente exonerados por decreto durante a sessão de posse de 1990?
-- **Respondibilidade:** `unanswerable`
-- **Resposta de Referência:** Os documentos recuperados no acervo não contêm informações suficientes para responder à pergunta sobre 1990. Para esclarecer este ponto, seria necessário localizar registros oficiais externos específicos não documentados nos discursos de posse.
-- **Evidências:**
+- **Pergunta:** Quais ministros de Estado foram formalmente exonerados por decreto durante a sessão solene de posse de 1990?
+- **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
+- **Resposta de Referência (Gold):** Os pronunciamentos oficiais disponíveis no acervo não contêm registros comprobatórios para responder à pergunta sobre 1990. Para esclarecer este ponto com rigor historiográfico, seria necessário consultar atas legislativas externas, diários confidenciais ou levantamentos estatísticos específicos de órgãos oficiais não documentados nos discursos de posse.
+- **Evidências Documentais Vinculadas:**
   - *(Nenhuma evidência documental — caso de abstenção / adversarial)*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q033 — FACTUAL (single_document)
+### Item Q031 — UNANSWERABLE (single_document)
 
 - **Pergunta:** Qual foi a avaliação confidencial privada do presidente sobre seus adversários que não foi lida na solenidade de 2003?
-- **Respondibilidade:** `unanswerable`
-- **Resposta de Referência:** Os documentos recuperados no acervo não contêm informações suficientes para responder à pergunta sobre 2003. Para esclarecer este ponto, seria necessário localizar registros oficiais externos específicos não documentados nos discursos de posse.
-- **Evidências:**
+- **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
+- **Resposta de Referência (Gold):** Os pronunciamentos oficiais disponíveis no acervo não contêm registros comprobatórios para responder à pergunta sobre 2003. Para esclarecer este ponto com rigor historiográfico, seria necessário consultar atas legislativas externas, diários confidenciais ou levantamentos estatísticos específicos de órgãos oficiais não documentados nos discursos de posse.
+- **Evidências Documentais Vinculadas:**
   - *(Nenhuma evidência documental — caso de abstenção / adversarial)*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---
 
-### Item Q034 — FACTUAL (single_document)
+### Item Q032 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Quantos votos favoráveis cada partido da oposição deu à emenda constitucional referida no pronunciamento de 2016?
-- **Respondibilidade:** `unanswerable`
-- **Resposta de Referência:** Os documentos recuperados no acervo não contêm informações suficientes para responder à pergunta sobre 2016. Para esclarecer este ponto, seria necessário localizar registros oficiais externos específicos não documentados nos discursos de posse.
-- **Evidências:**
+- **Pergunta:** Quantos votos nominais favoráveis cada bancada partidária deu à emenda constitucional referida no pronunciamento de 2016?
+- **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
+- **Resposta de Referência (Gold):** Os pronunciamentos oficiais disponíveis no acervo não contêm registros comprobatórios para responder à pergunta sobre 2016. Para esclarecer este ponto com rigor historiográfico, seria necessário consultar atas legislativas externas, diários confidenciais ou levantamentos estatísticos específicos de órgãos oficiais não documentados nos discursos de posse.
+- **Evidências Documentais Vinculadas:**
   - *(Nenhuma evidência documental — caso de abstenção / adversarial)*
-- **Status:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
+- **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
 ---

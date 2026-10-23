@@ -1,17 +1,20 @@
+"""Chunker contextual baseado em janelas de sentenças com rastreamento de offsets."""
 import re
 from typing import List, Dict, Any
 
 
-class SentenceWindowChunker:
-    def __init__(self, target_chars: int = 1200, overlap_chars: int = 200, min_chars: int = 300):
+class ContextualSentenceChunker:
+    """Segmentador em janelas amplas de sentenças, preservando contexto temático e offsets."""
+
+    def __init__(self, target_chars: int = 1600, overlap_chars: int = 300, min_chars: int = 400):
         self.target_chars = target_chars
         self.overlap_chars = overlap_chars
         self.min_chars = min_chars
 
     def split_into_sentences(self, text: str) -> List[Dict[str, Any]]:
-        """Divide o texto em sentenças preservando os offsets globais (start, end)."""
+        """Divide o texto em sentenças preservando os offsets originais globais."""
         sentences = []
-        # Padrão para detecção de término de sentença preservando pontuações comuns
+        # Captura término de sentença preservando pontuações
         pattern = re.compile(r'([^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$)')
         for match in pattern.finditer(text):
             sentence_text = match.group().strip()
@@ -24,7 +27,7 @@ class SentenceWindowChunker:
         return sentences
 
     def chunk_document(self, doc_id: str, text: str, page: int = 1) -> List[Dict[str, Any]]:
-        """Gera trechos preservando contexto, sentenças inteiras e offsets de caracteres."""
+        """Gera trechos preservando contexto suficiente para evitar perguntas tautológicas."""
         sentences = self.split_into_sentences(text)
         if not sentences:
             return []
@@ -61,11 +64,10 @@ class SentenceWindowChunker:
                 })
                 chunk_idx += 1
 
-                # Calcular overlap para a próxima janela
                 if i == len(sentences) - 1:
                     break
 
-                # Retroceder sentenças para manter o overlap desejado
+                # Overlap controlado
                 overlap_acc = 0
                 backtrack_count = 0
                 for back_sent in reversed(current_sentences):

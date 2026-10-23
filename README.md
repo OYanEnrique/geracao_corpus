@@ -84,17 +84,26 @@ geracao_corpus/
 │   ├── question_generation.md
 │   ├── answer_generation.md
 │   └── verification.md
-├── scripts/                           # Pipeline sequencial executável
+├── scripts/                           # Entrypoints CLI enxutos (importam de src/)
 │   ├── 01_prepare_documents.py        # Limpeza e chunking sensível a sentenças
 │   ├── 02_extract_evidences.py        # Extração de unidades de evidência (LLM A)
-│   ├── 03_generate_questions.py       # Geração híbrida (factual, multi-doc, abstenção)
-│   ├── 04_generate_answers.py         # Respostas de referência minimamente suficientes
+│   ├── 03_generate_questions.py       # Geração equilibrada (8 categorias do guia)
+│   ├── 04_generate_answers.py         # Respostas de referência anti-tautológicas
 │   ├── 05_auto_validate.py            # Validação automática e auditoria cruzada (LLM B)
 │   ├── 06_human_review_export.py      # Exportação para análise qualitativa de historiadores
 │   ├── 07_build_gold_silver.py        # Separação balanceada e congelamento SHA256
-│   └── utils/                         # Chunker, limpador de OCR, validador de schema e LLM client
+│   └── run_pipeline.py                # Execução completa de ponta a ponta
+├── src/                               # 📁 NÚCLEO PROFISSIONAL DO PROJETO
+│   ├── preparation/                   # Módulos de limpeza e ContextualSentenceChunker
+│   ├── extraction/                    # Extrator de evidências substantivas
+│   ├── generation/                    # QuestionGenerator e AnswerGenerator
+│   ├── validation/                    # SchemaValidator e AutoValidator (LLM B)
+│   ├── evaluation/                    # HumanReviewExport e BenchmarkBuilder
+│   ├── utils/                         # UnifiedLLMClient e Config loaders
+│   └── pipeline.py                    # Orquestrador programático do fluxo
 ├── versions/
-│   └── v0.1_pilot1/                   # Benchmark imutável com checksums_and_manifest.json
+│   ├── v0.1_pilot1/                   # Versão inicial do piloto
+│   └── v0.2_balanced/                 # Benchmark balanceado (12.5% por categoria) com hash SHA256
 ├── .env.example                       # Modelo de variáveis de ambiente
 ├── relatorio.md                       # Apresentação executiva em formato de slides
 └── README.md                          # Documentação do projeto

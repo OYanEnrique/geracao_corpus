@@ -21,7 +21,8 @@
         "relational",
         "comparative",
         "exploratory",
-        "contradictory"
+        "contradictory",
+        "unanswerable"
       ],
       "description": "Categoria principal da pergunta"
     },
