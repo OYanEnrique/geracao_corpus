@@ -1,18 +1,59 @@
-# Configuração dos Modelos via Groq
+# Configuração dos Comitês de Modelos (3 Maiores na Geração + 3 Menores na Audição)
 
-llm_generator: # LLM A (Gerador principal)
+# Comitê de Geração (3 Modelos Maiores)
+generation_committee:
+  - id: "gen_groq_120b"
+    name: "GPT-OSS 120B (Groq)"
+    provider: "groq"
+    model: "openai/gpt-oss-120b"
+    temperature: 0.2
+    max_tokens: 800
+  - id: "gen_or_llama70b"
+    name: "Llama 3.3 70B (OpenRouter)"
+    provider: "openrouter"
+    model: "meta-llama/llama-3.3-70b-instruct"
+    temperature: 0.2
+    max_tokens: 800
+  - id: "gen_or_qwen72b"
+    name: "Qwen 2.5 72B (OpenRouter)"
+    provider: "openrouter"
+    model: "qwen/qwen-2.5-72b-instruct"
+    temperature: 0.2
+    max_tokens: 800
+
+# Comitê de Audição / Auditoria (3 Modelos Menores)
+auditing_committee:
+  - id: "audit_groq_20b"
+    name: "GPT-OSS 20B (Groq)"
+    provider: "groq"
+    model: "openai/gpt-oss-20b"
+    temperature: 0.0
+    max_tokens: 500
+  - id: "audit_or_llama8b"
+    name: "Llama 3.1 8B (OpenRouter)"
+    provider: "openrouter"
+    model: "meta-llama/llama-3.1-8b-instruct"
+    temperature: 0.0
+    max_tokens: 500
+  - id: "audit_or_qwen7b"
+    name: "Qwen 2.5 7B (OpenRouter)"
+    provider: "openrouter"
+    model: "qwen/qwen-2.5-7b-instruct"
+    temperature: 0.0
+    max_tokens: 500
+
+# Chaves individuais para fallback
+llm_generator:
   provider: "groq"
   model: "openai/gpt-oss-120b"
   temperature: 0.2
   max_tokens: 800
-  timeout: 60
 
-llm_verifier: # LLM B (Auditor independente de sustentação documental)
+llm_verifier:
   provider: "groq"
   model: "openai/gpt-oss-20b"
   temperature: 0.0
   max_tokens: 500
-  timeout: 60
 
 mock_mode:
   enabled_if_no_keys: false

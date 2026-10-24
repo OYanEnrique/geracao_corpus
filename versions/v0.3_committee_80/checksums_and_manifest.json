@@ -1,0 +1,28 @@
+{
+  "version": "v0.3_committee_80",
+  "questions_gold_sha256": "1448f130a2e2e4b0031db3f399ef4e58e338e691ba84e5bb9cd1eda104151a01",
+  "questions_silver_sha256": "b5e540feceb6fb5a8d6d59dcfe4ac5468829a10d09924124a0b88aa99ab6c18b",
+  "gold_items_count": 80,
+  "silver_items_count": 80,
+  "gold_category_distribution": {
+    "factual": 10,
+    "temporal": 10,
+    "descriptive": 10,
+    "relational": 10,
+    "comparative": 10,
+    "exploratory": 10,
+    "contradictory": 10,
+    "unanswerable": 10
+  },
+  "gold_category_percentages": {
+    "factual": "12.5%",
+    "temporal": "12.5%",
+    "descriptive": "12.5%",
+    "relational": "12.5%",
+    "comparative": "12.5%",
+    "exploratory": "12.5%",
+    "contradictory": "12.5%",
+    "unanswerable": "12.5%"
+  },
+  "frozen_at": "2026-10-22T23:35:00Z"
+}

@@ -1,0 +1,38 @@
+{
+  "total_approved": 80,
+  "total_rejected": 25,
+  "total_evaluated": 105,
+  "approval_rate": 0.762,
+  "target_per_category": 10,
+  "counts_by_category": {
+    "factual": 10,
+    "temporal": 10,
+    "descriptive": 10,
+    "relational": 10,
+    "comparative": 10,
+    "exploratory": 10,
+    "contradictory": 10,
+    "unanswerable": 10
+  },
+  "percentages_by_category": {
+    "factual": "12.5%",
+    "temporal": "12.5%",
+    "descriptive": "12.5%",
+    "relational": "12.5%",
+    "comparative": "12.5%",
+    "exploratory": "12.5%",
+    "contradictory": "12.5%",
+    "unanswerable": "12.5%"
+  },
+  "generation_committee": [
+    "GPT-OSS 120B (Groq)",
+    "Llama 3.3 70B (OpenRouter)",
+    "Qwen 2.5 72B (OpenRouter)"
+  ],
+  "auditing_committee": [
+    "GPT-OSS 20B (Groq)",
+    "Llama 3.1 8B (OpenRouter)",
+    "Qwen 2.5 7B (OpenRouter)"
+  ],
+  "gold_dataset_path": "corpus\\questions_gold.jsonl"
+}

@@ -7,7 +7,11 @@ from src.utils.llm_client import UnifiedLLMClient
 from src.utils.config import get_models_config
 
 
-def run_question_generation(target_per_category: int = 4) -> Dict[str, Any]:
+def run_question_generation(target_per_category: int = 10, use_committee: bool = True) -> Dict[str, Any]:
+    if use_committee:
+        from src.generation.committee_generator import run_committee_generation_loop
+        return run_committee_generation_loop(target_per_category=target_per_category)
+
     print(f"=== [Pipeline] Geração Equilibrada de Perguntas ({target_per_category} por categoria) ===")
 
     models_cfg = get_models_config()

@@ -14,7 +14,7 @@ def compute_sha256(file_path: Path) -> str:
     return h.hexdigest()
 
 
-def run_benchmark_builder(version_tag: str = "v0.2_balanced") -> Dict[str, Any]:
+def run_benchmark_builder(version_tag: str = "v0.3_committee_80") -> Dict[str, Any]:
     print(f"=== [Pipeline] Consolidação e Congelamento do Benchmark ({version_tag}) ===")
 
     input_file = Path("corpus/validated_approved.jsonl")
@@ -23,38 +23,15 @@ def run_benchmark_builder(version_tag: str = "v0.2_balanced") -> Dict[str, Any]:
         for line in f:
             items.append(json.loads(line))
 
-    # Agrupar itens por categoria primária
-    items_by_cat: Dict[str, List[Dict[str, Any]]] = {}
-    for it in items:
-        cat = it["primary_type"]
-        if cat not in items_by_cat:
-            items_by_cat[cat] = []
-        items_by_cat[cat].append(it)
-
+    # Todos os 80 itens aprovados pelos comitês compõem o Benchmark Gold Oficial
     gold_items: List[Dict[str, Any]] = []
-    silver_items: List[Dict[str, Any]] = []
-
-    # Selecionar itens balanceados para o Gold: 2 ou 3 itens por categoria para o Gold
-    # e o restante para o Silver (ou todos aprovados se for o conjunto final)
-    # Vamos colocar 2 itens por categoria no Gold oficial, e o restante no Silver!
-    gold_target_per_cat = 2
-
-    for cat, cat_items in items_by_cat.items():
-        g_selected = cat_items[:gold_target_per_cat]
-        s_selected = cat_items[gold_target_per_cat:]
-
-        for it in g_selected:
-            it_gold = dict(it)
-            it_gold["set"] = "gold"
-            it_gold["validation_status"] = "human_validated"
-            it_gold["validator_id"] = "historiador_especialista"
-            it_gold["validator_notes"] = "Auditado: ancoragem estrita e ausência de tautologia comprovadas."
-            gold_items.append(it_gold)
-
-        for it in s_selected:
-            it_silver = dict(it)
-            it_silver["set"] = "silver"
-            silver_items.append(it_silver)
+    for it in items:
+        it_gold = dict(it)
+        it_gold["set"] = "gold"
+        it_gold["validation_status"] = "auto_only"
+        it_gold["validator_id"] = "comite_auditor_3_modelos"
+        it_gold["validator_notes"] = f"Aprovado por comitê auditor de 3 modelos menores com rejeição ativa de tautologia: {it.get('auditing_metadata', {}).get('verdict_summary', 'Aprovado')}"
+        gold_items.append(it_gold)
 
     gold_path = Path("corpus/questions_gold.jsonl")
     silver_path = Path("corpus/questions_silver.jsonl")
@@ -62,6 +39,12 @@ def run_benchmark_builder(version_tag: str = "v0.2_balanced") -> Dict[str, Any]:
     with open(gold_path, "w", encoding="utf-8") as f:
         for it in gold_items:
             f.write(json.dumps(it, ensure_ascii=False) + "\n")
+
+    silver_items: List[Dict[str, Any]] = []
+    for it in gold_items:
+        it_silver = dict(it)
+        it_silver["set"] = "silver"
+        silver_items.append(it_silver)
 
     with open(silver_path, "w", encoding="utf-8") as f:
         for it in silver_items:
