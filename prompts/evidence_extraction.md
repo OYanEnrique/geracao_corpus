@@ -44,6 +44,8 @@ Valores válidos para `evidence_type`: `"explicit"`, `"implicit"`, `"ambiguous"`
 - **Data do documento:** {date}
 - **Autor/Presidente:** {author}
 
+> **IMPORTANTE:** Mesmo que o trecho esteja em inglês, a `claim` e as `notes` devem ser escritas em **PORTUGUÊS BRASILEIRO (pt-BR)**. Mantenha nomes próprios, siglas e citações literais no idioma original.
+
 ### Texto do trecho:
 ```text
 {text}

@@ -49,19 +49,27 @@ def run_preparation(raw_dir: str = "data/raw/piloto_1", output_dir: str = "corpu
         with open(file_path, "r", encoding="utf-8") as tf:
             raw_text = tf.read()
 
-        clean_text, stats = TextCleaner.clean(raw_text)
+        # Separar metadados tabulados embutidos se presentes (ex.: piloto_2)
+        if "\t" in raw_text[:200]:
+            parts = raw_text.split("\t", 2)
+            speech_body = parts[2] if len(parts) == 3 else raw_text
+        else:
+            speech_body = raw_text
+
+        clean_text, stats = TextCleaner.clean(speech_body)
         quality = TextCleaner.estimate_quality(clean_text)
 
+        is_piloto2 = "piloto_2" in str(raw_dir)
         doc_record = {
             "document_id": doc_id,
-            "collection": "discursos_presidenciais_pos_redemocratizacao",
+            "collection": "us_presidential_inaugural_addresses" if is_piloto2 else "discursos_presidenciais_pos_redemocratizacao",
             "doc_type": row["tipo_discurso"],
-            "title": f"Pronunciamento Presidencial de {row['presidente']} ({row['ano']})",
+            "title": f"Inaugural Address of {row['presidente']} ({row['ano']})" if is_piloto2 else f"Pronunciamento Presidencial de {row['presidente']} ({row['ano']})",
             "date": row["ano"],
             "author": row["presidente"],
             "page_count": 1,
             "ocr_quality_overall": quality,
-            "archival_context": "Discursos de posse e pronunciamentos de chefes de Estado (1985-2023)",
+            "archival_context": "US Presidential Inaugural Addresses (1789-2013)" if is_piloto2 else "Discursos de posse e pronunciamentos de chefes de Estado (1985-2023)",
             "file_ref": str(file_path.as_posix()),
             "metadata": {
                 "caso_limitrofe": row.get("caso_limitrofe") == "True",

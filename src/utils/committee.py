@@ -83,9 +83,11 @@ Formule uma indagação investigativa profunda sobre os fatos documentais descri
 
 {context_prompt}
 
+IMPORTANTE: Formule a pergunta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), independentemente do idioma do documento-fonte.
+
 Retorne estritamente um JSON:
 {{
-  "candidate_question": "texto completo da pergunta formulada"
+  "candidate_question": "texto completo da pergunta formulada em português brasileiro"
 }}"""
             res = client.call_json(prompt)
             q_text = res.get("candidate_question", "").strip() if isinstance(res, dict) else ""
@@ -200,11 +202,13 @@ DIRETRIZES FUNDAMENTAIS ANTI-TAUTOLOGIA:
 3. Se a evidência contiver dados exatos, cite-os com precisão.
 4. Redija em 2 a 3 frases afirmativas, claras e objetivas.
 
+IMPORTANTE: Forneça a resposta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que as evidências estejam em inglês ou outro idioma. Não traduza os nomes próprios, apenas o texto da resposta.
+
 Retorne estritamente um JSON:
 {{
-  "reference_answer": "resposta substantiva fundamentada",
+  "reference_answer": "resposta substantiva fundamentada em português brasileiro",
   "answer_claims": [
-    {{"claim_text": "afirmação factual substantiva 1", "supporting_evidence_ids": {json.dumps(req_ids)}, "support_level": "supported"}}
+    {{"claim_text": "afirmação factual substantiva 1 em português brasileiro", "supporting_evidence_ids": {json.dumps(req_ids)}, "support_level": "supported"}}
   ]
 }}"""
         # Utiliza o modelo Llama 3.3 70B ou GPT-OSS 120B para redigir a resposta

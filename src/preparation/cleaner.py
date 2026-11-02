@@ -11,6 +11,11 @@ class TextCleaner:
         
         # 1. Normalização de quebras de linha
         normalized = text.replace("\r\n", "\n").replace("\r", "\n")
+
+        # 1b. Decodificação de entidades HTML e remoção de tags residuais
+        import html
+        normalized = html.unescape(normalized)
+        normalized = re.sub(r"</?[a-zA-Z0-9]+[^>]*>", "", normalized)
         
         # 2. Remoção de hifenização de quebra de linha (ex.: pa- \n lavra)
         normalized = re.sub(r"(\w+)-\s*\n\s*(\w+)", r"\1\2", normalized)

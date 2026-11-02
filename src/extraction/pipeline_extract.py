@@ -1,7 +1,19 @@
 """Pipeline de extração atômica de evidências documentais ricas."""
+import sys
 import json
 from pathlib import Path
 from typing import Dict, Any, List
+
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+if hasattr(sys.stderr, "reconfigure"):
+    try:
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 from src.utils.llm_client import UnifiedLLMClient
 from src.utils.config import get_models_config
@@ -46,74 +58,78 @@ def run_evidence_extraction(sample_chunks_per_doc: int = 1) -> Dict[str, Any]:
 
     print(f"Extraindo evidências substantivas dos {len(chunks_by_doc)} documentos...")
 
+    import concurrent.futures
+
+    tasks = []
     for doc_id, doc_chunks in chunks_by_doc.items():
         doc_meta = docs_map.get(doc_id, {})
-        # Seleciona trecho temático substantivo (pulando o vocativo cerimonial inicial)
-        selected_indices = []
-        if len(doc_chunks) > 1:
-            selected_indices.append(1)
-        else:
-            selected_indices.append(0)
+        # Seleciona trecho temático substantivo (pulando o vocativo cerimonial inicial se possível)
+        chunk = doc_chunks[min(1, len(doc_chunks) - 1)]
+        tasks.append((doc_meta, chunk))
 
-        for idx in selected_indices:
-            chunk = doc_chunks[idx]
-            prompt = (
-                prompt_template
-                .replace("{document_id}", str(chunk["document_id"]))
-                .replace("{chunk_id}", str(chunk["chunk_id"]))
-                .replace("{page}", str(chunk["page"]))
-                .replace("{date}", str(doc_meta.get("date", "Desconhecido")))
-                .replace("{author}", str(doc_meta.get("author", "Desconhecido")))
-                .replace("{text}", str(chunk["text"]))
-            )
+    def extract_single(meta, chunk):
+        p = (
+            prompt_template
+            .replace("{document_id}", str(chunk["document_id"]))
+            .replace("{chunk_id}", str(chunk["chunk_id"]))
+            .replace("{page}", str(chunk["page"]))
+            .replace("{date}", str(meta.get("date", "Desconhecido")))
+            .replace("{author}", str(meta.get("author", "Desconhecido")))
+            .replace("{text}", str(chunk["text"]))
+        )
+        p += "\n\nIMPORTANTE: Extraia APENAS afirmações com dados, medidas concretas, diagnósticos socioeconômicos ou fatos específicos. Ignore saudações e frases genéricas."
+        res = llm.call_json(p)
+        if not isinstance(res, list):
+            res = [res] if isinstance(res, dict) else []
+        return chunk, meta, res
 
-            # Adicionar diretriz anti-tautologia
-            prompt += "\n\nIMPORTANTE: Extraia APENAS afirmações com dados, medidas concretas, diagnósticos socioeconômicos ou fatos específicos. Ignore saudações e frases genéricas."
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+        futures = [executor.submit(extract_single, meta, chunk) for meta, chunk in tasks]
+        done_count = 0
+        total_tasks = len(tasks)
+        for fut in concurrent.futures.as_completed(futures):
+            done_count += 1
+            if done_count % 10 == 0 or done_count == total_tasks:
+                print(f"  Progresso extração: {done_count}/{total_tasks} documentos processados...")
+            try:
+                chunk, doc_meta, response = fut.result()
+                for item in response:
+                    if not isinstance(item, dict) or "claim" not in item:
+                        continue
+                    claim_text = item.get("claim", "").strip()
+                    if len(claim_text) < 25:
+                        continue
 
-            response = llm.call_json(prompt)
-            if not isinstance(response, list):
-                response = [response] if isinstance(response, dict) else []
+                    ev_id = f"E{evidence_counter:04d}"
+                    evidence_counter += 1
 
-            for item in response:
-                if not isinstance(item, dict) or "claim" not in item:
-                    continue
+                    evidence_record = {
+                        "evidence_id": ev_id,
+                        "document_id": chunk["document_id"],
+                        "chunk_id": chunk["chunk_id"],
+                        "page": chunk["page"],
+                        "char_start": chunk["char_start"],
+                        "char_end": chunk["char_end"],
+                        "text": item.get("evidence_span", chunk["text"][:200]),
+                        "claim": claim_text,
+                        "entities": item.get("entities", []) or [doc_meta.get("author", "Governo")],
+                        "dates": item.get("dates", []) or [str(doc_meta.get("date", "1789"))],
+                        "relations": item.get("relations", []),
+                        "evidence_type": item.get("evidence_type", "explicit"),
+                        "ocr_quality": chunk.get("ocr_quality", "good"),
+                        "notes": item.get("notes", "Extração substantiva") or "Extração substantiva"
+                    }
 
-                claim_text = item.get("claim", "").strip()
-                # Filtrar claims excessivamente curtas ou tautológicas
-                if len(claim_text) < 25:
-                    continue
-
-                ev_id = f"E{evidence_counter:04d}"
-                evidence_counter += 1
-
-                evidence_record = {
-                    "evidence_id": ev_id,
-                    "document_id": chunk["document_id"],
-                    "chunk_id": chunk["chunk_id"],
-                    "page": chunk["page"],
-                    "char_start": chunk["char_start"],
-                    "char_end": chunk["char_end"],
-                    "text": item.get("evidence_span", chunk["text"][:200]),
-                    "claim": claim_text,
-                    "entities": item.get("entities", []) or [doc_meta.get("author", "Governo")],
-                    "dates": item.get("dates", []) or [str(doc_meta.get("date", "1985"))],
-                    "relations": item.get("relations", []),
-                    "evidence_type": item.get("evidence_type", "explicit"),
-                    "ocr_quality": chunk.get("ocr_quality", "good"),
-                    "notes": item.get("notes", "Extração substantiva") or "Extração substantiva"
-                }
-
-                is_valid, errors = validator.validate("evidence", evidence_record)
-                if not is_valid:
-                    # Pequeno ajuste de saneamento se houver nulos
-                    if "notes" in evidence_record and evidence_record["notes"] is None:
-                        evidence_record["notes"] = ""
                     is_valid, errors = validator.validate("evidence", evidence_record)
+                    if not is_valid:
+                        if "notes" in evidence_record and evidence_record["notes"] is None:
+                            evidence_record["notes"] = ""
+                        is_valid, errors = validator.validate("evidence", evidence_record)
 
-                if is_valid:
-                    evidences_list.append(evidence_record)
-                else:
-                    print(f"  [Aviso Schema {ev_id}]: {errors}")
+                    if is_valid:
+                        evidences_list.append(evidence_record)
+            except Exception as e:
+                print(f"[Aviso Extração]: {e}")
 
     output_file = Path("corpus/evidences.jsonl")
     with open(output_file, "w", encoding="utf-8") as f:

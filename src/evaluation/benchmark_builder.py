@@ -1,5 +1,6 @@
 """Consolidador e congelador de versão do benchmark (Gold e Silver) com hash SHA256."""
 import json
+import time
 import hashlib
 from pathlib import Path
 import shutil
@@ -70,7 +71,7 @@ def run_benchmark_builder(version_tag: str = "v0.3_committee_80") -> Dict[str, A
         "silver_items_count": len(silver_items),
         "gold_category_distribution": gold_cat_counts,
         "gold_category_percentages": {cat: f"{(cnt/len(gold_items))*100:.1f}%" for cat, cnt in gold_cat_counts.items()},
-        "frozen_at": "2026-10-22T23:35:00Z"
+        "frozen_at": time.strftime("%Y-%m-%dT%H:%M:%SZ")
     }
 
     manifest_file = frozen_dir / "checksums_and_manifest.json"
