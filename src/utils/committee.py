@@ -78,8 +78,9 @@ class GenerationCommittee:
 Categoria da pergunta solicitada: {category.upper()}
 
 DIRETRIZ CENTRAL ANTI-TAUTOLOGIA:
-A pergunta NUNCA deve sugerir ou antecipar a resposta em seu próprio enunciado.
-Formule uma indagação investigativa profunda sobre os fatos documentais descritos abaixo.
+1. A pergunta NUNCA deve sugerir, espelhar ou antecipar a resposta em seu próprio enunciado.
+2. NUNCA cite na pergunta as próprias entidades, dados específicos ou conclusões que a resposta deve trazer.
+3. Formule uma indagação investigativa profunda sobre os fatos documentais descritos abaixo, permitindo que a resposta traga os dados novos.
 
 {context_prompt}
 
@@ -197,10 +198,11 @@ Evidências documentais autênticas:
 {chr(10).join(ev_summary)}
 
 DIRETRIZES FUNDAMENTAIS ANTI-TAUTOLOGIA:
-1. NUNCA comece a resposta papagueando ou repetindo a pergunta.
-2. Forneça DIRETAMENTE as informações substantivas (nomes, valores, instituições, datas, diagnósticos) comprovadas nas evidências.
-3. Se a evidência contiver dados exatos, cite-os com precisão.
-4. Redija em 2 a 3 frases afirmativas, claras e objetivas.
+1. NUNCA comece a resposta papagueando ou repetindo a pergunta (ex: NÃO inicie com "O presidente X indica Y como responsável...").
+2. NUNCA utilize frases como "De acordo com o discurso..." ou "No documento mencionado...". Inicie DIRETAMENTE pelo fato, entidade, dado numérico ou conclusão substantiva.
+3. Forneça DIRETAMENTE as informações substantivas (nomes, valores, instituições, datas, diagnósticos) comprovadas nas evidências.
+4. Se a evidência contiver dados exatos, cite-os com precisão.
+5. Redija em 2 a 3 frases afirmativas, claras e objetivas. Evite espelhar o vocabulário ou a sintaxe da pergunta.
 
 IMPORTANTE: Forneça a resposta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que as evidências estejam em inglês ou outro idioma. Não traduza os nomes próprios, apenas o texto da resposta.
 

@@ -1,0 +1,28 @@
+{
+  "version": "v0.5_piloto1_otimizado_80",
+  "questions_gold_sha256": "6fc39ac2c036db020ac10da7a4839ecbdb3f7956b0d11c88f9223a590fcf96f2",
+  "questions_silver_sha256": "dff88d429103cdab2e022eae5fe6995ace5a588aaaa4b3c3e71ac63a190ff5ce",
+  "gold_items_count": 80,
+  "silver_items_count": 80,
+  "gold_category_distribution": {
+    "factual": 10,
+    "temporal": 10,
+    "descriptive": 10,
+    "relational": 10,
+    "comparative": 10,
+    "exploratory": 10,
+    "contradictory": 10,
+    "unanswerable": 10
+  },
+  "gold_category_percentages": {
+    "factual": "12.5%",
+    "temporal": "12.5%",
+    "descriptive": "12.5%",
+    "relational": "12.5%",
+    "comparative": "12.5%",
+    "exploratory": "12.5%",
+    "contradictory": "12.5%",
+    "unanswerable": "12.5%"
+  },
+  "frozen_at": "2026-11-07T19:52:02Z"
+}

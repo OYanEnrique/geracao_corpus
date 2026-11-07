@@ -92,12 +92,12 @@ def run_committee_generation_loop(target_per_category: int = 10) -> Dict[str, An
     cat_counts = {c: 0 for c in categories}
     seen_questions = set()
 
-    # Detecção de corpus (Piloto 1 brasileiro vs Piloto 2 norte-americano)
-    is_us_corpus = any("US_INAU" in d_id for d_id in docs_map.keys())
-    corpus_version = "v0.4_piloto2_80" if is_us_corpus else "v0.3_committee_80"
+    # Detecção dinâmica dos metadados e versão do corpus
+    raw_collection = list(docs_map.values())[0].get("collection", "corpus_padrao") if docs_map else "corpus_padrao"
+    corpus_version = f"v_committee_80_{raw_collection}"
 
-    # Recuperação do Checkpoint específico
-    checkpoint_file = Path("corpus/committee_checkpoint_piloto2.jsonl") if is_us_corpus else Path("corpus/committee_checkpoint.jsonl")
+    # Recuperação do Checkpoint específico por coleção
+    checkpoint_file = Path(f"corpus/checkpoint_{raw_collection}.jsonl")
     if checkpoint_file.exists():
         with open(checkpoint_file, "r", encoding="utf-8") as f:
             for line in f:
@@ -112,109 +112,24 @@ def run_committee_generation_loop(target_per_category: int = 10) -> Dict[str, An
 
     total_q_counter = len(all_approved) + 1
 
-    if is_us_corpus:
-        # Configuração especializada para Piloto 2: Discursos Presidenciais dos EUA (1789-2013)
-        exploratory_themes = [
-            ("defesa da União Constitucional e combate ao separatismo", ["US_INAU_1789_WASHINGTON", "US_INAU_1829_JACKSON", "US_INAU_1861_LINCOLN"]),
-            ("superação de crises econômicas e recuperação produtiva", ["US_INAU_1933_ROOSEVELT_FRANKLIN", "US_INAU_1937_ROOSEVELT_FRANKLIN", "US_INAU_1981_REAGAN"]),
-            ("guerra, paz internacional, liberdade e segurança coletiva", ["US_INAU_1917_WILSON", "US_INAU_1953_EISENHOWER", "US_INAU_1961_KENNEDY"]),
-            ("limites dos poderes federais e prerrogativas dos Estados", ["US_INAU_1801_JEFFERSON", "US_INAU_1829_JACKSON", "US_INAU_1981_REAGAN"]),
-            ("direitos civis, reconciliação e igualdade de todos os cidadãos", ["US_INAU_1865_LINCOLN", "US_INAU_1965_JOHNSON", "US_INAU_2009_OBAMA"]),
-            ("comércio internacional, tarifas e prosperidade econômica", ["US_INAU_1889_HARRISON", "US_INAU_1897_MCKINLEY", "US_INAU_1993_CLINTON"]),
-            ("educação, progresso tecnológico e modernização", ["US_INAU_1881_GARFIELD", "US_INAU_1961_KENNEDY", "US_INAU_2009_OBAMA"]),
-            ("isolacionismo, neutralidade e não-intervenção em querelas externas", ["US_INAU_1789_WASHINGTON", "US_INAU_1801_JEFFERSON", "US_INAU_1821_MONROE"]),
-            ("defesa da democracia e resistência contra a tirania", ["US_INAU_1941_ROOSEVELT_FRANKLIN", "US_INAU_1949_TRUMAN", "US_INAU_1961_KENNEDY"]),
-            ("dever moral, providência divina e coesão nacional", ["US_INAU_1789_WASHINGTON", "US_INAU_1865_LINCOLN", "US_INAU_1977_CARTER"])
-        ]
+    # Detecção dinâmica dos documentos disponíveis para formulação de pares e temas transversais
+    available_doc_ids = [d for d in docs_map.keys() if d in ev_by_doc and len(ev_by_doc[d]) > 0]
+    if not available_doc_ids:
+        available_doc_ids = list(docs_map.keys())
 
-        comp_pairs = [
-            ("US_INAU_1789_WASHINGTON", "US_INAU_1797_ADAMS_JOHN"),
-            ("US_INAU_1801_JEFFERSON", "US_INAU_1809_MADISON"),
-            ("US_INAU_1829_JACKSON", "US_INAU_1837_VAN_BUREN"),
-            ("US_INAU_1861_LINCOLN", "US_INAU_1865_LINCOLN"),
-            ("US_INAU_1861_LINCOLN", "US_INAU_1869_GRANT"),
-            ("US_INAU_1905_ROOSEVELT_THEODORE", "US_INAU_1913_WILSON"),
-            ("US_INAU_1933_ROOSEVELT_FRANKLIN", "US_INAU_1981_REAGAN"),
-            ("US_INAU_1949_TRUMAN", "US_INAU_1953_EISENHOWER"),
-            ("US_INAU_1961_KENNEDY", "US_INAU_1965_JOHNSON"),
-            ("US_INAU_1981_REAGAN", "US_INAU_1993_CLINTON"),
-            ("US_INAU_2001_BUSH_GEORGE_W", "US_INAU_2009_OBAMA"),
-            ("US_INAU_1789_WASHINGTON", "US_INAU_2013_OBAMA")
-        ]
+    # Anos disponíveis no acervo para perguntas de abstenção
+    years_unanswerable = [str(docs_map[d].get("date", "2000")) for d in available_doc_ids if docs_map[d].get("date")]
+    if not years_unanswerable:
+        years_unanswerable = ["1985", "1990", "1995", "2000", "2005", "2010", "2015", "2020"]
 
-        contradictory_cases = [
-            ("US_INAU_1933_ROOSEVELT_FRANKLIN", "US_INAU_1981_REAGAN", "papel do governo federal: agente de ação emergencial versus o próprio problema da economia"),
-            ("US_INAU_1789_WASHINGTON", "US_INAU_1949_TRUMAN", "política externa: neutralidade/não-alinhamento versus liderança militar em alianças globais"),
-            ("US_INAU_1801_JEFFERSON", "US_INAU_1861_LINCOLN", "natureza da República: soberania descentralizada dos Estados versus união perpétua indivisível"),
-            ("US_INAU_1925_COOLIDGE", "US_INAU_1937_ROOSEVELT_FRANKLIN", "responsabilidade fiscal e intervenção: redução rígida de despesas públicas versus dever estatal com os necessitados"),
-            ("US_INAU_1845_POLK", "US_INAU_1865_LINCOLN", "expansão territorial e destino da nação: celebração do expansionismo geográfico versus juízo moral sobre custos humanos da divisão"),
-            ("US_INAU_1841_HARRISON", "US_INAU_1861_LINCOLN", "limites do poder presidencial: subordinação rigorosa ao Legislativo versus ação executiva enérgica para salvar o país"),
-            ("US_INAU_1877_HAYES", "US_INAU_1965_JOHNSON", "reconstrução e direitos civis: apaziguamento regional dos Estados do Sul versus imposição federal intransigente da igualdade de direitos"),
-            ("US_INAU_1897_MCKINLEY", "US_INAU_1997_CLINTON", "comércio e tarifas: protecionismo aduaneiro severo versus abertura global e livre comércio internacional"),
-            ("US_INAU_1909_TAFT", "US_INAU_1913_WILSON", "modernização e corporações: estabilidade jurídica e proteção às grandes indústrias versus enfrentamento moral e regulação de monopólios"),
-            ("US_INAU_1981_REAGAN", "US_INAU_2009_OBAMA", "diretrizes sobre o mercado e a seguridade: desregulamentação individualista versus solidariedade pública e ampliação de redes de proteção")
-        ]
-
-        unanswerable_templates = [
-            ("Qual foi a contagem exata de votos individuais por estado no Colégio Eleitoral certificada antes da posse de {ano}?", "lookup"),
-            ("Quais secretários de Estado foram demitidos por memorando confidencial na véspera da solenidade de {ano}?", "lookup"),
-            ("Qual foi o parecer técnico confidencial elaborado pelo Departamento do Tesouro que embasou as declarações de {ano}?", "relation"),
-            ("Quantos congressistas votaram contra a ratificação formal do resultado da posse de {ano}?", "aggregation"),
-            ("Qual foi o valor detalhado de despesas pessoais de campanha não declarado publicamente na posse de {ano}?", "lookup")
-        ]
-        years_unanswerable = ["1789", "1801", "1829", "1841", "1861", "1865", "1905", "1933", "1949", "1961", "1981", "2009"]
-
-    else:
-        # Configuração para Piloto 1: Discursos Presidenciais do Brasil (1985-2023)
-        exploratory_themes = [
-            ("diagnóstico da inflação e desordem fiscal", ["DISCURSO_1985_SARNEY", "DISCURSO_1990_COLLOR", "DISCURSO_1992_ITAMAR"]),
-            ("combate à fome e erradicação da miséria", ["DISCURSO_1985_SARNEY", "DISCURSO_1992_ITAMAR", "DISCURSO_2003_LULA"]),
-            ("relação harmônica entre os Poderes e o Congresso", ["DISCURSO_1985_SARNEY", "DISCURSO_1995_FHC", "DISCURSO_2007_LULA"]),
-            ("reformas institucionais e redefinição do Estado", ["DISCURSO_1990_COLLOR", "DISCURSO_1995_FHC", "DISCURSO_2016_TEMER"]),
-            ("desenvolvimento educacional e científico", ["DISCURSO_1995_FHC", "DISCURSO_2007_LULA", "DISCURSO_2011_DILMA"]),
-            ("direitos trabalhistas, emprego e salário real", ["DISCURSO_1985_SARNEY", "DISCURSO_1992_ITAMAR", "DISCURSO_2003_LULA"]),
-            ("política externa, soberania e inserção internacional", ["DISCURSO_1990_COLLOR", "DISCURSO_2003_LULA", "DISCURSO_2019_BOLSONARO"]),
-            ("combate à corrupção, ética pública e moralidade", ["DISCURSO_1990_COLLOR", "DISCURSO_1992_ITAMAR", "DISCURSO_2019_BOLSONARO"]),
-            ("proteção ambiental e desenvolvimento sustentável", ["DISCURSO_1992_ITAMAR", "DISCURSO_2011_DILMA", "DISCURSO_2023_LULA"]),
-            ("pacificação nacional e superação de ódios políticos", ["DISCURSO_1985_SARNEY", "DISCURSO_2016_TEMER", "DISCURSO_2023_LULA"])
-        ]
-
-        comp_pairs = [
-            ("DISCURSO_1985_SARNEY", "DISCURSO_1990_COLLOR"),
-            ("DISCURSO_1990_COLLOR", "DISCURSO_1992_ITAMAR"),
-            ("DISCURSO_1992_ITAMAR", "DISCURSO_1995_FHC"),
-            ("DISCURSO_1995_FHC", "DISCURSO_1999_FHC"),
-            ("DISCURSO_1999_FHC", "DISCURSO_2003_LULA"),
-            ("DISCURSO_2003_LULA", "DISCURSO_2007_LULA"),
-            ("DISCURSO_2007_LULA", "DISCURSO_2011_DILMA"),
-            ("DISCURSO_2011_DILMA", "DISCURSO_2015_DILMA"),
-            ("DISCURSO_2015_DILMA", "DISCURSO_2016_TEMER"),
-            ("DISCURSO_2016_TEMER", "DISCURSO_2019_BOLSONARO"),
-            ("DISCURSO_2019_BOLSONARO", "DISCURSO_2023_LULA"),
-            ("DISCURSO_1985_SARNEY", "DISCURSO_2023_LULA")
-        ]
-
-        contradictory_cases = [
-            ("DISCURSO_1985_SARNEY", "DISCURSO_1990_COLLOR", "presença do Estado e saneamento da economia"),
-            ("DISCURSO_1990_COLLOR", "DISCURSO_2003_LULA", "papel do livre mercado versus intervenção social"),
-            ("DISCURSO_1985_SARNEY", "DISCURSO_1995_FHC", "diagnóstico sobre raízes da inflação e estabilização"),
-            ("DISCURSO_1995_FHC", "DISCURSO_2003_LULA", "avaliação da herança das privatizações e do modelo econômico"),
-            ("DISCURSO_2003_LULA", "DISCURSO_2019_BOLSONARO", "alinhamento internacional e diretrizes ideológicas de governo"),
-            ("DISCURSO_2016_TEMER", "DISCURSO_2019_BOLSONARO", "justificativa de legitimidade política e ordem institucional"),
-            ("DISCURSO_1990_COLLOR", "DISCURSO_1992_ITAMAR", "estratégia de modernização com choque versus conciliação ética"),
-            ("DISCURSO_2011_DILMA", "DISCURSO_2016_TEMER", "diagnóstico sobre equilíbrio fiscal e reformas constitucionais"),
-            ("DISCURSO_2019_BOLSONARO", "DISCURSO_2023_LULA", "concepção sobre união nacional, direitos sociais e meio ambiente"),
-            ("DISCURSO_1985_SARNEY", "DISCURSO_2023_LULA", "desafios da reconstrução democrática após transição de poder")
-        ]
-
-        unanswerable_templates = [
-            ("Qual foi a taxa exata de inflação mensal do IPCA registrada no mês subsequente à posse de {ano}?", "lookup"),
-            ("Quais foram os nomes dos ministros exonerados em reunião secreta antes da solenidade de {ano}?", "lookup"),
-            ("Quantos votos individuais de cada parlamentar foram computados na votação mencionada no discurso de {ano}?", "aggregation"),
-            ("Qual foi o parecer técnico sigiloso elaborado pelo Banco Central que embasou as declarações de {ano}?", "relation"),
-            ("Quais foram os valores detalhados de doações privadas de campanha citados na cerimônia de {ano}?", "lookup")
-        ]
-        years_unanswerable = ["1985", "1990", "1992", "1995", "1999", "2003", "2007", "2011", "2016", "2019", "2023"]
+    # Templates genéricos de perguntas não respondíveis aplicáveis a qualquer corpus oficial
+    unanswerable_templates = [
+        ("Qual foi a contagem exata e nominal de votos secretos de bastidores apurada na véspera da posse de {ano}?", "lookup"),
+        ("Quais ministros ou secretários foram exonerados por meio de memorando estritamente confidencial antes da solenidade de {ano}?", "lookup"),
+        ("Qual foi o parecer técnico sigiloso elaborado pelo órgão financeiro central que embasou as declarações de {ano}?", "relation"),
+        ("Quantos parlamentares individuais declararam voto contrário em ata confidencial referente à posse de {ano}?", "aggregation"),
+        ("Quais foram os valores detalhados de doações anônimas de campanha não registradas publicamente na posse de {ano}?", "lookup")
+    ]
 
     # LOOP PRINCIPAL: Enquanto qualquer categoria não tiver target_per_category aprovados
     for category in categories:
@@ -289,14 +204,13 @@ def run_committee_generation_loop(target_per_category: int = 10) -> Dict[str, An
             elif category == "comparative":
                 source_type = "multi_document"
                 reasoning = "comparison"
-                pair_idx = (slot_idx + iteration_attempt - 1) % len(comp_pairs)
-                d1, d2 = comp_pairs[pair_idx]
-                # Fallback: se os docs do par não têm evidências, escolhe aleatoriamente dos disponíveis
-                available_keys = list(ev_by_doc.keys())
-                if d1 not in ev_by_doc or not ev_by_doc[d1]:
-                    d1 = available_keys[(pair_idx) % len(available_keys)]
-                if d2 not in ev_by_doc or not ev_by_doc[d2]:
-                    d2 = available_keys[(pair_idx + 1) % len(available_keys)]
+                available_keys = [k for k in docs_map.keys() if k in ev_by_doc and ev_by_doc[k]]
+                if len(available_keys) < 2:
+                    available_keys = list(ev_by_doc.keys())
+                d1 = available_keys[(slot_idx + iteration_attempt - 1) % len(available_keys)]
+                d2 = available_keys[(slot_idx + iteration_attempt) % len(available_keys)]
+                if d1 == d2 and len(available_keys) > 1:
+                    d2 = available_keys[(slot_idx + iteration_attempt + 1) % len(available_keys)]
                 m1 = docs_map.get(d1, {})
                 m2 = docs_map.get(d2, {})
                 e1 = ev_by_doc[d1][0] if d1 in ev_by_doc and ev_by_doc[d1] else None
@@ -304,49 +218,42 @@ def run_committee_generation_loop(target_per_category: int = 10) -> Dict[str, An
                 if not e1 or not e2:
                     continue
                 ev_list = [e1, e2]
-                temporal_scope = f"{m1.get('date')}-{m2.get('date')}"
+                temporal_scope = f"{m1.get('date', '')}-{m2.get('date', '')}".strip("-")
                 context_prompt = (
-                    f"Documento 1 ({m1.get('author')}, {m1.get('date')}): \"{e1['claim']}\" (Trecho: \"{e1['text'][:200]}\")\n"
-                    f"Documento 2 ({m2.get('author')}, {m2.get('date')}): \"{e2['claim']}\" (Trecho: \"{e2['text'][:200]}\")\n"
-                    "Crie uma pergunta comparativa em linguagem natural que demande contrastar as posições, diagnósticos ou prioridades entre ambos os líderes.\n\n"
-                    "IMPORTANTE: Formule a pergunta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que os trechos estejam em inglês."
+                    f"Documento 1 ({m1.get('author')}, {m1.get('date')}): \"{e1['claim']}\" (Trecho: \"{e1['text'][:250]}\")\n"
+                    f"Documento 2 ({m2.get('author')}, {m2.get('date')}): \"{e2['claim']}\" (Trecho: \"{e2['text'][:250]}\")\n"
+                    "Crie uma pergunta comparativa em linguagem natural que demande contrastar as posições, diagnósticos ou prioridades entre ambos os líderes ou pronunciamentos.\n\n"
+                    "IMPORTANTE: Formule a pergunta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que os trechos estejam em outro idioma."
                 )
 
             elif category == "exploratory":
                 source_type = "multi_document"
                 reasoning = "aggregation"
-                t_idx = (slot_idx + iteration_attempt - 1) % len(exploratory_themes)
-                theme_title, doc_ids = exploratory_themes[t_idx]
-                ev_list = []
-                for did in doc_ids:
-                    if did in ev_by_doc and ev_by_doc[did]:
-                        ev_list.append(ev_by_doc[did][0])
-                # Fallback: se nenhuma evidência encontrada, usa qualquer doc disponível
-                if not ev_list:
-                    fallback_keys = list(ev_by_doc.keys())[:3]
-                    for fk in fallback_keys:
-                        if ev_by_doc[fk]:
-                            ev_list.append(ev_by_doc[fk][0])
-                corpus_span = "1789-2013" if is_us_corpus else "1985-2023"
-                temporal_scope = corpus_span
+                available_keys = [k for k in docs_map.keys() if k in ev_by_doc and ev_by_doc[k]]
+                # Seleciona de 2 a 3 documentos de períodos distintos
+                num_docs = min(3, len(available_keys))
+                chosen_dids = [available_keys[(slot_idx + iteration_attempt + offset) % len(available_keys)] for offset in range(num_docs)]
+                ev_list = [ev_by_doc[did][0] for did in chosen_dids if did in ev_by_doc and ev_by_doc[did]]
+                if len(ev_list) < 2:
+                    continue
+                dates = [str(docs_map.get(did, {}).get("date", "")) for did in chosen_dids if docs_map.get(did, {}).get("date")]
+                temporal_scope = f"{min(dates)}-{max(dates)}" if dates else "Periodo-Historico"
+                ev_summaries = [f"Fonte ({docs_map.get(did, {}).get('author')}, {docs_map.get(did, {}).get('date')}): \"{ev['claim']}\"" for did, ev in zip(chosen_dids, ev_list)]
                 context_prompt = (
-                    f"Tema Histórico Transversal: {theme_title}\n"
-                    f"Documentos que abordam o tema no acervo: {', '.join(doc_ids)}\n"
-                    "Crie uma pergunta exploratória ampla que solicite identificar e sintetizar como esse tema transversal foi tratado nos pronunciamentos oficiais ao longo da história.\n\n"
-                    "IMPORTANTE: Formule a pergunta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que os documentos estejam em inglês."
+                    "Evidências Documentais de Múltiplos Períodos:\n"
+                    + "\n".join(ev_summaries) + "\n"
+                    "Crie uma pergunta exploratória ampla que solicite identificar e sintetizar a evolução ou o tratamento dessas diretrizes oficiais ao longo dos diferentes momentos históricos documentados.\n\n"
+                    "IMPORTANTE: Formule a pergunta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que os documentos estejam em outro idioma."
                 )
 
             elif category == "contradictory":
                 source_type = "multi_document"
                 reasoning = "contradiction"
-                c_idx = (slot_idx + iteration_attempt - 1) % len(contradictory_cases)
-                d1, d2, divergence_topic = contradictory_cases[c_idx]
-                # Fallback se docs do caso não têm evidências
-                available_keys = list(ev_by_doc.keys())
-                if d1 not in ev_by_doc or not ev_by_doc[d1]:
-                    d1 = available_keys[(c_idx) % len(available_keys)]
-                if d2 not in ev_by_doc or not ev_by_doc[d2]:
-                    d2 = available_keys[(c_idx + 1) % len(available_keys)]
+                available_keys = [k for k in docs_map.keys() if k in ev_by_doc and ev_by_doc[k]]
+                d1 = available_keys[(slot_idx + iteration_attempt - 1) % len(available_keys)]
+                d2 = available_keys[(slot_idx + iteration_attempt + 1) % len(available_keys)]
+                if d1 == d2 and len(available_keys) > 1:
+                    d2 = available_keys[(slot_idx + iteration_attempt + 2) % len(available_keys)]
                 m1 = docs_map.get(d1, {})
                 m2 = docs_map.get(d2, {})
                 e1 = ev_by_doc[d1][0] if d1 in ev_by_doc and ev_by_doc[d1] else None
@@ -354,13 +261,12 @@ def run_committee_generation_loop(target_per_category: int = 10) -> Dict[str, An
                 if not e1 or not e2:
                     continue
                 ev_list = [e1, e2]
-                temporal_scope = f"{m1.get('date')}-{m2.get('date')}"
+                temporal_scope = f"{m1.get('date', '')}-{m2.get('date', '')}".strip("-")
                 context_prompt = (
-                    f"Tópico de Divergência Historiográfica: {divergence_topic}\n"
-                    f"Fonte A ({m1.get('author')}, {m1.get('date')}): \"{e1['claim']}\"\n"
-                    f"Fonte B ({m2.get('author')}, {m2.get('date')}): \"{e2['claim']}\"\n"
-                    "Crie uma pergunta que investigue a divergência ou tensão conceitual explícita entre as duas visões documentadas.\n\n"
-                    "IMPORTANTE: Formule a pergunta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que as fontes estejam em inglês."
+                    f"Fonte A ({m1.get('author')}, {m1.get('date')}): \"{e1['claim']}\" (Trecho: \"{e1['text'][:250]}\")\n"
+                    f"Fonte B ({m2.get('author')}, {m2.get('date')}): \"{e2['claim']}\" (Trecho: \"{e2['text'][:250]}\")\n"
+                    "Crie uma pergunta que investigue a divergência, contraste ou tensão conceitual explícita entre as prioridades, diagnósticos ou medidas adotadas por essas duas fontes documentadas.\n\n"
+                    "IMPORTANTE: Formule a pergunta OBRIGATORIAMENTE em PORTUGUÊS BRASILEIRO (pt-BR), mesmo que as fontes estejam em outro idioma."
                 )
 
             elif category == "unanswerable":

@@ -1,8 +1,8 @@
 {
   "total_approved": 80,
-  "total_rejected": 43,
-  "total_evaluated": 123,
-  "approval_rate": 0.65,
+  "total_rejected": 13,
+  "total_evaluated": 93,
+  "approval_rate": 0.86,
   "target_per_category": 10,
   "counts_by_category": {
     "factual": 10,

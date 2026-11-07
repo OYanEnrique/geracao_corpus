@@ -38,9 +38,14 @@ def run_full_pipeline(
     bench_res = run_benchmark_builder(version_tag=version_tag)
 
     # 6. Geração do relatório executivo acumulado sequencialmente em /relatorios
-    # Detecta o tipo de corpus via documentos gerados
-    is_us = any("US_INAU" in str(raw_dir)) or "piloto_2" in str(raw_dir)
-    title = "Discursos Presidenciais dos EUA (1789-2013)" if is_us else "Discursos Presidenciais do Brasil (1985-2023)"
+    # Título e contexto derivados dinamicamente do diretório de dados ou metadados
+    raw_name = Path(raw_dir).name
+    title = f"Acervo Documental ({raw_name})"
+    if "piloto_1" in raw_name:
+        title = "Discursos Presidenciais do Brasil (1985-2023)"
+    elif "piloto_2" in raw_name:
+        title = "Discursos Presidenciais dos EUA (1789-2013)"
+
     report_file = build_and_save_report(
         corpus_title=title,
         corpus_tag=version_tag,

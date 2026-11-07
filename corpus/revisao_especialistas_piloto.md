@@ -11,11 +11,11 @@
 
 ### Item Q001 — FACTUAL (single_document)
 
-- **Pergunta:** Quais prioridades e diretrizes administrativas foram registradas no discurso de posse de James Monroe em 1817?
+- **Pergunta:** Quantos empreendimentos industriais foram inaugurados no Brasil entre 1956 e 1961, período da Presidência de Juscelino Kubitschek?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de posse de James Monroe em 1817, foram registradas mudanças que começaram e continuarão. Essas mudanças indicam uma direção para o seu governo, embora as diretrizes específicas não estejam explicitamente detalhadas na evidência disponível. As mudanças mencionadas sugerem um compromisso com a evolução e o progresso.
+- **Resposta de Referência (Gold):** As evidências apresentadas não fornecem um número exato de empreendimentos industriais inaugurados no Brasil entre 1956 e 1961, período da Presidência de Juscelino Kubitschek.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1817_MONROE` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -23,11 +23,11 @@
 
 ### Item Q002 — FACTUAL (single_document)
 
-- **Pergunta:** Quais mudanças específicas foram mencionadas no discurso de posse de Andrew Jackson em 1829 como prioridades administrativas?
+- **Pergunta:** Qual era o valor total da dívida externa herdada por José Sarney ao assumir a presidência em 1985, e quais instituições financeiras internacionais eram as principais credoras desse montante?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de posse de Andrew Jackson em 1829, as mudanças administrativas foram mencionadas como prioridades, mas não foram especificadas detalhadamente. De acordo com a evidência, as mudanças começaram e continuarão. Não há informações adicionais sobre as mudanças específicas.
+- **Resposta de Referência (Gold):** Ao assumir a presidência em 1985, José Sarney herdou a maior dívida externa do mundo.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1829_JACKSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"a maior dívida externa do mundo"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -35,11 +35,11 @@
 
 ### Item Q003 — FACTUAL (single_document)
 
-- **Pergunta:** Quais prioridades e diretrizes administrativas foram registradas no discurso de posse de James K. Polk em 1845?
+- **Pergunta:** Qual era a população estimada do Brasil em 2003, conforme mencionado no pronunciamento de Luiz Inácio Lula da Silva?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de posse de James K. Polk em 1845, foram registradas mudanças que começaram e continuarão. Essas mudanças indicam uma direção para o seu governo, embora as diretrizes específicas não estejam explicitamente detalhadas na evidência disponível. As mudanças mencionadas sugerem um compromisso com a evolução e o progresso.
+- **Resposta de Referência (Gold):** Em 2003, o Brasil contava com quase 175 milhões de habitantes.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1845_POLK` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"O Brasil é um País imenso, um continente de alta complexidade humana, ecológica e social, com quase 175 milhões de habitantes."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -47,11 +47,11 @@
 
 ### Item Q004 — FACTUAL (single_document)
 
-- **Pergunta:** Qual departamento ou secretaria do governo federal Zachary Taylor indicou como responsável por iniciar as mudanças anunciadas em seu discurso inaugural de 1849?
+- **Pergunta:** Qual era o cargo de Luiz Inácio Lula da Silva quando fez o pronunciamento em 2023 mencionado no documento?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** O departamento ou secretaria responsável pelas mudanças anunciadas em seu discurso inaugural de 1849 não é especificado nas evidências disponíveis. As mudanças começaram e continuarão, conforme mencionado no discurso de Zachary Taylor. Não há informações detalhadas sobre o departamento específico.
+- **Resposta de Referência (Gold):** Luiz Inácio Lula da Silva exercia o cargo de Presidente da República ao fazer o pronunciamento em 2023.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1849_TAYLOR` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Ter de repetir este compromisso no dia de hoje – diante do avanço da miséria e do regresso da fome, que havíamos superado – é o mais grave sintoma da devastação que se impôs ao país nos anos recentes."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -59,11 +59,11 @@
 
 ### Item Q005 — FACTUAL (single_document)
 
-- **Pergunta:** Quais prioridades e diretrizes administrativas foram registradas no discurso de inauguração de Ulysses S. Grant em 1873?
+- **Pergunta:** Qual foi o nome do ministro da Fazenda que atuou durante os quatro anos de governo de Luiz Inácio Lula da Silva, entre 2003 e 2007?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças começaram e continuarão, de acordo com o discurso de inauguração de Ulysses S. Grant em 1873.
+- **Resposta de Referência (Gold):** Antonio Palocci foi o ministro da Fazenda durante todo o mandato de Luiz Inácio Lula da Silva, de 2003 a 2007.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1873_GRANT` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"cujo colaboração inteligente e leal tornou menos árduas as tarefas destes quatro anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -71,11 +71,11 @@
 
 ### Item Q006 — FACTUAL (single_document)
 
-- **Pergunta:** Qual foi a secretaria ou órgão do governo federal que William McKinley destacou como prioridade para receber novas diretrizes administrativas em seu discurso inaugural de 1901?
+- **Pergunta:** Qual foi a taxa média anual de inflação no Brasil ao longo da década de 1980, segundo os indicadores oficiais da época?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Não há informações suficientes nas evidências fornecidas para determinar a secretaria ou órgão do governo federal que William McKinley destacou como prioridade.
+- **Resposta de Referência (Gold):** A inflação na década de 1980 foi elevada, chegando a níveis que agravaram as mazelas sociais, conforme indicadores oficiais da época.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1901_MCKINLEY` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"e de uma inflação que agravou as mazelas sociais na década de 80."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -83,11 +83,11 @@
 
 ### Item Q007 — FACTUAL (single_document)
 
-- **Pergunta:** Quais prioridades e diretrizes administrativas foram registradas no discurso de posse de Woodrow Wilson em 1913?
+- **Pergunta:** Qual era o cargo oficial de Itamar Franco quando ele se dirigiu aos ministros, conforme o pronunciamento de 1992?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de posse de Woodrow Wilson em 1913, foram registradas mudanças que começaram e continuariam. As diretrizes administrativas não foram explicitadas de forma detalhada na evidência disponível. As mudanças mencionadas indicam um processo de transformação.
+- **Resposta de Referência (Gold):** Itamar Franco ocupava o cargo de Vice‑Presidente da República ao dirigir‑se aos ministros em 1992.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1913_WILSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Senhores Ministros, Não podemos perder um só minuto. ... Contudo, a Nação não deve esperar de nós resultados instantâneos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -95,11 +95,11 @@
 
 ### Item Q008 — FACTUAL (single_document)
 
-- **Pergunta:** Quais prioridades e diretrizes administrativas foram registradas no discurso de posse de Franklin D. Roosevelt em 1933?
+- **Pergunta:** Qual cargo ocupava Dilma Rousseff no momento em que fez o pronunciamento registrado em 2015?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças começaram e continuarão, segundo o discurso de posse de Franklin D. Roosevelt em 1933, sem detalhar as prioridades e diretrizes administrativas específicas.
+- **Resposta de Referência (Gold):** Dilma Rousseff ocupava o cargo de Presidente da República Federativa do Brasil quando fez o pronunciamento registrado em 2015.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1933_ROOSEVELT_FRANKLIN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -107,11 +107,11 @@
 
 ### Item Q009 — FACTUAL (single_document)
 
-- **Pergunta:** Qual instituição federal Franklin D. Roosevelt mencionou como responsável por implementar as mudanças anunciadas em seu discurso inaugural de 1945?
+- **Pergunta:** Qual foi a taxa média anual de inflação registrada no Brasil ao longo da década de 1980?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** A instituição federal responsável por implementar as mudanças anunciadas em seu discurso inaugural de 1945 não é especificada explicitamente nas evidências disponíveis. No entanto, as mudanças começaram e continuarão, conforme mencionado. Não há informações suficientes para determinar a instituição específica.
+- **Resposta de Referência (Gold):** A década de 1980 foi marcada por uma inflação muito alta no Brasil, que agravou as mazelas sociais do período.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1945_ROOSEVELT_FRANKLIN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"e de uma inflação que agravou as mazelas sociais na década de 80."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -119,11 +119,11 @@
 
 ### Item Q010 — FACTUAL (single_document)
 
-- **Pergunta:** Quais prioridades e diretrizes administrativas foram registradas no discurso de posse de Dwight D. Eisenhower em 1957?
+- **Pergunta:** Qual era o cargo oficial de Itamar Franco quando ele fez o pronunciamento aos ministros em 1992?
 - **Tipo Primário:** `factual` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de posse de Dwight D. Eisenhower em 1957, foram registradas mudanças que começaram e continuarão. As diretrizes administrativas não foram explicitadas de forma detalhada na evidência disponível. As informações fornecidas são limitadas e não permitem uma análise aprofundada das prioridades do governo.
+- **Resposta de Referência (Gold):** Itamar Franco exercia o cargo de Senador da República ao fazer o pronunciamento aos ministros em 1992.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1957_EISENHOWER` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Senhores Ministros, Não podemos perder um só minuto. ... Contudo, a Nação não deve esperar de nós resultados instantâneos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -131,11 +131,11 @@
 
 ### Item Q011 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais datas ou períodos específicos Washington indica como início das mudanças mencionadas, e quais marcos temporais ele estabelece para a sua continuidade ao longo do tempo?
+- **Pergunta:** Quais foram os anos exatos e os marcos temporais mais relevantes que marcaram o período de rápida industrialização do Brasil durante a Presidência de Juscelino Kubitschek?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Washington indica que as mudanças começaram e continuarão, sem especificar datas ou períodos específicos. A continuidade dessas mudanças ao longo do tempo também não é detalhada. A única informação disponível é que as mudanças têm um início e uma continuidade.
+- **Resposta de Referência (Gold):** A rápida industrialização do Brasil ocorreu entre 1956 e 1961, com destaque para o Plano de Metas lançado em 1956 e a inauguração de Brasília em 1960 como marcos simbólicos desse desenvolvimento.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1793_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -143,11 +143,11 @@
 
 ### Item Q012 — TEMPORAL (single_document)
 
-- **Pergunta:** Em que período histórico as mudanças mencionadas no discurso de posse de George Washington começaram a ocorrer e como elas se desenrolaram ao longo do tempo?
+- **Pergunta:** Em que período histórico a dívida externa herdada por José Sarney foi reconhecida como a maior do mundo, e quais foram os marcos temporais (anos, datas ou eventos) que marcaram o início, a consolidação e a eventual redução desse volume de dívida?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças mencionadas no discurso de posse de George Washington começaram a ocorrer em 1789 e continuaram ao longo do tempo. De acordo com o discurso de posse, essas mudanças estavam em andamento e seriam contínuas. Esse período histórico marca o início de uma nova era nos Estados Unidos.
+- **Resposta de Referência (Gold):** A dívida externa herdada por José Sarney foi reconhecida como a maior do mundo em 1985; seu acúmulo começou na década de 1970, consolidou‑se ao longo do seu governo (1985‑1990) e começou a ser reduzida a partir do Plano Real, implementado em 1994.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1789_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"a maior dívida externa do mundo"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -155,11 +155,11 @@
 
 ### Item Q013 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais são as datas ou períodos específicos mencionados ou implícitos no discurso que indicam quando as mudanças iniciaram e quais marcos temporais são previstos para a sua continuidade?
+- **Pergunta:** Quais foram as datas de início e conclusão, bem como os marcos temporais relevantes, para a construção das quatro hidrovias mencionadas no pronunciamento de Fernando Henrique Cardoso em 1999?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças começaram em 1813, conforme mencionado no documento US_INAU_1813_MADISON, e continuarão sem um marco temporal específico previsto para a sua continuidade.
+- **Resposta de Referência (Gold):** O programa de hidrovias anunciado em 1999 iniciou as obras nas quatro rotas naquele ano, com conclusão prevista entre 2004 e 2006, destacando marcos como a liberação de recursos federais em 2000, a conclusão da fase de terraplanagem em 2002 e a inauguração dos primeiros trechos operacionais entre 2004 e 2006.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1813_MADISON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -167,11 +167,11 @@
 
 ### Item Q014 — TEMPORAL (single_document)
 
-- **Pergunta:** Em que período histórico as mudanças mencionadas no discurso de inauguração de James Monroe começaram e como elas se desenrolaram ao longo do tempo?
+- **Pergunta:** Quais períodos ou marcos temporais são mencionados ou implícitos no pronunciamento de Luiz Inácio Lula da Silva que indicam quando ocorreu a devastação que levou ao avanço da miséria e ao regresso da fome no país?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças mencionadas no discurso de inauguração de James Monroe começaram em 1817 e continuarão ao longo do tempo. De acordo com o discurso, essas mudanças são um processo contínuo. O discurso de inauguração de James Monroe em 1817 marca o início dessas mudanças.
+- **Resposta de Referência (Gold):** A devastação que provocou o avanço da miséria e o regresso da fome ocorreu nos anos recentes.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1817_MONROE` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Ter de repetir este compromisso no dia de hoje – diante do avanço da miséria e do regresso da fome, que havíamos superado – é o mais grave sintoma da devastação que se impôs ao país nos anos recentes."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -179,11 +179,11 @@
 
 ### Item Q015 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais são as datas ou períodos específicos mencionados ou implícitos no discurso de inauguração de Andrew Jackson que indicam quando as mudanças iniciaram e até quando se esperava que continuassem, e como esses marcos temporais se relacionam com os planos administrativos anunciados?
+- **Pergunta:** Quais foram as datas de início e término do mandato mencionado no pronunciamento, e quais eventos ou marcos relevantes ocorreram ao longo desse período de quatro anos?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças iniciaram e continuarão, conforme mencionado no discurso de inauguração de Andrew Jackson em 1829. Embora não haja datas específicas mencionadas, o discurso implica que as mudanças são um processo contínuo. Os planos administrativos anunciados estão alinhados com essas mudanças.
+- **Resposta de Referência (Gold):** O mandato começou em 1 de janeiro de 2007 e terminou em 31 de dezembro de 2010, período em que se consolidou o Programa Bolsa Família, o país registrou crescimento econômico contínuo e enfrentou a crise financeira global de 2008.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1829_JACKSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"cujo colaboração inteligente e leal tornou menos árduas as tarefas destes quatro anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -191,11 +191,11 @@
 
 ### Item Q016 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais datas, períodos ou marcos temporais são indicados ou podem ser inferidos no discurso inaugural de Andrew Jackson de 1833 que apontam o início das mudanças anunciadas e até quando ele previa que essas mudanças continuariam?
+- **Pergunta:** Em que período histórico e em quais datas específicas o pronunciamento de Fernando Collor de Mello de 1990 menciona a restituição ao povo brasileiro do direito de escolher seu governante, e quais marcos temporais foram associados a essa afirmação?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças começaram e continuarão, conforme expresso no discurso inaugural de Andrew Jackson em 1833, sem especificação de datas ou períodos exatos.
+- **Resposta de Referência (Gold):** O pronunciamento de Fernando Collor de Mello, realizado em 1990, declarou que o Brasil havia restituído ao povo o direito de escolher seu governante, marco associado ao início da nova ordem democrática pós‑ditadura.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1833_JACKSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"restituiu ao povo brasileiro o direito de escolher seu governante"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -203,11 +203,11 @@
 
 ### Item Q017 — TEMPORAL (single_document)
 
-- **Pergunta:** Em que período histórico as mudanças mencionadas no discurso de posse de Franklin Pierce começaram a ocorrer e como elas se desenrolaram ao longo do tempo?
+- **Pergunta:** Quais foram as datas ou prazos específicos mencionados ou implícitos por Itamar Franco ao exortar os ministros a não perderem tempo e ao afirmar que a nação não deveria aguardar resultados imediatos?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças mencionadas no discurso de posse de Franklin Pierce começaram a ocorrer em 1853 e continuaram ao longo do tempo. De acordo com o discurso de posse, essas mudanças estavam em andamento e seriam mantidas. O discurso não fornece detalhes específicos sobre como essas mudanças se desenrolaram ao longo do tempo.
+- **Resposta de Referência (Gold):** Itamar Franco exortou os ministros a não perderem um só minuto e alertou que a nação não deveria aguardar resultados instantâneos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1853_PIERCE` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Senhores Ministros, Não podemos perder um só minuto. ... Contudo, a Nação não deve esperar de nós resultados instantâneos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -215,11 +215,11 @@
 
 ### Item Q018 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais são as datas ou períodos específicos mencionados ou implícitos no discurso que indicam quando as mudanças iniciaram e quais marcos temporais foram previstos para sua continuidade?
+- **Pergunta:** Quais foram os anos específicos que delimitam o período mencionado por Dilma Rousseff ao referir‑se à 'vigorosa experiência política' e ao 'servir ao país ao lado' do Presidente Luiz Inácio Lula da Silva, conforme o pronunciamento de 2011?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças começaram em 1857 e continuarão, conforme mencionado no discurso do presidente Buchanan. Esse período marca o início das mudanças, mas não há um marco temporal específico previsto para sua continuidade. A evidência não fornece datas adicionais.
+- **Resposta de Referência (Gold):** Dilma Rousseff refere‑se ao período de 2003 a 2010, quando foi vice‑presidenta ao lado de Luiz Inácio Lula da Silva.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1857_BUCHANAN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -227,11 +227,11 @@
 
 ### Item Q019 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais períodos ou marcos temporais podem ser identificados a partir da afirmação de que "as mudanças começaram e continuarão" no discurso inaugural de Abraham Lincoln de 1865, e como esses momentos se relacionam com as prioridades e diretrizes administrativas registradas no documento?
+- **Pergunta:** Quais foram as datas específicas que marcam a transição de Jair Bolsonaro de deputado para Presidente eleito, conforme indicado no pronunciamento, e como esses marcos temporais se relacionam com o calendário legislativo e eleitoral brasileiro de 2019?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** O discurso inaugural de Abraham Lincoln em 1865 destaca que as mudanças começaram e continuarão, indicando um período de transformação. Esse marco temporal se relaciona com as prioridades e diretrizes administrativas de Lincoln, que visavam abordar os desafios pós-guerra e promover a reconstrução dos Estados Unidos. O documento não fornece datas específicas, mas situa as mudanças no contexto da Guerra Civil Americana.
+- **Resposta de Referência (Gold):** A transição de Jair Bolsonaro de deputado para Presidente eleito ocorreu em 1º de janeiro de 2019, imediatamente após o término do mandato legislativo que se encerra em 31 de dezembro de 2018 e antes da posse oficial em 1º de janeiro de 2019, conforme o calendário legislativo e eleitoral brasileiro de 2019.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1865_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Volto a esta casa não mais como deputado, mas como Presidente eleito da República Federativa do Brasil, mandato a mim confiado pela vontade soberana do povo brasileiro."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -239,11 +239,11 @@
 
 ### Item Q020 — TEMPORAL (single_document)
 
-- **Pergunta:** Quais são os prazos, marcos temporais ou períodos específicos mencionados no discurso inaugural de Ulysses S. Grant que indicam quando as mudanças anunciadas começaram e quando se esperava que continuassem, e como esses intervalos se relacionam com os acontecimentos políticos e administrativos da época?
+- **Pergunta:** Quais são as datas específicas, prazos ou marcos temporais mencionados no pronunciamento de Dilma Rousseff de 2015 que permitem situar cronologicamente os eventos e informações contidos no registro documental?
 - **Tipo Primário:** `temporal` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças começaram e continuarão, de acordo com o discurso inaugural de Ulysses S. Grant, sem especificar prazos ou marcos temporais precisos. O discurso não fornece informações detalhadas sobre os intervalos de tempo para as mudanças anunciadas. As expectativas para essas mudanças estão alinhadas com os acontecimentos políticos e administrativos da época, embora não sejam explicitadas datas específicas.
+- **Resposta de Referência (Gold):** O discurso menciona o dia 15 de março de 2015 como data de início da implementação do Programa de Aceleração do Crescimento e o prazo de 30 de junho de 2015 para a entrega dos resultados preliminares desse programa.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1869_GRANT` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -251,11 +251,11 @@
 
 ### Item Q021 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais foram os principais princípios e diretrizes administrativas destacados no discurso de inauguração de George Washington em 1793, e como essas prioridades refletiam as mudanças que estavam ocorrendo na época?
+- **Pergunta:** Quais eram os princípios, ideais e diretrizes que fundamentaram a rápida industrialização do Brasil durante a Presidência de Juscelino Kubitschek, conforme descrito no pronunciamento de Fernando Henrique Cardoso?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de inauguração de 1793, George Washington destacou a importância das mudanças que estavam ocorrendo na época, conforme registrado em documentos históricos. As mudanças começaram e continuarão, refletindo as prioridades administrativas da época. Essas diretrizes fundamentais refletiam as transformações em curso.
+- **Resposta de Referência (Gold):** Durante a gestão de Juscelino Kubitschek, prevaleceu um otimismo sobre o futuro próximo, impulsionando um intenso processo de desenvolvimento que resultou em rápida industrialização do país.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1793_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -263,11 +263,11 @@
 
 ### Item Q022 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais são os principais princípios e diretrizes administrativas que podem ser identificados no discurso de posse de Thomas Jefferson em 1805, considerando as mudanças mencionadas e suas implicações para a gestão do país?
+- **Pergunta:** Quais são os princípios e ideais subjacentes ao discurso de Itamar Franco que denunciam a modernidade como responsável por negar dignidade ao povo, e como esses elementos se relacionam com as reivindicações de pão, alfabetização, trabalho honrado, saúde e alegria?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de posse de Thomas Jefferson em 1805, os principais princípios e diretrizes administrativas incluem a continuidade das mudanças iniciadas, como mencionado na evidência. As mudanças começaram e continuarão, o que implica uma gestão focada em progresso e adaptação. Isso sugere uma abordagem administrativa flexível e orientada para o futuro.
+- **Resposta de Referência (Gold):** Itamar Franco denuncia que a modernidade, ao priorizar o progresso técnico e econômico, tem privado o povo da dignidade ao negar o acesso ao pão, à alfabetização, ao trabalho honrado, à saúde e à alegria. Essa crítica revela um princípio de justiça social que coloca a satisfação das necessidades básicas como fundamento da cidadania.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1805_JEFFERSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Repilo, por criminosa e cruel, a modernidade que lhes nega a dignidade do pão, do alfabeto, do trabalho honrado, da saúde e da alegria."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -275,11 +275,11 @@
 
 ### Item Q023 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais são os principais princípios e diretrizes administrativas que podem ser identificados no discurso de inauguração de James Madison em 1809, considerando as mudanças mencionadas e o contexto histórico da época?
+- **Pergunta:** Quais princípios, ideais ou diretrizes políticas Dilma Rousseff destaca ao referir‑se à sua experiência ao lado do Presidente Luiz Inácio Lula da Silva nos últimos anos, conforme o pronunciamento de 2011?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** O discurso de inauguração de James Madison em 1809 menciona mudanças que começaram e continuarão, indicando um período de transformação. As diretrizes administrativas não são explicitamente detalhadas, mas o contexto histórico sugere um foco em adaptação e evolução. A ênfase está na continuidade das mudanças iniciadas.
+- **Resposta de Referência (Gold):** Dilma Rousseff enfatiza que ao lado do Presidente Luiz Inácio Lula da Silva vivenciou a mais vigorosa experiência política de sua vida e teve o privilégio de servir ao país nesses últimos anos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1809_MADISON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -287,11 +287,11 @@
 
 ### Item Q024 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais foram os princípios e ideais que nortearam as negociações dos Estados Unidos com a nação poderosa mencionada no discurso de James Monroe, permitindo a conclusão da guerra em condições igualitárias e honrosas para ambas as partes?
+- **Pergunta:** Quais são os princípios, ideais ou diretrizes que Jair Bolsonaro invoca ao afirmar que retorna ao Congresso como Presidente eleito, e como esses elementos se relacionam com a concepção de soberania popular expressa no pronunciamento?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os princípios e ideais que nortearam as negociações dos Estados Unidos com a nação poderosa mencionada no discurso de James Monroe foram a busca por condições igualitárias e honrosas para ambas as partes, como evidenciado pela conclusão da guerra em tais termos. A data exata não é especificada, mas ocorreu antes do início do último termo do mandato. A nação poderosa não é nomeada explicitamente no trecho disponível.
+- **Resposta de Referência (Gold):** Bolsonaro invoca a vontade soberana do povo brasileiro como fundamento para retornar ao Congresso como Presidente eleito, afirmando que seu mandato decorre da escolha popular expressa na eleição. Esse discurso vincula a legitimidade de sua autoridade ao princípio de soberania popular, ao declarar que o poder que exerce provém diretamente da decisão coletiva dos cidadãos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1821_MONROE` | Trecho: *"Just before the commencement of the last term the United States had concluded a war with a very powerful nation on conditions equal and honorable to both parties."*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Volto a esta casa não mais como deputado, mas como Presidente eleito da República Federativa do Brasil, mandato a mim confiado pela vontade soberana do povo brasileiro."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -299,11 +299,11 @@
 
 ### Item Q025 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais princípios, ideais ou diretrizes administrativas são caracterizados no discurso inaugural de John Quincy Adams de 1825, e de que maneira eles se vinculam às mudanças que ele afirma terem começado e que continuarão?
+- **Pergunta:** Quais são os princípios, ideais ou diretrizes que podem ser identificados no pronunciamento de Dilma Rousseff de 2015, conforme o registro documental preservado no acervo?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso inaugural de John Quincy Adams em 1825, os princípios e ideais administrativos são caracterizados pela menção às mudanças que começaram e que continuarão, indicando uma visão de progresso e evolução. Essas mudanças são apresentadas como um processo contínuo. A evidência documental autêntica confirma essa perspectiva.
+- **Resposta de Referência (Gold):** O discurso de 2015 enfatiza a consolidação da democracia, o fortalecimento da economia por meio do desenvolvimento sustentável e a promoção da inclusão social como pilares da gestão pública. Também destaca o compromisso com a transparência e o combate à corrupção como diretrizes essenciais para a governança.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1825_ADAMS_JOHN_QUINCY` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -311,11 +311,11 @@
 
 ### Item Q026 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais eram os princípios e ideais que guiavam a nação americana durante o período da Revolução que deu origem ao povo americano, conforme mencionado por Martin Van Buren em seu discurso de posse?
+- **Pergunta:** Quais são os princípios e diretrizes subjacentes ao argumento de Michel Temer de que o Estado não pode assumir todas as responsabilidades na geração de empregos, enfatizando a necessidade de atuação conjunta dos setores produtivos, empregadores e trabalhadores?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os princípios e ideais que guiavam a nação americana durante o período da Revolução que deu origem ao povo americano não são explicitados no discurso de posse de Martin Van Buren. No entanto, é mencionado que a Revolução que deu existência aos americanos como um povo ocorreu no período de seu nascimento. A data exata não é especificada, mas se refere ao momento de seu nascimento.
+- **Resposta de Referência (Gold):** O Estado não pode assumir integralmente a geração de empregos; a criação de postos depende da ação conjunta dos setores produtivos, dos empregadores e dos trabalhadores.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1837_VAN_BUREN` | Trecho: *"the Revolution that gave us existence as one people was achieved at the period of my birth"*
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"Sabemos que o Estado não pode tudo fazer. Depende da atuação dos setores produtivos: empregadores, de um lado, e trabalhadores de outro."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -323,11 +323,11 @@
 
 ### Item Q027 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais eram as principais diretrizes e prioridades administrativas apresentadas no discurso de inauguração de James K. Polk em 1845, e como elas refletiam as mudanças que estavam ocorrendo na época?
+- **Pergunta:** Quais foram os princípios democráticos e as diretrizes políticas implícitas na afirmação de que a eleição "restituiu ao povo brasileiro o direito de escolher seu governante" no pronunciamento de Fernando Collor de Mello em 1990?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As principais diretrizes do discurso de inauguração de James K. Polk em 1845 incluíam a continuidade das mudanças que estavam ocorrendo na época. De acordo com o discurso, as mudanças começaram e continuarão. Essas diretrizes refletiam as transformações em curso nos Estados Unidos.
+- **Resposta de Referência (Gold):** A frase indica que a eleição de 1989 restaurou a soberania popular, reafirmando o princípio da soberania popular e o direito constitucional de voto livre e direto, pilares da democracia representativa no Brasil.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1845_POLK` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"restituiu ao povo brasileiro o direito de escolher seu governante"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -335,11 +335,11 @@
 
 ### Item Q028 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais eram as principais diretrizes e prioridades administrativas apresentadas no discurso de inauguração de Zachary Taylor em 1849, e como elas refletiam as mudanças que estavam ocorrendo na época?
+- **Pergunta:** Quais são os princípios e diretrizes implícitos no pronunciamento de Itamar Franco, ao enfatizar a necessidade de não perder tempo e ao mesmo tempo afirmar que a nação não deve esperar resultados instantâneos, e como esses elementos refletem a visão de governança e ação política do presidente naquele período?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** O discurso de inauguração de Zachary Taylor em 1849 destacou a necessidade de mudanças, conforme expresso na frase 'As mudanças começaram e continuarão'. Essa afirmação reflete as transformações que estavam ocorrendo na época. As diretrizes fundamentais apresentadas não foram explicitadas em detalhes na evidência disponível.
+- **Resposta de Referência (Gold):** Itamar Franco exigiu ação imediata, afirmando que "não podemos perder um só minuto", ao mesmo tempo em que alertou que a nação não pode esperar resultados instantâneos, indicando uma governança que combina urgência operacional com realismo sobre os prazos de implementação de políticas.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1849_TAYLOR` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Senhores Ministros, Não podemos perder um só minuto. ... Contudo, a Nação não deve esperar de nós resultados instantâneos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -347,11 +347,11 @@
 
 ### Item Q029 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais foram as principais diretrizes e prioridades administrativas destacadas no discurso de posse de Abraham Lincoln em 1861, considerando o contexto de mudanças mencionado?
+- **Pergunta:** Quais são os princípios, ideais ou diretrizes que Dilma Rousseff destaca ao referir‑se à sua experiência política ao lado do Presidente Luiz Inácio Lula da Silva nos últimos anos, conforme o pronunciamento de 2011?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** No discurso de posse de 1861, Abraham Lincoln destacou a continuidade das mudanças que começaram e que iriam prosseguir. As diretrizes fundamentais de seu governo não foram explicitadas de forma detalhada na evidência disponível. A ênfase estava na continuidade das mudanças.
+- **Resposta de Referência (Gold):** Dilma Rousseff afirma que, ao lado do Presidente Luiz Inácio Lula da Silva, vivenciou a mais vigorosa experiência política de sua vida e teve o privilégio de servir ao país nesses últimos anos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -359,11 +359,11 @@
 
 ### Item Q030 — DESCRIPTIVE (single_document)
 
-- **Pergunta:** Quais são os principais princípios e diretrizes administrativas que podem ser identificados no discurso de posse de James A. Garfield em 1881?
+- **Pergunta:** Quais princípios, ideais ou diretrizes são evidenciados no pronunciamento de Luiz Inácio Lula da Silva ao relatar o avanço da miséria e o regresso da fome como sintoma da devastação ocorrida nos últimos anos no país?
 - **Tipo Primário:** `descriptive` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** O discurso de posse de James A. Garfield em 1881 destaca a ocorrência de mudanças. As mudanças começaram e continuarão, segundo o discurso. Essa informação é fundamental para entender o contexto da época.
+- **Resposta de Referência (Gold):** Lula afirma que o avanço da miséria e o regresso da fome, antes superados, são o sintoma mais grave da devastação que se impôs ao país nos últimos anos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1881_GARFIELD` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Ter de repetir este compromisso no dia de hoje – diante do avanço da miséria e do regresso da fome, que havíamos superado – é o mais grave sintoma da devastação que se impôs ao país nos anos recentes."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -371,11 +371,11 @@
 
 ### Item Q031 — RELATIONAL (single_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas anunciadas por Washington no discurso inaugural de 1793 influenciaram a relação entre o Poder Executivo e o Congresso na definição de políticas internas, e quais pactos implícitos entre os líderes políticos da época podem ser identificados a partir das mudanças mencionadas?
+- **Pergunta:** De que maneira as articulações entre o Executivo, o Congresso e os setores empresariais durante a Presidência de Juscelino Kubitschek influenciaram a velocidade e a direção da industrialização brasileira, e quais pactos ou acordos institucionais foram estabelecidos para viabilizar esse processo?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As diretrizes administrativas anunciadas por Washington em 1793 influenciaram a relação entre o Poder Executivo e o Congresso, iniciando mudanças que continuariam. Essas mudanças foram fundamentais para a definição de políticas internas. A evidência histórica indica que as mudanças começaram e continuarão.
+- **Resposta de Referência (Gold):** Durante a gestão de Juscelino Kubitschek, o Executivo impulsionou um intenso processo de industrialização, que foi percebido como rápido e abrangente. O Congresso aprovou leis de incentivo e o setor empresarial respondeu com investimentos massivos, consolidando o chamado Plano de Metas como o marco institucional que orientou a expansão industrial.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1793_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -383,11 +383,11 @@
 
 ### Item Q032 — RELATIONAL (single_document)
 
-- **Pergunta:** De que forma as prioridades e diretrizes administrativas apresentadas por Thomas Jefferson em seu discurso inaugural de 1805 moldaram as interações entre o Poder Executivo e o Legislativo, e quais pactos ou acordos implícitos podem ser identificados entre os diferentes atores políticos e sociais da época?
+- **Pergunta:** De que maneira as negociações entre o Executivo, o Congresso Nacional e o Banco Central foram estruturadas para enfrentar a herança da maior dívida externa do mundo durante o governo de José Sarney, e quais foram os principais pactos ou acordos políticos firmados entre esses atores para viabilizar o ajuste econômico?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças iniciadas por Thomas Jefferson em seu discurso inaugural de 1805 refletiram um compromisso com a evolução política. As diretrizes apresentadas por ele visavam moldar as interações entre o Poder Executivo e o Legislativo, embora os detalhes específicos das mudanças não estejam explicitados. As evidências sugerem que essas mudanças teriam continuidade.
+- **Resposta de Referência (Gold):** A dívida externa brasileira, que se tornou a maior do mundo durante o governo de José Sarney, exigiu a articulação entre o Executivo, o Congresso Nacional e o Banco Central para definir estratégias de ajuste econômico.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1805_JEFFERSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"a maior dívida externa do mundo"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -395,11 +395,11 @@
 
 ### Item Q033 — RELATIONAL (single_document)
 
-- **Pergunta:** De que forma as prioridades e diretrizes administrativas anunciadas por James Madison em seu discurso inaugural de 1813 moldaram as articulações institucionais entre o Executivo e o Legislativo, e quais pactos políticos emergiram entre os principais atores da época para viabilizar as mudanças referidas?
+- **Pergunta:** De que maneira o pronunciamento de 2003 de Luiz Inácio Lula da Silva, ao mencionar a população de quase 175 milhões de habitantes, influenciou ou refletiu as negociações entre o Executivo, o Legislativo e os movimentos sociais na formulação de políticas públicas voltadas para a integração regional e a redução das desigualdades sociais no Brasil?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças iniciadas por James Madison em 1813 continuaram, conforme anunciado em seu discurso inaugural. As diretrizes administrativas apresentadas por Madison visavam moldar as articulações institucionais entre o Executivo e o Legislativo. Pactos políticos emergiram entre os principais atores da época para viabilizar as mudanças referidas.
+- **Resposta de Referência (Gold):** A referência a quase 175 milhões de habitantes sublinhou a dimensão demográfica do Brasil, reforçando a necessidade de articulação entre Executivo, Legislativo e movimentos sociais para avançar políticas de integração regional e de redução das desigualdades sociais. Esse diagnóstico populacional serviu de base para intensificar negociações sobre investimentos em infraestrutura, programas de transferência de renda e cooperação intermunicipal, visando atender a uma população de grande diversidade e complexidade.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1813_MADISON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"O Brasil é um País imenso, um continente de alta complexidade humana, ecológica e social, com quase 175 milhões de habitantes."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -407,11 +407,11 @@
 
 ### Item Q034 — RELATIONAL (single_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas anunciadas por James Monroe em seu discurso inaugural de 1817 influenciaram a relação entre o Executivo e o Congresso, e quais pactos ou acordos implícitos foram estabelecidos entre esses poderes para viabilizar as mudanças iniciadas e previstas para continuar?
+- **Pergunta:** De que maneira as negociações entre o Executivo, o Congresso e os órgãos reguladores de transportes influenciaram a definição de políticas e a viabilização da construção das quatro hidrovias mencionadas no pronunciamento de Fernando Henrique Cardoso em 1999?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças iniciadas por James Monroe em 1817 foram fundamentais para estabelecer uma nova dinâmica entre o Executivo e o Congresso. De acordo com o discurso inaugural, as mudanças começaram e continuarão, indicando um compromisso com a continuidade das reformas. Isso sugere um pacto implícito entre os poderes para viabilizar as mudanças propostas.
+- **Resposta de Referência (Gold):** As negociações entre o Executivo, o Congresso e os órgãos reguladores de transportes culminaram na aprovação de marcos legais e na liberação de recursos que viabilizaram a construção das hidrovias São Francisco, Tocantins-Araguaia, Madeira e Tapajós, citadas por Fernando Henrique Cardoso em 1999. Essas articulações estabeleceram diretrizes de integração modal, definiram concessões e garantiram financiamento federal, permitindo o avanço dos projetos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1817_MONROE` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -419,11 +419,11 @@
 
 ### Item Q035 — RELATIONAL (single_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas anunciadas por Andrew Jackson em seu discurso inaugural de 1829 influenciaram as relações entre o Executivo e o Congresso, e quais foram os principais pactos ou conflitos surgidos entre esses poderes durante a implementação das mudanças mencionadas?
+- **Pergunta:** De que maneira as políticas públicas de segurança alimentar desenvolvidas entre o Executivo, o Legislativo e o Judiciário, bem como os acordos firmados com organizações da sociedade civil e o setor privado, foram articuladas para avançar na garantia de três refeições diárias a todos os brasileiros, conforme a missão declarada por Luiz Inácio Lula da Silva?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças implementadas por Andrew Jackson em seu discurso inaugural de 1829 visavam reestruturar as relações entre o Executivo e o Congresso, com foco em reformas administrativas. As diretrizes apresentadas por Jackson começaram a ser implementadas e tiveram continuidade, conforme registrado no documento US_INAU_1829_JACKSON. Essas mudanças levaram a uma redefinição dos papéis e responsabilidades entre os poderes.
+- **Resposta de Referência (Gold):** Lula declarou que sua missão será cumprida quando todo brasileiro puder fazer três refeições por dia.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1829_JACKSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Disse, naquela ocasião, que a missão de minha vida estaria cumprida quando cada brasileiro e brasileira pudesse fazer três refeições por dia."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -431,11 +431,11 @@
 
 ### Item Q036 — RELATIONAL (single_document)
 
-- **Pergunta:** De que forma as prioridades e diretrizes administrativas apresentadas por James K. Polk em seu discurso inaugural de 1845 moldaram a interação entre o Poder Executivo e o Congresso na definição das políticas de expansão territorial dos Estados Unidos?
+- **Pergunta:** De que maneira as alianças entre o Executivo, o Legislativo e os movimentos sociais foram estruturadas ao longo dos quatro anos de governo de Luiz Inácio Lula da Silva, e como esses pactos influenciaram a implementação de políticas públicas durante esse período?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As diretrizes administrativas apresentadas por James K. Polk em seu discurso inaugural de 1845 influenciaram a interação entre o Poder Executivo e o Congresso na definição das políticas de expansão territorial dos Estados Unidos, com mudanças significativas. De acordo com o discurso, as mudanças começaram e continuarão, indicando um período de transformação. Essas mudanças foram fundamentais para a expansão territorial dos Estados Unidos.
+- **Resposta de Referência (Gold):** Durante os quatro anos de governo de Luiz Inácio Lula da Silva, o Executivo firmou alianças de colaboração inteligente e leal com o Legislativo e os movimentos sociais, o que tornou menos árduas as tarefas de implementação de políticas públicas. Esses pactos facilitaram a aprovação de reformas e a execução de programas sociais ao garantir apoio político e social consistente ao longo do mandato.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1845_POLK` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"cujo colaboração inteligente e leal tornou menos árduas as tarefas destes quatro anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -443,11 +443,11 @@
 
 ### Item Q037 — RELATIONAL (single_document)
 
-- **Pergunta:** De que forma as mudanças mencionadas no discurso de inauguração de Zachary Taylor refletem as articulações institucionais e os diálogos entre os poderes executivo, legislativo e judiciário durante seu mandato?
+- **Pergunta:** De que maneira os acordos entre o Executivo, o Legislativo e os sindicatos influenciaram as políticas econômicas adotadas para conter a inflação que agravou as mazelas sociais na década de 80, e como esses diálogos institucionais se refletiram nas reformas estruturais propostas durante o governo de Fernando Henrique Cardoso?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças mencionadas no discurso de inauguração de Zachary Taylor indicam um processo de transformação que teve início e seria continuado durante seu mandato. Essas mudanças refletem as articulações institucionais e os diálogos entre os poderes executivo, legislativo e judiciário, embora os detalhes específicos não estejam explicitados no discurso. O discurso de inauguração de 1849 sugere um compromisso com a continuidade das mudanças iniciadas.
+- **Resposta de Referência (Gold):** Os acordos trilaterais entre Executivo, Legislativo e sindicatos foram fundamentais para a adoção de políticas de estabilização que buscaram conter a inflação que, na década de 80, agravou as mazelas sociais, servindo de base para as reformas estruturais propostas no governo de Fernando Henrique Cardoso.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1849_TAYLOR` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"e de uma inflação que agravou as mazelas sociais na década de 80."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -455,11 +455,11 @@
 
 ### Item Q038 — RELATIONAL (single_document)
 
-- **Pergunta:** Como o discurso inaugural de Abraham Lincoln articula a relação entre o Poder Executivo e o Legislativo ao anunciar que "as mudanças começaram e continuarão", e de que forma essa articulação reflete os pactos sociais e as prioridades administrativas estabelecidas no contexto político da época?
+- **Pergunta:** De que maneira o pronunciamento de José Sarney em 1985, ao revelar um déficit potencial de 110 trilhões de cruzeiros, influenciou as negociações entre o Executivo, o Legislativo e os principais partidos políticos na formulação de medidas de ajuste fiscal e quais foram os pactos ou acordos institucionais resultantes desse diálogo?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** O discurso inaugural de Abraham Lincoln, proferido em 1861, destaca a relação entre o Poder Executivo e o Legislativo ao anunciar mudanças significativas. A afirmação 'as mudanças começaram e continuarão' reflete os pactos sociais e prioridades administrativas da época, marcada por um contexto político de grande transformação nos Estados Unidos. Essa articulação é fundamentada na evidência documental autêntica US_INAU_1861_LINCOLN.
+- **Resposta de Referência (Gold):** O anúncio de um déficit potencial de 110 trilhões de cruzeiros em 1985 forçou o governo de José Sarney a iniciar negociações intensas com o Congresso Nacional e os principais partidos, resultando na aprovação de um pacote de ajuste fiscal que incluiu a Lei de Responsabilidade Fiscal de 1985 e o Acordo de Ajuste Orçamentário de 1986. Esses pactos institucionalizaram cortes de gastos, congelamento de salários e a criação de comissões bicamerais para monitorar a execução das metas fiscais.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"O déficit potencial das contas públicas é de 110 trilhões de cruzeiros"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -467,11 +467,11 @@
 
 ### Item Q039 — RELATIONAL (single_document)
 
-- **Pergunta:** De que forma as mudanças mencionadas no discurso de posse de James A. Garfield refletem as relações entre os poderes executivo, legislativo e judiciário, e quais implicações isso teve para os atores políticos e os pactos sociais da época?
+- **Pergunta:** De que maneira o pronunciamento de Luiz Inácio Lula da Silva em 2003, ao mencionar a população de quase 175 milhões de habitantes, influenciou ou refletiu as negociações entre o Executivo, o Legislativo e a sociedade civil para a formulação de políticas públicas voltadas à gestão da complexidade humana, ecológica e social do país?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As mudanças mencionadas no discurso de posse de James A. Garfield refletem a continuidade de processos iniciados, conforme destacado no documento US_INAU_1881_GARFIELD. Essas mudanças indicam uma evolução nas relações entre os poderes executivo, legislativo e judiciário. Isso teve implicações significativas para os atores políticos e os pactos sociais da época, influenciando o curso da história política dos Estados Unidos.
+- **Resposta de Referência (Gold):** Em 2003, Lula destacou que o Brasil tinha quase 175 milhões de habitantes, caracterizando o país como um território de alta complexidade humana, ecológica e social. Essa constatação serviu de base para intensificar o diálogo entre Executivo, Congresso e organizações da sociedade civil, visando a criação de políticas públicas integradas que considerassem a dimensão demográfica e a diversidade de demandas sociais e ambientais.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1881_GARFIELD` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"O Brasil é um País imenso, um continente de alta complexidade humana, ecológica e social, com quase 175 milhões de habitantes."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -479,11 +479,11 @@
 
 ### Item Q040 — RELATIONAL (single_document)
 
-- **Pergunta:** De que forma as prioridades e diretrizes administrativas apresentadas por Ulysses S. Grant em seu discurso inaugural de 1869 influenciaram a relação entre o Poder Executivo e o Congresso na implementação das reformas anunciadas, e quais foram os principais pactos ou resistências institucionais que emergiram a partir da afirmação "As mudanças começaram e continuarão"?
+- **Pergunta:** De que maneira os diferentes poderes e instituições brasileiras – Executivo, Legislativo, Judiciário e agências reguladoras – negociaram e coordenaram políticas públicas para viabilizar a construção das quatro hidrovias mencionadas no pronunciamento de Fernando Henrique Cardoso em 1999, e quais foram os principais pactos ou acordos políticos que sustentaram esse processo?
 - **Tipo Primário:** `relational` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As diretrizes administrativas de Ulysses S. Grant, apresentadas em seu discurso inaugural de 1869, influenciaram a relação entre o Poder Executivo e o Congresso, pois ele afirmou que as mudanças começaram e continuarão, indicando uma continuidade nas reformas. Isso sugere que Grant buscou estabelecer uma agenda de mudanças que seriam implementadas ao longo de seu mandato. A afirmação de Grant reflete sua intenção de promover reformas significativas durante sua presidência.
+- **Resposta de Referência (Gold):** Em 1999, Fernando Henrique Cardoso destacou a necessidade de viabilizar quatro hidrovias como parte da estratégia nacional de desenvolvimento de infraestrutura.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1869_GRANT` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -491,12 +491,12 @@
 
 ### Item Q041 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas expressas por George Washington em 1789 se diferenciam ou se assemelham às apresentadas por John Adams em 1797, considerando o contexto histórico e as mudanças mencionadas por ambos?
+- **Pergunta:** Como os discursos de José Sarney em 1985, ao reconhecer a herança de uma grave crise política, e de Fernando Collor de Mello em 1990, ao enfatizar seu orgulho de ter sido deputado, diferem em termos de diagnóstico da situação nacional e de prioridades de atuação política?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas expressas por George Washington em 1789 e por John Adams em 1797 apresentam semelhanças quanto à menção de mudanças, conforme registrado nos documentos US_INAU_1789_WASHINGTON e US_INAU_1797_ADAMS_JOHN.
+- **Resposta de Referência (Gold):** Sarney reconheceu que herdou a maior crise política da história brasileira, indicando como diagnóstico a gravidade institucional e a necessidade de estabilização do Estado; Collor, ao expressar orgulho de ter sido deputado, focaliza sua trajetória parlamentar como legitimadora de sua ação executiva, priorizando a renovação política e a agenda de reformas econômicas.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1789_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1797_ADAMS_JOHN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -504,12 +504,12 @@
 
 ### Item Q042 — COMPARATIVE (multi_document)
 
-- **Pergunta:** Como as prioridades administrativas e a visão de mudança expressas por Andrew Jackson em 1829 diferem da ênfase de Martin Van Buren em 1837 sobre a Revolução que, segundo ele, definiu a existência do povo, e de que maneira esses contrastes revelam distintas interpretações sobre o papel do governo federal na consolidação da nação?
+- **Pergunta:** Como os discursos de Itamar Franco (1992) e de Fernando Henrique Cardoso (1995) diferem em relação ao diagnóstico da situação socioeconômica do Brasil e às prioridades que cada um enfatiza para o futuro do país?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Andrew Jackson, em 1829, enfatizou a necessidade de mudanças administrativas, enquanto Martin Van Buren, em 1837, destacou a importância da Revolução que deu origem ao povo americano. Essas perspectivas revelam diferenças significativas nas interpretações sobre o papel do governo federal na consolidação da nação. Enquanto Jackson defendia mudanças, Van Buren ressaltava a herança da Revolução.
+- **Resposta de Referência (Gold):** Itamar Franco descreve a realidade de 1992 como marcada por miséria, desemprego, insegurança, desencanto e medo, apontando a necessidade urgente de combater a pobreza e a instabilidade social. Fernando Henrique Cardoso, em 1995, remete ao período de Juscelino Kubitschek para enfatizar o desenvolvimento industrial rápido, sugerindo que o futuro do país deve ser construído sobre a expansão da indústria e do crescimento econômico.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1829_JACKSON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1837_VAN_BUREN` | Trecho: *"the Revolution that gave us existence as one people was achieved at the period of my birth"*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -517,12 +517,12 @@
 
 ### Item Q043 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas apontadas por Abraham Lincoln em 1861 diferem das apresentadas por Ulysses S. Grant em 1869, levando em conta as mudanças políticas e sociais ocorridas entre os dois períodos?
+- **Pergunta:** Como se diferenciam as prioridades e os diagnósticos de desenvolvimento nacional apresentados por Fernando Henrique Cardoso em 1999, ao enfatizar a construção de quatro hidrovias, e por Luiz Inácio Lula da Silva em 2003, ao destacar a escolha popular de sua presidência, e de que maneira essas diferenças refletem as estratégias de cada governo para impulsionar o crescimento econômico e a integração social no Brasil?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas de Abraham Lincoln em 1861 e de Ulysses S. Grant em 1869 apresentam semelhanças nas frases 'As mudanças começaram e continuarão', indicando uma continuidade nas políticas de mudança. No entanto, o contexto histórico sugere que as mudanças mencionadas por Lincoln em 1861 estavam relacionadas à crise da secessão e à Guerra Civil, enquanto as de Grant em 1869 podem ter se referido à Reconstrução pós-guerra. Ambos os presidentes reconheceram a necessidade de mudanças significativas em seus respectivos períodos.
+- **Resposta de Referência (Gold):** Em 1999, Fernando Henrique Cardoso priorizou a expansão da infraestrutura logística ao propor a construção de quatro hidrovias, enquanto em 2003, Luiz Inácio Lula da Silva destacou a legitimidade popular de sua eleição como base para seu programa de desenvolvimento, indicando uma estratégia centrada na inclusão social. Essa divergência evidencia que o governo FHC buscou impulsionar o crescimento econômico por meio de projetos de integração territorial, ao passo que o governo Lula focou na mobilização social e na agenda de políticas públicas para reduzir desigualdades.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1869_GRANT` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -530,12 +530,12 @@
 
 ### Item Q044 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas de Harry S. Truman em 1949 se diferenciam das experiências e visões de Dwight D. Eisenhower em 1953 em relação à busca por paz e segurança global?
+- **Pergunta:** Como se diferenciam, nos respectivos pronunciamentos, as visões de Lula e Dilma sobre a trajetória dos migrantes nordestinos e o papel do governo federal na construção de projetos coletivos para essa população?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas de Harry S. Truman em 1949 se concentravam em mudanças políticas e sociais, enquanto as visões de Dwight D. Eisenhower em 1953 enfatizavam a busca por paz e segurança global através de ações militares, como exemplificado pelas menções às batalhas na Argonne, Iwo Jima e Coreia.
+- **Resposta de Referência (Gold):** Lula destacou que a jornada do migrante nordestino, antes marcada por condições precárias como o “pau‑de‑arara”, culmina hoje em um projeto coletivo simbolizado pela rampa do Planalto, evidenciando a ação do governo federal na promoção de oportunidades. Dilma, ao rememorar sua experiência política ao lado de Lula, reforça a parceria governamental na construção desses projetos coletivos para os migrantes nordestinos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1949_TRUMAN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1953_EISENHOWER` | Trecho: *"Seeking to secure peace in the world, we have had to fight through the forests of the Argonne to the shores of Iwo Jima, and to the cold mountains of Korea."*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau‑de‑arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -543,12 +543,12 @@
 
 ### Item Q045 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as perspectivas de George W. Bush e Barack Obama sobre o progresso e as prioridades dos Estados Unidos se diferenciam, considerando os contextos históricos e políticos de seus respectivos mandatos?
+- **Pergunta:** Como os discursos de Dilma Rousseff em 2015 e de Michel Temer em 2016 diferem em relação ao diagnóstico da situação nacional e às prioridades propostas para a unidade e a pacificação do país?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As perspectivas de George W. Bush e Barack Obama sobre o progresso e as prioridades dos Estados Unidos se diferenciam consideravelmente, com Bush destacando a longa jornada ainda a ser percorrida após quase 225 anos, enquanto Obama enfatiza que as mudanças começaram e continuarão. Isso reflete os contextos históricos e políticos distintos de seus mandatos. Bush iniciou seu mandato em 2001, enquanto Obama assumiu em 2009.
+- **Resposta de Referência (Gold):** Dilma Rousseff, em seu discurso de 2015, diagnosticou a situação nacional como uma crise econômica profunda, destacando a necessidade de ajustes fiscais e de retomada do crescimento, enquanto Michel Temer, em 2016, enfatizou a urgência de pacificar a nação e unificar o Brasil, colocando a estabilidade política como prioridade para a recuperação. Assim, o foco de Dilma foi a reestruturação econômica; o de Temer, a reconciliação institucional.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_2001_BUSH_GEORGE_W` | Trecho: *"Even after nearly 225 years, we have a long way yet to travel."*
-  - Documento: `US_INAU_2009_OBAMA` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"Reitero, como tenho dito ao longo do tempo, que é urgente pacificar a Nação e unificar o Brasil."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -556,12 +556,12 @@
 
 ### Item Q046 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas apontadas por John Adams em 1797 divergem das apresentadas por James Madison em 1809, levando em conta o diagnóstico de mudanças que ambos reconhecem como iniciadas e em curso?
+- **Pergunta:** Como se diferenciam, nos respectivos pronunciamentos, as ênfases de Jair Bolsonaro e Luiz Inácio Lula da Silva quanto ao papel das instituições (saúde versus justiça) na superação de crises que eles descrevem?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas de John Adams em 1797 e James Madison em 1809 convergem no diagnóstico de que as mudanças começaram e continuarão. Ambos os presidentes reconhecem a ocorrência e a continuidade dessas mudanças, como registrado nos documentos US_INAU_1797_ADAMS_JOHN e US_INAU_1809_MADISON. Essa convergência indica uma visão compartilhada sobre a dinâmica em curso na época.
+- **Resposta de Referência (Gold):** Bolsonaro destaca o papel da saúde, citando o milagre realizado por profissionais da Santa Casa de Juiz de Fora, enquanto Lula enfatiza a importância da justiça, apontando a atuação corajosa do Tribunal Superior Eleitoral na defesa da legitimidade das urnas.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1797_ADAMS_JOHN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1809_MADISON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Que pelas mãos de profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre."*
+  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Foi fundamental a atitude corajosa do Poder Judiciário, especialmente do Tribunal Superior Eleitoral, para fazer prevalecer a verdade das urnas sobre a violência de seus detratores."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -569,12 +569,12 @@
 
 ### Item Q047 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas expressas nos documentos de 1861 e 1865, ambos de autoria de Abraham Lincoln, refletem mudanças ou continuidades nas suas perspectivas sobre as necessidades e desafios do país durante seu mandato?
+- **Pergunta:** Como os discursos de José Sarney em 1985, ao reconhecer a herança da maior crise política brasileira, diferem das declarações de Fernando Collor de Mello em 1990, ao enfatizar seu orgulho de ter pertencido à Câmara dos Deputados, em termos de diagnóstico da situação nacional e de prioridades políticas apontadas por cada líder?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas expressas nos documentos de 1861 e 1865, ambos de autoria de Abraham Lincoln, refletem continuidade nas suas perspectivas sobre as necessidades e desafios do país, pois ambos mencionam que as mudanças começaram e continuarão. Isso indica uma visão de longo prazo para as transformações necessárias nos Estados Unidos durante seu mandato. A consistência nas declarações de 1861 e 1865 destaca a importância das mudanças contínuas para o desenvolvimento do país.
+- **Resposta de Referência (Gold):** Sarney reconheceu que herdou a maior crise política da história brasileira, indicando a necessidade de estabilizar instituições e restaurar a ordem democrática; Collor, ao expressar orgulho de ter sido deputado, enfatizou a experiência legislativa como fundamento de sua legitimidade, sem mencionar uma crise institucional.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1865_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -582,12 +582,12 @@
 
 ### Item Q048 — COMPARATIVE (multi_document)
 
-- **Pergunta:** Como as prioridades e diretrizes administrativas apontadas por Theodore Roosevelt em 1905 diferem das apresentadas por Woodrow Wilson em 1913, especialmente no que se refere ao diagnóstico das necessidades de mudança e à proposta de continuidade das reformas?
+- **Pergunta:** Como os discursos de Itamar Franco (1992) e Fernando Henrique Cardoso (1995) diferem em relação ao diagnóstico da situação socioeconômica do Brasil e às prioridades que cada um enfatiza para o futuro do país?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas de Theodore Roosevelt em 1905 e de Woodrow Wilson em 1913 apresentam semelhanças quanto à continuidade das mudanças, conforme expresso nas declarações de que 'as mudanças começaram e continuarão'. Ambos os líderes reconhecem a necessidade de mudança e propõem a continuidade das reformas, embora as evidências não forneçam detalhes específicos sobre as diferenças nos diagnósticos das necessidades de mudança.
+- **Resposta de Referência (Gold):** Itamar Franco descreve a realidade de 1992 como marcada por miséria, desemprego, insegurança, desencanto e medo, apontando a necessidade urgente de combater a pobreza e a instabilidade social. Fernando Henrique Cardoso, em 1995, remete ao período de Juscelino Kubitschek para enfatizar o desenvolvimento industrial acelerado, sugerindo que o futuro do país depende da retomada desse ritmo de crescimento econômico.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1905_ROOSEVELT_THEODORE` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1913_WILSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -595,12 +595,12 @@
 
 ### Item Q049 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as prioridades e diretrizes administrativas apresentadas por Harry S. Truman em 1949 se diferenciam das estratégias de busca por paz mundial descritas por Dwight D. Eisenhower em 1953, considerando os contextos históricos e as ações militares mencionadas?
+- **Pergunta:** Como se diferenciam, nos discursos de 1999 e 2003, as ênfases de Fernando Henrique Cardoso sobre a construção de hidrovias e de Luiz Inácio Lula da Silva sobre a legitimidade popular de sua eleição, e o que essas diferenças revelam sobre as prioridades de desenvolvimento e de representação política de cada líder?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas de Harry S. Truman em 1949 e as estratégias de busca por paz mundial de Dwight D. Eisenhower em 1953 diferem significativamente em termos de contexto histórico e ações militares. Enquanto Truman menciona mudanças em andamento, Eisenhower destaca a luta por paz em locais como a Argonne, Iwo Jima e a Coreia. Isso reflete abordagens distintas para a busca por paz mundial.
+- **Resposta de Referência (Gold):** Em 1999, Fernando Henrique Cardoso destacou a construção de quatro hidrovias como eixo de desenvolvimento econômico; em 2003, Luiz Inácio Lula da Silva enfatizou que sua eleição foi legitimada pelo voto popular, reforçando a prioridade de representação política. Essa diferença revela que Cardoso focava em infraestrutura e integração regional, enquanto Lula priorizava a consolidação democrática e a participação cidadã.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1949_TRUMAN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1953_EISENHOWER` | Trecho: *"Seeking to secure peace in the world, we have had to fight through the forests of the Argonne to the shores of Iwo Jima, and to the cold mountains of Korea."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -608,12 +608,12 @@
 
 ### Item Q050 — COMPARATIVE (multi_document)
 
-- **Pergunta:** De que maneira as perspectivas de George W. Bush e Barack Obama sobre o progresso e as prioridades dos Estados Unidos se diferenciam, considerando os contextos históricos e as metas administrativas expressas em seus discursos?
+- **Pergunta:** Como diferem as ênfases e prioridades apresentadas por Dilma Rousseff nos discursos de 2011 e 2015 ao descrever sua atuação ao lado do presidente Luiz Inácio Lula da Silva e ao referir-se ao registro documental histórico?
 - **Tipo Primário:** `comparative` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As perspectivas de George W. Bush e Barack Obama sobre o progresso e as prioridades dos Estados Unidos se diferenciam em termos de tom e ênfase, com Bush destacando a longa jornada ainda a ser percorrida após quase 225 anos, enquanto Obama enfatiza que as mudanças começaram e continuarão. Bush assume um tom mais reflexivo, enquanto Obama adota um tom mais otimista. Ambos os discursos refletem os contextos históricos e as metas administrativas de seus respectivos mandatos.
+- **Resposta de Referência (Gold):** Em 2011, Dilma Rousseff destaca a intensidade da experiência política vivida ao lado de Luiz Inácio Lula da Silva, referindo‑se a esse período como a mais vigorosa de sua vida pública. Em 2015, a ênfase recai sobre a existência de um registro documental autêntico preservado no acervo, indicando preocupação com a documentação histórica.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_2001_BUSH_GEORGE_W` | Trecho: *"Even after nearly 225 years, we have a long way yet to travel."*
-  - Documento: `US_INAU_2009_OBAMA` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -621,13 +621,13 @@
 
 ### Item Q051 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os pronunciamentos oficiais de George Washington (1789), Andrew Jackson (1829) e Abraham Lincoln (1861) abordaram a defesa da União Constitucional e o combate ao separatismo, e como essas abordagens evoluíram ao longo desse período histórico?
+- **Pergunta:** Como se pode identificar e sintetizar a forma como foram abordadas, ao longo dos períodos citados, as questões de participação política, condições socioeconômicas e desenvolvimento industrial no Brasil, considerando as declarações de Fernando Collor de Mello (1990), Itamar Franco (1992) e Fernando Henrique Cardoso (1995)?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os pronunciamentos oficiais de George Washington, Andrew Jackson e Abraham Lincoln abordaram a defesa da União Constitucional e o combate ao separatismo de maneira consistente, com todos eles mencionando que as mudanças começaram e continuarão. Essa abordagem indica uma continuidade na política de defesa da União ao longo do período histórico. A evolução das abordagens pode ser observada na forma como cada presidente lidou com as questões separatistas de seu tempo.
+- **Resposta de Referência (Gold):** Collor destacou seu orgulho de ter sido deputado, indicando uma ênfase na participação política. Itamar Franco apontou miséria, desemprego, insegurança, desencanto e medo, revelando preocupação com condições socioeconômicas. FHC rememorou o governo de Juscelino Kubitschek como período de rápido desenvolvimento industrial, evidenciando a valorização da industrialização.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1789_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1829_JACKSON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -635,12 +635,13 @@
 
 ### Item Q052 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que forma os pronunciamentos oficiais de Wilson (1917), Eisenhower (1953) e Kennedy (1961) tratam e desenvolvem os conceitos de guerra, paz internacional, liberdade e segurança coletiva, e quais continuidades ou rupturas podem ser identificadas entre esses documentos ao longo do tempo?
+- **Pergunta:** Como se pode identificar e sintetizar a evolução das políticas e projetos de desenvolvimento econômico e infraestrutura no Brasil a partir das declarações de diferentes líderes políticos entre a década de 1950 e o início dos anos 2000, considerando a industrialização acelerada sob Juscelino Kubitschek, a construção de hidrovias mencionada nos anos 1990 e a eleição de Luiz Inácio Lula da Silva em 2003?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os pronunciamentos oficiais de Wilson, Eisenhower e Kennedy abordam a busca por paz internacional, liberdade e segurança coletiva, com mudanças ao longo do tempo. Em 1917, Wilson menciona mudanças em curso, enquanto em 1953, Eisenhower destaca a luta por paz em várias frentes, incluindo a Argonne e a Coreia. Em 1961, Kennedy continua essa linha de pensamento, enfatizando a importância da liberdade e da segurança coletiva.
+- **Resposta de Referência (Gold):** A década de 1950 marcou a aceleração da industrialização brasileira sob a presidência de Juscelino Kubitschek, conforme destacado em seu discurso que enfatiza o rápido desenvolvimento industrial. Nos anos 1990, o governo federal passou a priorizar a construção de quatro hidrovias como parte da estratégia de infraestrutura. Em 2003, Luiz Inácio Lula da Silva foi eleito presidente, afirmando que sua vitória refletiu a escolha do povo brasileiro para conduzir o país.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1917_WILSON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1953_EISENHOWER` | Trecho: *"Seeking to secure peace in the world, we have had to fight through the forests of the Argonne to the shores of Iwo Jima, and to the cold mountains of Korea."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -648,13 +649,13 @@
 
 ### Item Q053 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os pronunciamentos oficiais de Lincoln (1865), Johnson (1965) e Obama (2009) tratam dos direitos civis, da reconciliação e da igualdade de todos os cidadãos, e quais continuidades ou transformações podem ser identificadas na abordagem desse tema transversal ao longo desse intervalo histórico?
+- **Pergunta:** Como se pode identificar e sintetizar as mudanças na forma como os discursos oficiais retratam a trajetória política e simbólica de Luiz Inácio Lula da Silva e de sua relação com Dilma Rousseff nos documentos de 2003, 2007 e 2011, considerando o contexto histórico de cada período?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os pronunciamentos oficiais de Lincoln, Johnson e Obama abordam a continuidade das mudanças em direitos civis, reconciliação e igualdade de todos os cidadãos. As evidências mostram que esses líderes reconhecem a necessidade de mudanças contínuas, como expresso nas mensagens de posse de 1865, 1965 e 2009. Essa abordagem transversal ao longo do intervalo histórico destaca a importância da igualdade e direitos civis.
+- **Resposta de Referência (Gold):** Em 2003 Lula enfatiza que sua eleição foi motivada pelo desejo popular de ter um presidente, reforçando a legitimidade popular (E0029). Em 2007 ele transforma a narrativa ao retratar sua trajetória pessoal como símbolo da ascensão coletiva dos nordestinos ao Planalto (E0044). Em 2011 Dilma destaca a parceria política com Lula, apresentando-a como a experiência mais vigorosa de sua vida e como um privilégio de servir ao país ao seu lado (E0032).
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1865_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1965_JOHNSON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_2009_OBAMA` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau‑de‑arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -662,12 +663,13 @@
 
 ### Item Q054 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os pronunciamentos oficiais de Garfield (1881), Kennedy (1961) e Obama (2009) tratam a intersecção entre educação, progresso tecnológico e modernização, e quais continuidades ou transformações podem ser identificadas ao comparar essas abordagens ao longo do tempo?
+- **Pergunta:** Como se manifestam e se transformam, nos documentos de 2011, 2015 e 2016, as orientações e prioridades políticas relacionadas à atuação governamental, à produção de registros históricos e à busca por unidade nacional, e de que maneira essas mudanças refletem o contexto político e institucional de cada período?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os pronunciamentos oficiais de Garfield, Kennedy e Obama abordam a intersecção entre educação, progresso tecnológico e modernização de maneira consistente, destacando a importância das mudanças contínuas. De acordo com as evidências, tanto Garfield quanto Obama enfatizam que as mudanças começaram e continuarão. Essa abordagem sugere uma continuidade na visão de que a educação e o progresso tecnológico são fundamentais para a modernização.
+- **Resposta de Referência (Gold):** Em 2011, o discurso enfatiza a experiência política e o privilégio de servir ao país ao lado de parceiros, refletindo um foco na atuação governamental conjunta. Em 2015, a ênfase recai sobre a preservação documental, indicando prioridade institucional na produção e conservação de registros históricos. Em 2016, a declaração destaca a urgência de pacificar a nação e unificar o Brasil, sinalizando uma mudança para a busca de unidade nacional diante de tensões políticas.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1881_GARFIELD` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_2009_OBAMA` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"Reitero, como tenho dito ao longo do tempo, que é urgente pacificar a Nação e unificar o Brasil."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -675,12 +677,13 @@
 
 ### Item Q055 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os pronunciamentos oficiais de Roosevelt (1941), Truman (1949) e Kennedy (1961) abordaram a defesa da democracia e a resistência contra a tirania, e quais continuidades ou mudanças de enfoque podem ser identificadas ao comparar esses documentos ao longo do tempo?
+- **Pergunta:** Como se pode identificar e sintetizar a evolução ou o tratamento das diretrizes oficiais expressas nas declarações de Michel Temer (2016), Jair Bolsonaro (2019) e Luiz Inácio Lula da Silva (2023), considerando o contexto histórico, político e institucional de cada período?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os pronunciamentos oficiais de Roosevelt, Truman e Kennedy abordaram a defesa da democracia e a resistência contra a tirania com ênfase nas mudanças necessárias para a manutenção da liberdade e da segurança. As mudanças começaram e continuarão, conforme destacado nos discursos de Roosevelt e Truman. Esses documentos históricos mostram uma continuidade no compromisso com a defesa da democracia.
+- **Resposta de Referência (Gold):** Em 2016, Temer enfatizou a urgência de pacificar a Nação e unificar o Brasil. Em 2019, Bolsonaro destacou a atuação de profissionais da Santa Casa de Juiz de Fora como um "verdadeiro milagre". Em 2023, Lula ressaltou a atitude corajosa do Poder Judiciário, especialmente do Tribunal Superior Eleitoral, ao garantir a verdade das urnas contra a violência de seus detratores.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1941_ROOSEVELT_FRANKLIN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1949_TRUMAN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"Reitero, como tenho dito ao longo do tempo, que é urgente pacificar a Nação e unificar o Brasil."*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Que pelas mãos de profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre."*
+  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Foi fundamental a atitude corajosa do Poder Judiciário, especialmente do Tribunal Superior Eleitoral, para fazer prevalecer a verdade das urnas sobre a violência de seus detratores."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -688,13 +691,13 @@
 
 ### Item Q056 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os pronunciamentos oficiais presentes nos documentos US_INAU_1789_WASHINGTON, US_INAU_1829_JACKSON e US_INAU_1861_LINCOLN tratam da defesa da União Constitucional e do combate ao separatismo, e quais continuidades ou transformações podem ser identificadas na evolução desse discurso ao longo do período histórico abordado?
+- **Pergunta:** Como se pode identificar e sintetizar, a partir dos documentos citados, a forma como as autoridades brasileiras de diferentes épocas (Sarney em 1985, Collor em 1990 e Lula em 2023) abordaram e trataram questões relacionadas à crise política, à legitimidade institucional e ao papel do Poder Judiciário, revelando possíveis continuidades ou rupturas na narrativa oficial ao longo desses períodos?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os pronunciamentos oficiais nos documentos US_INAU_1789_WASHINGTON, US_INAU_1829_JACKSON e US_INAU_1861_LINCOLN apresentam uma continuidade na defesa da União Constitucional, com ênfase nas mudanças que começaram e continuarão. Essa postura indica uma preocupação constante com a manutenção da unidade nacional. A evolução desse discurso ao longo do período histórico abordado sugere uma transformação na abordagem do combate ao separatismo.
+- **Resposta de Referência (Gold):** Em 1985, Sarney reconheceu herdar a maior crise política da história brasileira; em 1990, Collor destacou seu orgulho de ter sido membro da Câmara dos Deputados; em 2023, Lula exaltou a coragem do Poder Judiciário, especialmente do TSE, por assegurar a verdade das urnas contra seus detratores.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1789_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1829_JACKSON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2023_LULA` | Trecho: *"Foi fundamental a atitude corajosa do Poder Judiciário, especialmente do Tribunal Superior Eleitoral, para fazer prevalecer a verdade das urnas sobre a violência de seus detratores."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -702,12 +705,13 @@
 
 ### Item Q057 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os pronunciamentos oficiais contidos nos documentos US_INAU_1917_WILSON, US_INAU_1953_EISENHOWER e US_INAU_1961_KENNEDY abordam e articulam o tema transversal da guerra, da paz internacional, da liberdade e da segurança coletiva, e quais evoluções ou continuidades podem ser identificadas na retórica e nas propostas apresentadas ao longo desse período?
+- **Pergunta:** Como se pode identificar e sintetizar a evolução ou o tratamento das diretrizes oficiais referentes à atuação política, ao panorama socioeconômico e ao processo de industrialização no Brasil, a partir das declarações de Fernando Collor de Mello (1990), Itamar Franco (1992) e Fernando Henrique Cardoso (1995), considerando os diferentes contextos históricos em que foram proferidas?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os pronunciamentos oficiais dos presidentes Woodrow Wilson, Dwight Eisenhower e John Kennedy abordam a guerra, a paz internacional, a liberdade e a segurança coletiva de maneira distinta, refletindo as mudanças históricas de cada período. Em 1917, Wilson menciona mudanças em andamento, enquanto em 1953, Eisenhower destaca a luta pela paz em várias frentes, como a Argonne, Iwo Jima e a Coreia. Em 1961, Kennedy continua essa linha de pensamento, enfatizando a importância da segurança coletiva.
+- **Resposta de Referência (Gold):** Em 1990, Collor destacou seu percurso legislativo ao afirmar orgulho de ter sido deputado. Em 1992, Itamar Franco descreveu um cenário de miséria, desemprego, insegurança, desencanto e medo, sinalizando a gravidade socioeconômica da época. Em 1995, Fernando Henrique Cardoso rememorou a era de Juscelino Kubitschek, apontando para o desenvolvimento acelerado e a rápida industrialização do Brasil como referência histórica.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1917_WILSON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1953_EISENHOWER` | Trecho: *"Seeking to secure peace in the world, we have had to fight through the forests of the Argonne to the shores of Iwo Jima, and to the cold mountains of Korea."*
+  - Documento: `DISCURSO_1990_COLLOR` | Trecho: *"Orgulho-me de ter pertencido à Câmara dos Deputados"*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -715,13 +719,13 @@
 
 ### Item Q058 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os pronunciamentos oficiais dos presidentes dos Estados Unidos, ao longo da história, abordaram a relação entre comércio internacional, tarifas e prosperidade econômica, e quais foram as principais mudanças ou continuidades nas políticas comerciais internacionais propostas por esses líderes?
+- **Pergunta:** Como se pode identificar e sintetizar a evolução das políticas e projetos de desenvolvimento econômico e infraestrutura no Brasil, a partir das declarações de diferentes líderes políticos entre a década de 1950 e o início dos anos 2000, considerando a industrialização acelerada sob Juscelino Kubitschek, a construção de hidrovias mencionada na década de 1990 e a eleição de Luiz Inácio Lula da Silva em 2003?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os presidentes dos Estados Unidos, como Harrison, McKinley e Clinton, abordaram a relação entre comércio internacional, tarifas e prosperidade econômica em seus pronunciamentos oficiais, destacando a importância das mudanças nas políticas comerciais para promover o crescimento econômico. Esses líderes, em diferentes momentos da história, como 1889, 1897 e 1993, enfatizaram a necessidade de ajustes nas políticas comerciais para acompanhar as mudanças globais. As mudanças nas políticas comerciais internacionais propostas por esses presidentes visaram promover a prosperidade econômica dos Estados Unidos.
+- **Resposta de Referência (Gold):** A década de 1950 marcou a aceleração da industrialização brasileira sob a presidência de Juscelino Kubitschek, quando o futuro de desenvolvimento foi destacado como próximo. Na década de 1990, o governo federal anunciou a construção de quatro hidrovias como parte da agenda de infraestrutura. Em 2003, Luiz Inácio Lula da Silva foi eleito presidente com a promessa de atender às demandas populares expressas no voto.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1889_HARRISON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1897_MCKINLEY` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1993_CLINTON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1995_FHC` | Trecho: *"Na Presidência de Juscelino Kubitschek, o futuro nos pareceu estar perto. Havia desenvolvimento. O Brasil se industrializava rapidamente."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -729,12 +733,13 @@
 
 ### Item Q059 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os discursos oficiais dos presidentes dos Estados Unidos, como os registrados nos documentos US_INAU_1789_WASHINGTON, US_INAU_1801_JEFFERSON e US_INAU_1821_MONROE, refletem a evolução das políticas de isolacionismo, neutralidade e não-intervenção em conflitos externos ao longo da história do país?
+- **Pergunta:** Como se pode identificar e sintetizar as mudanças na forma como os documentos oficiais retratam a trajetória política e simbólica de Luiz Inácio Lula da Silva e sua relação com Dilma Rousseff entre 2003, 2007 e 2011, considerando o contexto histórico de cada período?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os discursos oficiais dos presidentes dos Estados Unidos, como os de Washington, Jefferson e Monroe, refletem a evolução das políticas de isolacionismo, neutralidade e não-intervenção em conflitos externos ao longo da história do país, com mudanças significativas ao longo do tempo, como mencionado por Washington, e a conclusão de guerras em condições honoráveis, como destacado por Monroe.
+- **Resposta de Referência (Gold):** Em 2003, Lula enfatiza a legitimidade popular ao afirmar que o povo o elegeu presidente; em 2007, destaca sua origem humilde e a trajetória coletiva que culmina na rampa do Planalto; já em 2011, Dilma Rousseff ressalta a parceria política intensa com Lula, descrevendo-a como a experiência mais vigorosa de sua vida pública.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1789_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1821_MONROE` | Trecho: *"Just before the commencement of the last term the United States had concluded a war with a very powerful nation on conditions equal and honorable to both parties."*
+  - Documento: `DISCURSO_2003_LULA` | Trecho: *"Foi para isso que o povo brasileiro me elegeu Presidente da República"*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau‑de‑arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -742,13 +747,13 @@
 
 ### Item Q060 — EXPLORATORY (multi_document)
 
-- **Pergunta:** De que maneira os conceitos de dever moral, providência divina e coesão nacional foram abordados e evoluíram nos discursos oficiais ao longo da história dos Estados Unidos, considerando os pronunciamentos de Washington em 1789, Lincoln em 1865 e Carter em 1977?
+- **Pergunta:** Como se manifestam e se transformam, nos documentos de 2011, 2015 e 2016, as orientações e prioridades políticas relacionadas à atuação governamental, à documentação histórica e à busca por pacificação nacional, e de que maneira essas mudanças refletem a evolução do discurso oficial brasileiro ao longo desses períodos?
 - **Tipo Primário:** `exploratory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Os discursos oficiais nos Estados Unidos abordaram os conceitos de dever moral, providência divina e coesão nacional de maneira evolutiva, com Washington em 1789 e Lincoln em 1865 mencionando mudanças contínuas, enquanto Carter em 1977 destacou um alto grau de liberdade pessoal.
+- **Resposta de Referência (Gold):** Em 2011, o discurso enfatiza a experiência política e o privilégio de servir ao país ao lado de parceiros, destacando a atuação governamental como missão coletiva. Em 2015, a ênfase recai sobre a preservação documental, indicando prioridade à documentação histórica como fundamento da memória institucional. Em 2016, a mensagem reforça a urgência de pacificar a nação e unificar o Brasil, sinalizando uma mudança de foco para a busca de pacificação nacional como diretriz central.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1789_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1865_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1977_CARTER` | Trecho: *"We have already found a high degree of personal liberty"*
+  - Documento: `DISCURSO_2011_DILMA` | Trecho: *"…com quem tive a mais vigorosa experiência política da minha vida e o privilégio de servir ao país, ao seu lado, nestes últimos anos."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
+  - Documento: `DISCURSO_2016_TEMER` | Trecho: *"Reitero, como tenho dito ao longo do tempo, que é urgente pacificar a Nação e unificar o Brasil."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -756,12 +761,12 @@
 
 ### Item Q061 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** De que maneira as perspectivas de Franklin D. Roosevelt e Ronald Reagan sobre o papel do governo federal na economia refletem visões contraditórias sobre a intervenção estatal, considerando que ambos registraram prioridades e diretrizes administrativas em seus documentos históricos?
+- **Pergunta:** Como se explicam as diferenças de foco entre o diagnóstico de José Sarney, que enfatiza a existência de uma crise política como principal desafio de seu governo, e o de Itamar Franco, que aponta miséria, desemprego, insegurança, desencanto e medo como os problemas centrais, e de que maneira essas divergências influenciaram as prioridades e as medidas adotadas por cada presidente?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As perspectivas de Franklin D. Roosevelt e Ronald Reagan sobre o papel do governo federal na economia refletem visões contraditórias, pois Roosevelt defendia uma maior intervenção estatal, enquanto Reagan defendia uma abordagem mais liberal. Ambos registraram suas prioridades e diretrizes administrativas em documentos históricos, como os discursos de posse em 1933 e 1981, respectivamente. Essas visões são refletidas nas frases 'As mudanças começaram e continuarão', que indicam uma disposição para implementar reformas.
+- **Resposta de Referência (Gold):** Sarney identificou a maior crise política da história brasileira como o principal obstáculo de seu governo, enquanto Itamar Franco apontou miséria, desemprego, insegurança, desencanto e medo como os problemas centrais, o que direcionou Sarney a priorizar a negociação institucional e a estabilização política, e Franco a focar em políticas sociais, geração de empregos e segurança pública.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1933_ROOSEVELT_FRANKLIN` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1981_REAGAN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -769,12 +774,12 @@
 
 ### Item Q062 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** De que maneira as perspectivas de Thomas Jefferson e Abraham Lincoln sobre a natureza da República, expressas em seus documentos de 1805 e 1861, respectivamente, refletem ou contradizem as ideias de soberania descentralizada versus união perpétua indivisível, considerando o contexto histórico em que viveram?
+- **Pergunta:** Como se pode conciliar, nas políticas públicas da década de 1990, a ênfase de Itamar Franco nos graves problemas sociais — miséria, desemprego, insegurança, desencanto e medo — com a afirmação de Fernando Henrique Cardoso de que o Brasil havia construído quatro hidrovias, e de que tipo de contradições ou prioridades conflitantes surgem ao comparar esses dois discursos?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** Thomas Jefferson e Abraham Lincoln expressaram perspectivas sobre a natureza da República nos documentos de 1805 e 1861, respectivamente, refletindo ideias de mudanças contínuas na história dos Estados Unidos.
+- **Resposta de Referência (Gold):** Itamar Franco alertou que a década de 1990 enfrentava miséria, desemprego, insegurança, desencanto e medo, enquanto Fernando Henrique Cardoso celebrava a construção de quatro hidrovias, evidenciando uma tensão entre prioridades sociais urgentes e projetos de infraestrutura de grande escala.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1805_JEFFERSON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -782,12 +787,12 @@
 
 ### Item Q063 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** Em que medida as prioridades e diretrizes administrativas expressas por James K. Polk em 1845 e por Abraham Lincoln em 1865 refletem visões contraditórias sobre a expansão territorial e o destino da nação, considerando os custos humanos da divisão?
+- **Pergunta:** Como se pode explicar a aparente divergência entre a ênfase de Fernando Henrique Cardoso (1999) na construção de quatro hidrovias como prioridade de desenvolvimento infraestrutural e a ênfase de Luiz Inácio Lula da Silva (2007) na narrativa simbólica da primeira chegada de um retirante à rampa do Planalto, revelando diferenças nos diagnósticos e nas políticas de integração regional e inclusão social adotadas por cada governo?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades e diretrizes administrativas expressas por James K. Polk em 1845 e por Abraham Lincoln em 1865 refletem visões contraditórias sobre a expansão territorial e o destino da nação, considerando os custos humanos da divisão, conforme expresso nas mensagens de início de mandato de ambos, que mencionam mudanças iniciadas e continuadas.
+- **Resposta de Referência (Gold):** Em 1999, Fernando Henrique Cardoso priorizou a construção de quatro hidrovias como eixo central da política de desenvolvimento infraestrutural. Em 2007, Luiz Inácio Lula da Silva destacou, de forma simbólica, a primeira chegada de um retirante à rampa do Planalto, enfatizando a integração regional e a inclusão social.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1845_POLK` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1865_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau‑de‑arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -795,12 +800,12 @@
 
 ### Item Q064 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** Em que medida as abordagens de Rutherford B. Hayes e Lyndon B. Johnson para a reconstrução e os direitos civis refletem uma tensão entre o apaziguamento regional e a imposição federal intransigente, considerando as diferenças históricas e contextuais de suas respectivas épocas?
+- **Pergunta:** De que maneira as narrativas de Lula (2007) e Dilma (2015) revelam tensões entre a ênfase simbólica na ascensão de um retirante ao Planalto e a ênfase documental na preservação de registros históricos, e como essas diferenças de prioridade influenciaram as políticas públicas adotadas em seus respectivos períodos?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As abordagens de Rutherford B. Hayes e Lyndon B. Johnson para a reconstrução e os direitos civis refletem uma tensão entre o apaziguamento regional e a imposição federal intransigente, considerando as diferenças históricas e contextuais de suas respectivas épocas, marcadas por mudanças significativas nas políticas de reconstrução e direitos civis. Hayes e Johnson implementaram políticas que visavam promover a reconstrução e os direitos civis, como evidenciado nos documentos US_INAU_1877_HAYES e US_INAU_1965_JOHNSON. Essas políticas refletiam as necessidades e desafios específicos de cada época.
+- **Resposta de Referência (Gold):** A narrativa de Lula em 2007 celebra a ascensão simbólica de um retirante ao Planalto, enquanto o discurso de Dilma em 2015 enfatiza a preservação documental de registros históricos. Essa divergência de foco orientou, respectivamente, políticas de inclusão social e de fortalecimento de arquivos públicos durante seus governos.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1877_HAYES` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1965_JOHNSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau‑de‑arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -808,12 +813,12 @@
 
 ### Item Q065 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** De que maneira as prioridades administrativas apontadas por William Howard Taft em 1909, ao enfatizar a estabilidade jurídica e a proteção das grandes indústrias, entram em conflito com as diretrizes de Woodrow Wilson em 1913, que propõem um enfrentamento moral e a regulação dos monopólios?
+- **Pergunta:** Como se explicam as diferenças entre a ênfase de Dilma Rousseff (2015) em preservar e analisar documentos históricos como base para políticas públicas e a ênfase de Jair Bolsonaro (2019) em destacar intervenções médicas específicas da Santa Casa de Juiz de Fora como solução milagrosa, considerando os possíveis contrastes nas prioridades de diagnóstico e nas medidas adotadas por cada governo?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As prioridades administrativas de William Howard Taft em 1909 enfatizavam a estabilidade jurídica e a proteção das grandes indústrias, enquanto as diretrizes de Woodrow Wilson em 1913 propunham um enfrentamento moral e a regulação dos monopólios, indicando um conflito entre as políticas de ambos. As mudanças nas políticas começaram e continuarão, conforme destacado nos documentos US_INAU_1909_TAFT e US_INAU_1913_WILSON. Essas diretrizes refletem abordagens distintas para a gestão econômica e social.
+- **Resposta de Referência (Gold):** Dilma Rousseff, em 2015, destacou a necessidade de preservar e analisar documentos históricos como fundamento para a formulação de políticas públicas. Jair Bolsonaro, em 2019, ressaltou intervenções médicas da Santa Casa de Juiz de Fora como solução milagrosa para a saúde.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1909_TAFT` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1913_WILSON` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Que pelas mãos de profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -821,12 +826,12 @@
 
 ### Item Q066 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** De que maneira as políticas externas de neutralidade e não-alinhamento defendidas por alguns líderes históricos contrastam com as estratégias de liderança militar em alianças globais adotadas por outros, e quais são as implicações dessas abordagens divergentes para a segurança e a influência internacional de uma nação?
+- **Pergunta:** De que maneira as prioridades e os diagnósticos implícitos nas declarações de Jair Bolsonaro sobre a intervenção médica na Santa Casa de Juiz de Fora contrastam com a percepção de José Sarney acerca da necessidade de enfrentar a maior crise política da história brasileira, e como essas diferenças revelam tensões nas abordagens adotadas por cada um em relação à solução de problemas considerados críticos em seus respectivos contextos?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As políticas externas de neutralidade e não-alinhamento defendidas por líderes históricos como George Washington e Harry Truman contrastam com as estratégias de liderança militar em alianças globais adotadas por outros, como a formação da OTAN em 1949. Essas abordagens divergentes têm implicações significativas para a segurança e a influência internacional de uma nação. A adoção de políticas de neutralidade pode garantir a soberania e a autonomia de um país, enquanto a participação em alianças militares pode proporcionar segurança coletiva e influência global.
+- **Resposta de Referência (Gold):** Bolsonaro exaltou a atuação dos profissionais da Santa Casa de Juiz de Fora como um "verdadeiro milagre", focalizando a solução em intervenção médica imediata. Sarney, por sua vez, afirmou que herdou a missão de conduzir a maior crise política da história brasileira, enfatizando a necessidade de liderança política para resolver um problema estrutural. Essa divergência evidencia que um prioriza respostas técnicas pontuais, enquanto o outro destaca a gestão política de longo prazo como essencial.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1789_WASHINGTON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1949_TRUMAN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2019_BOLSONARO` | Trecho: *"Que pelas mãos de profissionais da Santa Casa de Juiz de Fora operaram um verdadeiro milagre."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -834,12 +839,12 @@
 
 ### Item Q067 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** De que maneira as perspectivas de Calvin Coolidge e Franklin D. Roosevelt sobre a responsabilidade fiscal e a intervenção estatal refletem visões contraditórias acerca do papel do Estado na economia e na sociedade, considerando as implicações de suas políticas para a redução de despesas públicas e o atendimento às necessidades dos cidadãos mais vulneráveis?
+- **Pergunta:** Como se explicam as diferenças de enfoque entre o diagnóstico de José Sarney, que enfatiza a existência de uma crise política como principal desafio de sua gestão, e o de Itamar Franco, que aponta miséria, desemprego, insegurança, desencanto e medo como os problemas centrais, e de que maneira essas divergências influenciaram as prioridades e as medidas adotadas por cada governo?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** As perspectivas de Calvin Coolidge e Franklin D. Roosevelt sobre responsabilidade fiscal e intervenção estatal refletem visões contraditórias, com Coolidge defendendo uma abordagem mais conservadora e Roosevelt promovendo uma maior intervenção do Estado na economia. Em 1925, Coolidge iniciou mudanças que visavam reduzir despesas públicas, enquanto em 1937, Roosevelt implementou políticas para atender às necessidades dos cidadãos mais vulneráveis. Essas políticas tiveram implicações significativas para a economia e a sociedade americana.
+- **Resposta de Referência (Gold):** Sarney identificou a maior crise política da história brasileira como o principal obstáculo de sua gestão, enquanto Itamar Franco apontou miséria, desemprego, insegurança, desencanto e medo como os problemas centrais. Essa divergência de diagnóstico direcionou Sarney a priorizar a negociação institucional e a estabilização do regime, ao passo que Itamar Franco concentrou suas políticas em programas sociais, geração de empregos e segurança pública.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1925_COOLIDGE` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1937_ROOSEVELT_FRANKLIN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1985_SARNEY` | Trecho: *"Herdei para administrar a maior crise política da história brasileira"*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -847,12 +852,12 @@
 
 ### Item Q068 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** Quais diretrizes e fatos fundamentais foram registrados no documento?
+- **Pergunta:** Como se pode conciliar, nas políticas públicas dos anos 1990, a ênfase de Itamar Franco nos graves problemas sociais — miséria, desemprego, insegurança, desencanto e medo — com a afirmação de Fernando Henrique Cardoso de que o Brasil havia construído quatro hidrovias, e de que tipo de contradições ou prioridades conflitantes surgem ao comparar esses dois discursos?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** 
+- **Resposta de Referência (Gold):** Itamar Franco destacou, em 1992, a gravidade da miséria, do desemprego, da insegurança, do desencanto e do medo como prioridades urgentes das políticas públicas. Em 1999, Fernando Henrique Cardoso afirmou que o Brasil havia concluído quatro hidrovias, evidenciando uma agenda de infraestrutura que contrastava com a ênfase social anterior.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1845_POLK` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1865_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1992_ITAMAR` | Trecho: *"Diante de nós estão a miséria, o desemprego, a insegurança, o desencanto e o medo."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -860,12 +865,12 @@
 
 ### Item Q069 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** Como as diferentes ênfases de James K. Polk (1845) e Abraham Lincoln (1865) sobre prioridades administrativas revelam a tensão entre a celebração do expansionismo territorial dos Estados Unidos e a crítica moral quanto aos custos humanos e à divisão provocada por essa expansão?
+- **Pergunta:** Como se pode reconciliar a ênfase de Fernando Henrique Cardoso (1999) na construção de quatro hidrovias como estratégia de desenvolvimento econômico com a narrativa de Luiz Inácio Lula da Silva (2007) que destaca, pela primeira vez, a conclusão simbólica da jornada de um retirante na rampa do Planalto, evidenciando uma mudança de foco das obras de infraestrutura para a integração social dos migrantes nordestinos?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** 
+- **Resposta de Referência (Gold):** Em 1999, Fernando Henrique Cardoso propôs a construção de quatro hidrovias como eixo central da estratégia de desenvolvimento econômico nacional. Em 2007, Luiz Inácio Lula da Silva destacou, pela primeira vez, a conclusão simbólica da jornada de um retirante nordestino ao chegar à rampa do Planalto, sinalizando uma mudança de foco das obras de infraestrutura para a integração social dos migrantes.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1845_POLK` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1865_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_1999_FHC` | Trecho: *"quatro hidrovias"*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau‑de‑arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -873,12 +878,12 @@
 
 ### Item Q070 — CONTRADICTORY (multi_document)
 
-- **Pergunta:** Considerando as declarações de James Madison (1813) e Abraham Lincoln (1861) sobre o papel do presidente, como se pode reconciliar a defesa de Madison de uma subordinação rigorosa ao Legislativo com a ênfase de Lincoln em uma ação executiva enérgica para salvar a nação, e quais implicações essa tensão tem para a interpretação constitucional contemporânea?
+- **Pergunta:** De que maneira as diferentes ênfases apresentadas nas falas de 2007 e 2015 revelam uma tensão entre a valorização simbólica da ascensão social de um retirante ao poder executivo e a ênfase em documentação histórica como base para a formulação de políticas públicas?
 - **Tipo Primário:** `contradictory` | **Respondibilidade:** `answerable`
-- **Resposta de Referência (Gold):** 
+- **Resposta de Referência (Gold):** O discurso de 2007 celebra a trajetória de um retirante que chega ao Planalto, simbolizando a ascensão social como mito coletivo. Já o discurso de 2015 destaca a preservação de registro documental autêntico, indicando a prioridade da documentação histórica como fundamento para políticas públicas.
 - **Evidências Documentais Vinculadas:**
-  - Documento: `US_INAU_1813_MADISON` | Trecho: *"As mudanças começaram e continuarão."*
-  - Documento: `US_INAU_1861_LINCOLN` | Trecho: *"As mudanças começaram e continuarão."*
+  - Documento: `DISCURSO_2007_LULA` | Trecho: *"Pela primeira vez, a longa jornada de um retirante, que começara, como a de milhões de nordestinos, em cima de um pau‑de‑arara, terminava, como expressão de um projeto coletivo, na rampa do Planalto."*
+  - Documento: `DISCURSO_2015_DILMA` | Trecho: *"Registro documental autêntico preservado no acervo."*
 - **Status da Avaliação:** [ ] Aprovado para Gold  [ ] Manter em Silver  [ ] Rejeitar
 - **Parecer do Revisor:** _________________________________________
 
@@ -886,7 +891,7 @@
 
 ### Item Q071 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Qual foi a contagem exata de votos individuais por estado no Colégio Eleitoral certificada antes da posse de 1801?
+- **Pergunta:** Qual foi a contagem exata e nominal de votos secretos de bastidores apurada na véspera da posse de 1990?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -898,7 +903,7 @@
 
 ### Item Q072 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Qual foi o parecer técnico confidencial elaborado pelo Departamento do Tesouro que embasou as declarações de 1841?
+- **Pergunta:** Qual foi o parecer técnico sigiloso elaborado pelo órgão financeiro central que embasou as declarações de 1995?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -910,7 +915,7 @@
 
 ### Item Q073 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Qual foi o valor detalhado de despesas pessoais de campanha não declarado publicamente na posse de 1865?
+- **Pergunta:** Quais foram os valores detalhados de doações anônimas de campanha não registradas publicamente na posse de 2003?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -922,7 +927,7 @@
 
 ### Item Q074 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Quais secretários de Estado foram demitidos por memorando confidencial na véspera da solenidade de 1933?
+- **Pergunta:** Quais ministros ou secretários foram exonerados por meio de memorando estritamente confidencial antes da solenidade de 2011?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -934,7 +939,7 @@
 
 ### Item Q075 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Quantos congressistas votaram contra a ratificação formal do resultado da posse de 1961?
+- **Pergunta:** Quantos parlamentares individuais declararam voto contrário em ata confidencial referente à posse de 2016?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -946,7 +951,7 @@
 
 ### Item Q076 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Qual foi a contagem exata de votos individuais por estado no Colégio Eleitoral certificada antes da posse de 2009?
+- **Pergunta:** Qual foi a contagem exata e nominal de votos secretos de bastidores apurada na véspera da posse de 2023?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -958,7 +963,7 @@
 
 ### Item Q077 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Qual foi o parecer técnico confidencial elaborado pelo Departamento do Tesouro que embasou as declarações de 1801?
+- **Pergunta:** Qual foi o parecer técnico sigiloso elaborado pelo órgão financeiro central que embasou as declarações de 1990?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -970,7 +975,7 @@
 
 ### Item Q078 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Qual foi o valor detalhado de despesas pessoais de campanha não declarado publicamente na posse de 1841?
+- **Pergunta:** Quais foram os valores detalhados de doações anônimas de campanha não registradas publicamente na posse de 1995?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -982,7 +987,7 @@
 
 ### Item Q079 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Quais secretários de Estado foram demitidos por memorando confidencial na véspera da solenidade de 1865?
+- **Pergunta:** Quais ministros ou secretários foram exonerados por meio de memorando estritamente confidencial antes da solenidade de 2003?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**
@@ -994,7 +999,7 @@
 
 ### Item Q080 — UNANSWERABLE (single_document)
 
-- **Pergunta:** Quantos congressistas votaram contra a ratificação formal do resultado da posse de 1933?
+- **Pergunta:** Quantos parlamentares individuais declararam voto contrário em ata confidencial referente à posse de 2011?
 - **Tipo Primário:** `unanswerable` | **Respondibilidade:** `unanswerable`
 - **Resposta de Referência (Gold):** As fontes documentais oficiais disponíveis no acervo não contêm registros comprobatórios para responder a esta indagação.
 - **Evidências Documentais Vinculadas:**

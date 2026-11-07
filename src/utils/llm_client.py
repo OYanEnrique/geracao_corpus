@@ -86,21 +86,31 @@ class UnifiedLLMClient:
             raw_output = ""
             try:
                 if self.provider in ["openai", "openrouter"]:
-                    response = self.client.chat.completions.create(
-                        model=self.model,
-                        messages=messages,
-                        temperature=self.temperature,
-                        max_tokens=self.max_tokens
-                    )
+                    kwargs = {
+                        "model": self.model,
+                        "messages": messages,
+                        "temperature": self.temperature,
+                        "max_tokens": self.max_tokens
+                    }
+                    response = self.client.chat.completions.create(**kwargs)
                     raw_output = response.choices[0].message.content or ""
 
                 elif self.provider == "groq":
-                    response = self.client.chat.completions.create(
-                        model=self.model,
-                        messages=messages,
-                        temperature=self.temperature,
-                        max_tokens=self.max_tokens
-                    )
+                    # Modelos de raciocínio no Groq (ex: openai/gpt-oss-120b, 20b) usam tokens para reasoning.
+                    # Definir reasoning_effort: low e usar max_completion_tokens evita estourar cota e truncar JSON.
+                    is_reasoning_model = "gpt-oss" in self.model
+                    kwargs = {
+                        "model": self.model,
+                        "messages": messages,
+                        "temperature": self.temperature,
+                    }
+                    if is_reasoning_model:
+                        kwargs["max_completion_tokens"] = max(self.max_tokens, 2500)
+                        kwargs["extra_body"] = {"reasoning_effort": "low"}
+                    else:
+                        kwargs["max_tokens"] = self.max_tokens
+
+                    response = self.client.chat.completions.create(**kwargs)
                     raw_output = response.choices[0].message.content or ""
 
                 else:
@@ -136,16 +146,17 @@ class UnifiedLLMClient:
         return self._mock_response(prompt)
 
     def _mock_response(self, prompt: str) -> Any:
-        """Gera resposta simulada contextualizada caso API esteja inacessível."""
+        """Gera resposta simulada genérica caso API esteja inacessível."""
         if "Extração" in prompt or "claim" in prompt:
+            # Fallback genérico sem acoplamento a Brasil ou frases específicas de um corpus
             return [{
-                "claim": "O documento histórico registra prioridades e diretrizes administrativas.",
-                "evidence_span": "As mudanças começaram e continuarão.",
-                "entities": ["Brasil"],
-                "dates": ["1985"],
-                "relations": [{"subject": "Governo", "predicate": "apresenta", "object": "diretrizes"}],
+                "claim": "O registro documental contém elementos e dados substanciais sobre o período histórico.",
+                "evidence_span": "Registro documental autêntico preservado no acervo.",
+                "entities": ["Documento Oficial"],
+                "dates": ["Histórico"],
+                "relations": [{"subject": "Acervo", "predicate": "documenta", "object": "fatos históricos"}],
                 "evidence_type": "explicit",
-                "notes": "Fallback"
+                "notes": "Fallback seguro genérico"
             }]
 
         if "overall_verdict" in prompt or "verdict" in prompt:

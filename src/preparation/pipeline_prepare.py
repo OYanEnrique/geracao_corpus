@@ -59,17 +59,19 @@ def run_preparation(raw_dir: str = "data/raw/piloto_1", output_dir: str = "corpu
         clean_text, stats = TextCleaner.clean(speech_body)
         quality = TextCleaner.estimate_quality(clean_text)
 
-        is_piloto2 = "piloto_2" in str(raw_dir)
+        # Metadados e contexto inferidos dinamicamente a partir dos próprios dados do documento/pasta
+        # Sem hardcoding de nomes específicos de corpus
+        collection_name = raw_path.name
         doc_record = {
             "document_id": doc_id,
-            "collection": "us_presidential_inaugural_addresses" if is_piloto2 else "discursos_presidenciais_pos_redemocratizacao",
-            "doc_type": row["tipo_discurso"],
-            "title": f"Inaugural Address of {row['presidente']} ({row['ano']})" if is_piloto2 else f"Pronunciamento Presidencial de {row['presidente']} ({row['ano']})",
-            "date": row["ano"],
-            "author": row["presidente"],
+            "collection": collection_name,
+            "doc_type": row.get("tipo_discurso", "discurso"),
+            "title": f"Pronunciamento de {row.get('presidente', 'Autor')} ({row.get('ano', '')})",
+            "date": str(row.get("ano", "")),
+            "author": row.get("presidente", "Desconhecido"),
             "page_count": 1,
             "ocr_quality_overall": quality,
-            "archival_context": "US Presidential Inaugural Addresses (1789-2013)" if is_piloto2 else "Discursos de posse e pronunciamentos de chefes de Estado (1985-2023)",
+            "archival_context": f"Acervo documental da coleção {collection_name}",
             "file_ref": str(file_path.as_posix()),
             "metadata": {
                 "caso_limitrofe": row.get("caso_limitrofe") == "True",
