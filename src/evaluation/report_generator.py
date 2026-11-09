@@ -1,4 +1,9 @@
-"""Gerador de relatórios executivos em formato de slides Markdown acumulados sequencialmente em /relatorios."""
+"""Gerador de relatórios executivos em formato de slides Markdown acumulados sequencialmente em /relatorios.
+
+DIRETRIZ DE ESCOPO:
+- Cada relatório aborda estritamente o que foi realizado na etapa atual, evitando redundâncias de etapas passadas.
+- Dados de etapas anteriores só devem aparecer em tabelas/gráficos de comparação de melhoria.
+"""
 import os
 import re
 import json
